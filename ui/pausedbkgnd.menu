@@ -1,0 +1,57 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "pausedbkgnd"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		blurWorld 4.8
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.35
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 854 75 4 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gradient_top"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 480 854 75 4 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gradient_bottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -164 0 -280 480 10 0
+			decoration
+			visible 1
+			style 3
+			forecolor 0.75 0.75 0.75 0.25
+			background "gradient_fadein_fadebottom"
+			textscale 0.55
+		}
+	}
+}

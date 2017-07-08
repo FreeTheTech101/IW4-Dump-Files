@@ -1,0 +1,1357 @@
+/********************************************
+*          dumped by: aerosoul94            *
+*********************************************/
+
+{
+	menuDef
+	{
+		name "facemaskoverlay_ss"
+		rect 0 0 960 480 2 2
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( dvarbool( "hud_gasMaskOverlay" ) == 1 )
+		itemDef
+		{
+			name "FacemaskOverlayBG"
+			rect -427 -240 854 480 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "gasmask_overlay"
+			textscale 0.55
+		}
+	}
+	menuDef
+	{
+		name "mantlehint_ss"
+		rect 0 80 40 40 2 2
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) == 0 && gamemsgwndactive( 2 ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			name "chRect"
+			rect 0 80 40 40 2 2
+			ownerdraw 80
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.375
+			textstyle 3
+		}
+	}
+	menuDef
+	{
+		name "cursorhints_ss"
+		rect 0 28 40 40 2 2
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			name "chRect"
+			rect 0 28 40 40 2 2
+			ownerdraw 72
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.375
+			textstyle 3
+		}
+	}
+	menuDef
+	{
+		name "weaponinfo_ss"
+		rect -48 -18 640 480 4 4
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( player( "number" ) == 0 && gamemsgwndactive( 2 ) ) && ( dvarbool( "ammoCounterHide" ) == 0 ) && ( dvarbool( "actionSlotsHide" ) == 0 ) && ( dvarbool( "compass" ) == 1 ) )
+		itemDef
+		{
+			name "weaponbar_line_ss"
+			rect -366.667 -73.3333 261.333 56 10 10
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			background "hud_weaponbar_line"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -220 -30.6667 37.3333 0.666667 10 10
+			ownerdraw 119
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 9
+			textscale 0.437475
+			textstyle 6
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -198.667 -30 18.6667 18.6667 10 10
+			ownerdraw 104
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 3 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -205.333 -30 18.6667 18.6667 10 10
+			ownerdraw 104
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 2 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -212 -30 18.6667 18.6667 10 10
+			ownerdraw 104
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 1 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -218.667 -30 18.6667 18.6667 10 10
+			ownerdraw 104
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -218.667 -30 18.6667 18.6667 10 10
+			ownerdraw 104
+			decoration
+			visible 1
+			forecolor 0.5 0.3 0.3 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) == 0 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -150.667 -30 18.6667 18.6667 10 10
+			ownerdraw 103
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 3 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -157.333 -30 18.6667 18.6667 10 10
+			ownerdraw 103
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 2 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -164 -30 18.6667 18.6667 10 10
+			ownerdraw 103
+			decoration
+			visible 1
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 1 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -170.667 -30 18.6667 18.6667 10 10
+			ownerdraw 103
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -170.667 -30 18.6667 18.6667 10 10
+			ownerdraw 103
+			decoration
+			visible 1
+			forecolor 0.5 0.3 0.3 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) == 0 )
+		}
+		itemDef
+		{
+			name "clipGraphic"
+			rect -224 -40.6667 0 0 10 10
+			ownerdraw 117
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			name "clipGraphic"
+			rect -224 -23.3333 0 0 10 10
+			ownerdraw 121
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			rect -192 -50.6667 37.3333 0.666667 10 10
+			ownerdraw 81
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textalign 2
+			textscale 0.3333
+			textstyle 3
+			exp forecolor a ( hudfade( "weaponName" ) )
+			visible when ( 1 )
+		}
+	}
+	menuDef
+	{
+		name "stance_ss"
+		rect -196 -88 48 48 10 10
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( player( "number" ) == 0 && gamemsgwndactive( 2 ) ) && ( dvarbool( "ammoCounterHide" ) == 0 ) && ( dvarbool( "actionSlotsHide" ) == 0 ) && ( dvarbool( "compass" ) == 1 ) )
+		itemDef
+		{
+			name "chRect"
+			rect -196 -88 -80 80 10 10
+			ownerdraw 20
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 6
+			textscale 0.55
+			exp forecolor a ( hudfade( "stance" ) )
+		}
+	}
+	menuDef
+	{
+		name "dpad_ss"
+		rect -18 -16 640 480 4 4
+		legacySplitScreenScale
+		hiddenDuringFlashbang
+		hiddenDuringScope
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( player( "number" ) == 0 && gamemsgwndactive( 2 ) ) && ( dvarbool( "ammoCounterHide" ) == 0 ) && ( dvarbool( "actionSlotsHide" ) == 0 ) && ( dvarbool( "compass" ) == 1 ) )
+		itemDef
+		{
+			name "weaponbar_circle_ss"
+			rect -106 -74.6667 88 56 10 10
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			background "hud_weaponbar_circle"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -86.6667 -58 42.6667 42.6667 10 10
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			background "hud_dpad_ps3"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			name "pad"
+			rect -82.6667 -53.3333 34.6667 34.6667 10 10
+			ownerdraw 170
+			decoration
+			visible 1
+			forecolor 1 1 1 0.65
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			rect -111 -51 32 32 10 10
+			ownerdraw 173
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textalignx -44
+			textaligny -16
+			textscale 0.39996
+			textstyle 3
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			rect -81 -79 32 32 10 10
+			ownerdraw 171
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textscale 0.39996
+			textstyle 3
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			rect -51 -51 32 32 10 10
+			ownerdraw 174
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textaligny -16
+			textscale 0.39996
+			textstyle 3
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			rect -81 -26 32 32 10 10
+			ownerdraw 172
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textalignx 2
+			textaligny -10
+			textscale 0.39996
+			textstyle 3
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+	}
+	menuDef
+	{
+		name "compassv2_ss"
+		rect -18 -16 640 480 4 4
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( player( "number" ) == 0 && gamemsgwndactive( 2 ) ) && ( dvarbool( "ammoCounterHide" ) == 0 ) && ( dvarbool( "actionSlotsHide" ) == 0 ) && ( dvarbool( "compass" ) == 1 ) )
+		itemDef
+		{
+			name "Shadow_Pass1"
+			rect -127 -94 130 130 10 10
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_alpha"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "Shadow_Pass2"
+			rect -127 -94 130 130 10 10
+			ownerdraw 166
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_letters_shadow_step2"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) - 0.25 )
+		}
+		itemDef
+		{
+			name "Shadow_Pass3"
+			rect -127 -94 130 130 10 10
+			ownerdraw 166
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_letters_shadow_step3"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "Pass1"
+			rect -128 -95 130 130 10 10
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_alpha"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "Pass2"
+			rect -128 -95 130 130 10 10
+			ownerdraw 166
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_letters_step2"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "Pass3"
+			rect -128 -95 130 130 10 10
+			ownerdraw 166
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_compass_letters_step3"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+	}
+	menuDef
+	{
+		name "reload_ss"
+		rect 0 -32 640 480 4 4
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "chaplinCheat" ) == 0 ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && ( dvarint( "ammoCounterHide" ) == 0 ) )
+		itemDef
+		{
+			name "lowammowarning"
+			rect 60 -32 200 100 2 2
+			ownerdraw 120
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 9
+			textalign 8
+			textscale 0.583275
+			textstyle 3
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( dvarint( "g_gameskill" ) == 0 ) || ( dvarint( "g_gameskill" ) == 1 ) )
+		}
+	}
+	menuDef
+	{
+		name "tankstatus_ss"
+		rect 100 -46 40 40 8 10
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		itemDef
+		{
+			name "tankbody"
+			rect 100 -46 40 40 8 10
+			ownerdraw 95
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_tankbody"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "tankbarrel"
+			rect 120 -26 40 40 8 10
+			ownerdraw 96
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_tankbarrel"
+			type 8
+			textscale 0.55
+		}
+	}
+	menuDef
+	{
+		name "deadscreen_ss"
+		rect 0 0 640 480 0 0
+		visible 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !dvarbool( "specialops" ) )
+		itemDef
+		{
+			name "quote"
+			rect 80 90 480 20 0 0
+			ownerdraw 97
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textalign 1
+			textscale 0.4583
+			textstyle 3
+			dvar "ui_deadquote"
+		}
+		itemDef
+		{
+			name "hud_grenadeicon"
+			rect 315 300 60 60 0 0
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_grenadeicon"
+			textscale 0.55
+			dvarTest "ui_grenade_death"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			name "hud_grenadepointer"
+			rect 320 270 50 25 0 0
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_grenadepointer"
+			textscale 0.55
+			dvarTest "ui_grenade_death"
+			showDvar { 1 }
+		}
+	}
+	menuDef
+	{
+		name "holdbreathhint_ss"
+		rect 0 28 0 0 2 8
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !adsjavelin( ) && ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			name "chRect"
+			rect 0 28 0 0 2 8
+			ownerdraw 71
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.4583
+			textstyle 3
+		}
+	}
+	menuDef
+	{
+		name "savingicon_ss"
+		rect -100 10 40 40 10 8
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		itemDef
+		{
+			name "chRect"
+			rect -100 10 40 40 10 8
+			ownerdraw 111
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "saving"
+			type 8
+			textscale 0.55
+		}
+	}
+	menuDef
+	{
+		name "invalidcmdhint_ss"
+		rect 0 28 0 0 2 8
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			name "chRect"
+			rect 0 28 0 0 2 8
+			ownerdraw 113
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.375
+			textstyle 3
+		}
+	}
+	menuDef
+	{
+		name "vehiclehud_ss"
+		rect 0 0 640 480 2 2
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		itemDef
+		{
+			name "VehicleHudTargets"
+			rect -320 -240 640 480 2 2
+			ownerdraw 191
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "javelin_hud_target"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "VehicleWeaponReticle"
+			rect -320 -240 640 480 2 2
+			ownerdraw 190
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+		}
+	}
+	menuDef
+	{
+		name "weaponjavelinhud_ss"
+		rect 0 0 960 480 2 2
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( adsjavelin( ) )
+		itemDef
+		{
+			name "WeaponJavelinTargets"
+			rect -320 -240 640 480 2 2
+			ownerdraw 192
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "white"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "javelinlockbox"
+			rect -80 -40 160 80 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_lock_box"
+			textscale 0.55
+			visible when ( weaplockblink( 11 ) )
+		}
+		itemDef
+		{
+			name "javelinfilmgrain"
+			rect -230 -125 460 260 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "javelin_overlay_grain"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "WeaponJavelinBG"
+			rect -427 -240 854 480 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_bg"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "WeaponJavelinBG_left"
+			rect -2881 -240 2454 480 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_bg"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "WeaponJavelinBG_right"
+			rect 427 -240 2600 480 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_bg"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "javelinlockon"
+			rect 154 -198 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_lock_on"
+			textscale 0.55
+			visible when ( weaplockblink( 4.5 ) )
+		}
+		itemDef
+		{
+			name "javelincluon"
+			rect -300 -28 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_clu_on"
+			textscale 0.55
+			visible when ( weaplockblink( 0 ) && !weapattacktop( ) && !weapattackdirect( ) )
+		}
+		itemDef
+		{
+			name "javelintopoff"
+			rect 228 -124 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_top_on"
+			textscale 0.55
+			visible when ( weapattacktop( ) )
+		}
+		itemDef
+		{
+			name "javelindiroff"
+			rect 228 -28 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_dir_on"
+			textscale 0.55
+			visible when ( weapattackdirect( ) )
+		}
+		itemDef
+		{
+			name "javelinday"
+			rect -226 -198 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_day_on"
+			textscale 0.55
+			visible when ( !player( "nightvision" ) )
+		}
+		itemDef
+		{
+			name "javelinnight"
+			rect -300 -125 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_night_on"
+			textscale 0.55
+			visible when ( player( "nightvision" ) )
+		}
+		itemDef
+		{
+			name "javelinrocket_on"
+			rect 30 144 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_rocket_on"
+			textscale 0.55
+			visible when ( player( "clipammo" ) )
+		}
+		itemDef
+		{
+			name "javelinnorocket_on"
+			rect 154 144 64 64 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "hud_javelin_norocket_on"
+			textscale 0.55
+			visible when ( !player( "clipammo" ) )
+		}
+		itemDef
+		{
+			name "chRect"
+			rect 0 -90 0 0 2 2
+			ownerdraw 113
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textfont 6
+			textscale 0.4583
+			textstyle 3
+		}
+	}
+	menuDef
+	{
+		name "gamemessages_ss"
+		rect 6 10 0 0 8 8
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			rect 6 10 0 0 8 8
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textalign 4
+			textscale 0.36
+			textstyle 6
+		}
+	}
+	menuDef
+	{
+		name "boldgamemessages_ss"
+		rect 0 180 0 0 9 8
+		legacySplitScreenScale
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			rect 0 180 0 0 9 8
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textfont 4
+			textalign 5
+			textscale 0.417
+			textstyle 3
+			gamemsgwindowindex 1
+			gamemsgwindowmode 1
+		}
+	}
+	menuDef
+	{
+		name "subtitles_ss"
+		rect 0 375 0 0 2 1
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( dvarbool( "chaplinCheat" ) == 0 ) && dvarbool( "credits_active" ) == 0 )
+		itemDef
+		{
+			rect 0 375 0 0 2 1
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textalign 5
+			textscale 0.38
+			textstyle 3
+			gamemsgwindowindex 2
+			gamemsgwindowmode 1
+			visible when ( player( "number" ) == 0 )
+		}
+	}
+	menuDef
+	{
+		name "subtitles_chaplin_ss"
+		rect 0 375 0 0 2 1
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( dvarbool( "chaplinCheat" ) == 0 ) )
+		itemDef
+		{
+			rect 0 375 0 0 2 1
+			visible 1
+			forecolor 1 1 1 0
+			type 19
+			textalign 5
+			textscale 0.38
+			textstyle 3
+			gamemsgwindowindex 2
+			gamemsgwindowmode 1
+			visible when ( player( "number" ) == 0 )
+		}
+	}
+	menuDef
+	{
+		name "missilecam_hud_ss"
+		rect 0 0 640 480 0 0
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( missilecam( ) )
+		itemDef
+		{
+			rect -320 -240 640 480 2 2
+			style 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0.3
+			background "missilecam_reticle"
+			textscale 0.55
+		}
+	}
+	menuDef
+	{
+		name "minimap_ss_top"
+		rect 0 0 125 125 3 1
+		screenSpace
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( player( "number" ) == 0 ) && ( !dvarbool( "ui_hidemap" ) && dvarbool( "compass" ) && !( gamemsgwndactive( 0 ) ) && !ui_active( ) && !flashbanged( ) ) )
+		itemDef
+		{
+			rect -106 97 102 102 3 1
+			ownerdraw 159
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compass_map_default"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( ( 0 - 106 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 81 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( 97 ) * int( dvarbool( "wideScreen" ) ) + ( 116 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -106 97 102 102 3 1
+			ownerdraw 155
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( ( 0 - 106 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 81 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( 97 ) * int( dvarbool( "wideScreen" ) ) + ( 116 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -106 97 102 102 3 1
+			ownerdraw 153
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compassping_friendly"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( ( 0 - 106 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 81 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( 97 ) * int( dvarbool( "wideScreen" ) ) + ( 116 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -106 97 102 102 3 1
+			ownerdraw 150
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compassping_player"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( ( 0 - 106 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 81 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( 97 ) * int( dvarbool( "wideScreen" ) ) + ( 116 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -106 97 102 102 3 1
+			ownerdraw 152
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "objective_line"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( ( 0 - 106 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 81 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( 97 ) * int( dvarbool( "wideScreen" ) ) + ( 116 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -100 0 100 600 1 1
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 0 -600 100 600 3 3
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect -900 -100 900 100 3 1
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 0 0 900 100 1 3
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 390 56 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarString" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarString" ) + ": " + localvarstring( dvarstring( "ui_debug_localVarString" ) ) )
+		}
+		itemDef
+		{
+			rect 390 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarInt" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarInt" ) + ": " + localvarint( dvarstring( "ui_debug_localVarInt" ) ) )
+		}
+		itemDef
+		{
+			rect 390 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarBool" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarBool" ) + ": " + localvarbool( dvarstring( "ui_debug_localVarBool" ) ) )
+		}
+	}
+	menuDef
+	{
+		name "minimap_ss_bottom"
+		rect 0 0 125 125 1 3
+		screenSpace
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( player( "number" ) == 1 ) && ( !dvarbool( "ui_hidemap" ) && dvarbool( "compass" ) && !( gamemsgwndactive( 0 ) ) && !ui_active( ) && !flashbanged( ) ) )
+		itemDef
+		{
+			rect 5 -199 102 102 1 3
+			ownerdraw 159
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compass_map_default"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( 5 ) * int( dvarbool( "wideScreen" ) ) + ( 0 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( ( 0 - 199 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 198 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect 5 -199 102 102 1 3
+			ownerdraw 155
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( 5 ) * int( dvarbool( "wideScreen" ) ) + ( 0 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( ( 0 - 199 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 198 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect 5 -199 102 102 1 3
+			ownerdraw 153
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compassping_friendly"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( 5 ) * int( dvarbool( "wideScreen" ) ) + ( 0 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( ( 0 - 199 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 198 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect 5 -199 102 102 1 3
+			ownerdraw 150
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "compassping_player"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( 5 ) * int( dvarbool( "wideScreen" ) ) + ( 0 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( ( 0 - 199 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 198 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect 5 -199 102 102 1 3
+			ownerdraw 152
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			background "objective_line"
+			type 8
+			textscale 0.55
+			exp rect w ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect h ( ( ( 102 ) * int( dvarbool( "wideScreen" ) ) + ( 102 * 0.8 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect x ( ( ( 5 ) * int( dvarbool( "wideScreen" ) ) + ( 0 ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+			exp rect y ( ( ( ( 0 - 199 ) ) * int( dvarbool( "wideScreen" ) ) + ( ( 0 - 198 ) ) * ( 1 - int( dvarbool( "wideScreen" ) ) ) ) )
+		}
+		itemDef
+		{
+			rect -100 0 100 600 1 1
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 0 -600 100 600 3 3
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect -900 -100 900 100 3 1
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 0 0 900 100 1 3
+			style 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			dvarTest "ui_safearea"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			rect 390 56 0 0 1 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarString" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarString" ) + ": " + localvarstring( dvarstring( "ui_debug_localVarString" ) ) )
+		}
+		itemDef
+		{
+			rect 390 72 0 0 1 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarInt" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarInt" ) + ": " + localvarint( dvarstring( "ui_debug_localVarInt" ) ) )
+		}
+		itemDef
+		{
+			rect 390 72 0 0 1 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.375
+			visible when ( dvarstring( "ui_debug_localVarBool" ) != "" )
+			exp text ( dvarstring( "ui_debug_localVarBool" ) + ": " + localvarbool( dvarstring( "ui_debug_localVarBool" ) ) )
+		}
+	}
+}

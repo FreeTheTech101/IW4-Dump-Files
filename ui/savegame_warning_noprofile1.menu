@@ -1,0 +1,84 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "savegame_warning_noprofile1"
+		rect 0 0 0 0 1 1
+		visible 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		blurWorld 4.8
+		itemDef
+		{
+			name "backdrop"
+			rect -1 -1 1 1 1 1
+			decoration
+			visible 1
+			ownerdraw 101
+			forecolor 0 0 0 0.7
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "warningMsg"
+			rect -180 -40 120 120 2 2
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textscale 0.4583
+			text "@MENU_QUIT_WARNING"
+			hideDvar { 0 }
+		}
+		itemDef
+		{
+			name "resumegame"
+			rect -150 75 140 15 2 2
+			visible 1
+			group "pauseoptions"
+			forecolor 0.9 0.9 0.9 0.9
+			type 1
+			textscale 0.4583
+			text "@MENU_RESUMEGAME"
+			dvarTest "cg_drawpaused"
+			hideDvar { 0 }
+			action
+			{
+				play "mouse_click";
+				close "savegame_warning_noprofile";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef
+		{
+			name "saveandquit"
+			rect -150 115 130 15 2 2
+			visible 1
+			group "pauseoptions"
+			forecolor 0.9 0.9 0.9 0.9
+			type 1
+			textscale 0.4583
+			text "@PLATFORM_QUIT"
+			hideDvar { 0 }
+			action
+			{
+				play "mouse_click";
+				close "savegame_warning_noprofile";
+				exec "disconnect";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "offensive_skip"
+		rect 0 0 640 480 0 0
+		style 1
+		forecolor 1 1 1 1
+		fullscreen 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			exec "set cl_paused 1";
+			open "offensive_skip_popup";
+		}
+		onClose
+		{
+			exec "set cl_paused 0";
+		}
+	}
+}

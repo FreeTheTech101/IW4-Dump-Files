@@ -1,0 +1,159 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "dpad"
+		rect 0 0 25 25 2 3
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( gamemsgwndactive( 2 ) ) && dvarbool( "compass" ) && ( dvarbool( "actionSlotsHide" ) == 0 ) )
+		exp rect x ( 56 )
+		exp rect y ( - 14 )
+		itemDef
+		{
+			name "slot1"
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			ownerdraw 171
+			forecolor 1 1 1 0.65
+			type 8
+			textfont 6
+			textalignx 6
+			textaligny -10
+			textscale 0.25
+			exp rect x ( 4 - 70 * ( actionslotusable( 2 ) + actionslotusable( 3 ) + actionslotusable( 4 ) ) )
+			exp rect y ( 16 )
+			exp rect w ( 28 )
+			exp rect h ( 28 )
+		}
+		itemDef
+		{
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0
+			textfont 6
+			textalign 1
+			textscale 0.25
+			exp rect x ( 16 - 70 * ( actionslotusable( 2 ) + actionslotusable( 3 ) + actionslotusable( 4 ) ) )
+			exp rect y ( 48 )
+			exp rect w ( 1 )
+			exp rect h ( 1 )
+			exp forecolor a ( 0.65 * 1.3 * hudfade( "dpad" ) )
+			visible when ( actionslotusable( 1 ) )
+			exp text ( "^3" + keybinding( "+actionslot 1" ) )
+		}
+		itemDef
+		{
+			name "slot3"
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			ownerdraw 173
+			forecolor 1 1 1 0.65
+			type 8
+			textfont 6
+			textalignx 6
+			textaligny -10
+			textscale 0.25
+			exp rect x ( 4 - 70 * ( actionslotusable( 2 ) + actionslotusable( 4 ) ) )
+			exp rect y ( 16 )
+			exp rect w ( 28 )
+			exp rect h ( 28 )
+		}
+		itemDef
+		{
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0
+			textfont 6
+			textalign 1
+			textscale 0.25
+			exp rect x ( 16 - 70 * ( actionslotusable( 2 ) + actionslotusable( 4 ) ) )
+			exp rect y ( 48 )
+			exp rect w ( 1 )
+			exp rect h ( 1 )
+			exp forecolor a ( 0.65 * 1.3 * hudfade( "dpad" ) )
+			visible when ( actionslotusable( 3 ) )
+			exp text ( "^3" + keybinding( "+actionslot 3" ) )
+		}
+		itemDef
+		{
+			name "slot4"
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			ownerdraw 174
+			forecolor 1 1 1 0.65
+			type 8
+			textfont 6
+			textalignx 6
+			textaligny -10
+			textscale 0.25
+			exp rect x ( 4 - 70 * actionslotusable( 2 ) )
+			exp rect y ( 16 )
+			exp rect w ( 28 )
+			exp rect h ( 28 )
+		}
+		itemDef
+		{
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 6
+			textalign 1
+			textscale 0.25
+			exp rect x ( 16 - 70 * actionslotusable( 2 ) )
+			exp rect y ( 48 )
+			exp rect w ( 1 )
+			exp rect h ( 1 )
+			exp forecolor a ( 0.65 * 1.3 * hudfade( "dpad" ) )
+			visible when ( actionslotusable( 4 ) )
+			exp text ( "^3" + keybinding( "+actionslot 4" ) )
+		}
+		itemDef
+		{
+			name "slot2"
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			ownerdraw 172
+			forecolor 1 1 1 0.65
+			type 8
+			textfont 6
+			textalignx 6
+			textaligny -10
+			textscale 0.25
+			exp rect x ( 4 )
+			exp rect y ( 16 )
+			exp rect w ( 28 )
+			exp rect h ( 28 )
+		}
+		itemDef
+		{
+			rect 0 0 0 0 2 3
+			decoration
+			visible 1
+			forecolor 1 1 1 0
+			textfont 6
+			textalign 1
+			textscale 0.25
+			exp rect x ( 16 )
+			exp rect y ( 48 )
+			exp rect w ( 1 )
+			exp rect h ( 1 )
+			exp forecolor a ( 0.65 * 1.3 * hudfade( "dpad" ) )
+			visible when ( actionslotusable( 2 ) )
+			exp text ( "^3" + keybinding( "+actionslot 2" ) )
+		}
+	}
+}

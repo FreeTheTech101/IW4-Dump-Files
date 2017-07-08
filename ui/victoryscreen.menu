@@ -1,0 +1,103 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "victoryscreen"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fullscreen 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		fadeInAmount 0.002
+		onOpen
+		{
+			execOnDvarIntValue "ui_arcade_lost" 1 "disconnect";
+			uiScript "closemenuondvar" "ui_arcade_lost" 1 "victoryscreen";
+			uiScript "openmenuondvar" "ui_arcade_lost" 1 "main";
+			setdvar "cl_paused" 1;
+			setItemColor "fadebox" backcolor 0 0 0 1;
+			fadeout "fadebox";
+			exec "updategamerprofile";
+			execOnDvarIntValue "ui_showpopup" 1 "openmenu victory_notice_popmenu";
+		}
+		onClose
+		{
+			setdvar "cl_paused" 0;
+			setdvar "ui_requiredtraining" "";
+		}
+		itemDef
+		{
+			rect -107 0 854 480 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0.2 0.2 0.2 1
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -128 0 896 480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			backcolor 1 1 1 1
+			background "black"
+			textscale 0.55
+			visible when ( dvarstring( "mapname" ) == "cliffhanger" )
+		}
+		itemDef
+		{
+			name "defaultbackdrop"
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "victory_iw4"
+			textscale 0.55
+			visible when ( dvarstring( "ui_char_museum_mode" ) == "credits_1" )
+		}
+		itemDef
+		{
+			name "mainb"
+			rect 250 420 128 16 0 0
+			visible 1
+			forecolor 0.9 0.9 0.9 0.9
+			type 1
+			textfont 9
+			textalign 5
+			textscale 0.4583
+			text "@MENU_SP_CONTINUE_TO_SPECIAL_OPS"
+			action
+			{
+				setdvar "gamemode" "so";
+				exec "disconnect";
+				close "victoryscreen";
+				open "main";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef
+		{
+			name "fadebox"
+			rect -128 0 896 480 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			background "white"
+			textscale 0.55
+		}
+	}
+}

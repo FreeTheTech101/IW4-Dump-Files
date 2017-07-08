@@ -1,0 +1,6742 @@
+{
+"skycolor" "0.86 0.89 1"
+"skylight" "0.35"
+"sunlight" "1.2"
+"sundirection" "-60 330 0"
+"suncolor" "1 0.98 0.94"
+"ambient" "0.1"
+"_color" "0.717647 0.776471 1.000000"
+"classname" "worldspawn"
+}
+{
+"origin" "-472 -800 -113.4"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"gndLt" "2e2d2ece01"
+"ltOrigin" "1639.53 3334.19 271.077"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1639 3333.9 250"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.35226 308.723 -0.335319"
+}
+{
+"gndLt" "2d2c2e8a01"
+"ltOrigin" "1557.79 3383.08 273.587"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1556.1 3382.6 252.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.894552 75.9997 2.67168"
+}
+{
+"gndLt" "2e2c2dd701"
+"ltOrigin" "1559.71 3512.5 256.916"
+"target" "pf7_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1560.1 3520.7 232.4"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "348.775 27.937 18.0256"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf7_auto1"
+"classname" "script_brushmodel"
+"origin" "1560 3511 258"
+"model" "*1"
+}
+{
+"origin" "1476 200 260"
+"angles" "10 50 -3.81189e-007"
+"classname" "mp_global_intermission"
+}
+{
+"gndLt" "2a2a2dae01"
+"ltOrigin" "1602.12 3864.87 331.582"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "1607 3870.6 251"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "5.03669 248.863 1.76241"
+}
+{
+"origin" "8 -472 -20"
+"angles" "0 25 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "-440 -848 -112.6"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-512 -744 -114.6"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-520 -672 -110.8"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-544 -616 -110.1"
+"angles" "0 15 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-472 -624 -101.7"
+"angles" "0 15 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-440 -696 -102.5"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-392 -752 -100.3"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-364 -692 -98.5"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-400 -616 -100.8"
+"angles" "0 30 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "4147.1 2616.2 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4150.8 2558.6 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4157.4 2490.1 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4128.4 2423.8 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4121.1 2363.3 76"
+"angles" "0 165 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4062.8 2406.2 76"
+"angles" "0 165 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4071.1 2484.5 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4057.5 2557 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4046.9 2618.6 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "4054.5 2327.8 76"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"targetname" "radiation"
+"classname" "trigger_multiple"
+"origin" "5508 556 608"
+"model" "?0"
+}
+{
+"targetname" "radiation"
+"classname" "trigger_multiple"
+"origin" "5288 3048 608"
+"model" "?1"
+}
+{
+"targetname" "radiation"
+"classname" "trigger_multiple"
+"origin" "5328 -308 608"
+"model" "?2"
+}
+{
+"origin" "-2056 -1728 1280"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"origin" "392 374 32"
+"angles" "0 271 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "1320 2856 280"
+"angles" "0 60 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "2056 2872 316"
+"angles" "0 105 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "2832 3728 156.6"
+"angles" "0 270 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "3380 -220 184"
+"angles" "0 90 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "4030 1138 162"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "3786 1782 114"
+"angles" "0 195 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "-856 1710 220"
+"angles" "0 317 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "2016 1872 4"
+"angles" "0 270 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "454 1120 172"
+"angles" "0 89 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "688 1820 160"
+"angles" "0 270 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "1752 -272 136"
+"angles" "0 90 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "4048 2888 144"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "1058 -342 2"
+"angles" "0 108 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"gndLt" "3e3833dc01"
+"ltOrigin" "2738.82 3586.05 141.484"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2736.2 3583.2 121"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.953 146.797 10.0138"
+}
+{
+"origin" "392 374 48"
+"angles" "0 271 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "1320 2856 296"
+"angles" "0 60 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "2056 2872 316"
+"angles" "0 105 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "2832 3728 152.6"
+"angles" "0 270 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "3380 -220 188"
+"angles" "0 90 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "4030 1138 172"
+"angles" "0 180 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "3786 1782 114"
+"angles" "0 195 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "-856 1710 228"
+"angles" "0 317 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "2016 1872 20"
+"angles" "0 270 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "454 1120 188"
+"angles" "0 89 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "688 1820 176"
+"angles" "0 270 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "1752 -272 152"
+"angles" "0 90 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "4048 2888 160"
+"angles" "0 180 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "1058 -342 18"
+"angles" "0 108 0"
+"classname" "mp_dm_spawn"
+}
+{
+"gndLt" "26211b0000"
+"ltOrigin" "2096.15 1767.9 98.5413"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "2095.33 1772.46 97.6889"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "351.689 6.33754 -20.2569"
+}
+{
+"origin" "4848 4680 1280"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"gndLt" "0c0b0a0000"
+"ltOrigin" "2038.84 1196.71 187.938"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "2042.85 1196.75 190.334"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "346.383 255.849 24.2404"
+}
+{
+"gndLt" "1d1a160000"
+"ltOrigin" "1904.37 1293.72 139.823"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "1905.32 1298.33 139.617"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "15.3056 342.048 -14.1279"
+}
+{
+"ltOrigin" "1894.95 1276.26 179.178"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "1891.25 1277.39 181.736"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "13.617 75.849 23.8597"
+}
+{
+"gndLt" "1b18140001"
+"ltOrigin" "1887.28 1281.56 99.1537"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "1882.61 1282.29 99.203"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "13.617 75.849 -10.6403"
+}
+{
+"gndLt" "2925200000"
+"ltOrigin" "1943.77 1492.49 48.9869"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "1939.12 1493.05 48.3993"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "13.617 75.849 -18.9403"
+}
+{
+"gndLt" "0e0d0b0000"
+"ltOrigin" "1955.86 1485.78 105.819"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "1955.41 1481.42 107.51"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "344.694 162.048 14.1279"
+}
+{
+"dmg" "9000"
+"classname" "trigger_hurt"
+"origin" "-95 3448 -8228"
+"model" "?3"
+}
+{
+"gndLt" "413b357d01"
+"ltOrigin" "-282.895 -718.692 282.339"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "-139.7 -760.7 -71.2"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "355.007 268.177 17.0985"
+}
+{
+"gndLt" "4c4138d401"
+"ltOrigin" "1012.52 1285.82 161.418"
+"target" "pf276_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1011.2 1285.6 134.5"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "1.32604 78.0362 3.3709"
+}
+{
+"spawnflags" "1"
+"targetname" "pf276_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1013 1286 161"
+"model" "*2"
+}
+{
+"origin" "3918 154 186"
+"angles" "0 90 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"gndLt" "4b433aaf01"
+"ltOrigin" "1258.04 113.372 1.3273"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1258.9 113.8 -19.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.392 40.0098 0.513341"
+}
+{
+"origin" "-192 2584 -40"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "-192 2584 -24"
+"angles" "0 180 0"
+"classname" "mp_dm_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "-192 2584 -32"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn"
+}
+{
+"origin" "3918 154 196"
+"angles" "0 90 0"
+"classname" "mp_dm_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "3918 154 188"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"gndLt" "2f2b270000"
+"ltOrigin" "1735.41 80.6387 158.007"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf384_auto1"
+"origin" "1735.4 80.6 136"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "0 192.305 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf384_auto1"
+"classname" "script_brushmodel"
+"origin" "1735 81 159"
+"model" "*3"
+}
+{
+"classname" "script_struct"
+"origin" "1864 8 218.5"
+"targetname" "light_glow_white_bulb_FX_origin"
+}
+{
+"origin" "-317.6 -683.4 21"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "8 -472 -8"
+"angles" "0 25 0"
+"classname" "mp_dm_spawn"
+}
+{
+"gndLt" "292623c701"
+"ltOrigin" "-260.132 -172.188 72.8495"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-260.5 -166.3 52.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 0 12"
+}
+{
+"gndLt" "2220200000"
+"ltOrigin" "-1061.88 2079.89 110.172"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "-973 1992.2 -241.7"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "345.651 350.51 -7.74649"
+}
+{
+"gndLt" "2723230000"
+"ltOrigin" "-975.241 1990.27 -144.768"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "-971.2 1991.2 -225.6"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "358.342 54.6171 -2.33339"
+}
+{
+"gndLt" "2925250000"
+"ltOrigin" "-995.44 2013.51 -206.956"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-992.3 2013.4 -227.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.57575 147.709 -4.13916"
+}
+{
+"gndLt" "2925230000"
+"ltOrigin" "-923.464 1970.73 -199.42"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-919.1 1971.1 -219.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "347.719 21.0994 -4.69202"
+}
+{
+"gndLt" "2e2b270000"
+"ltOrigin" "2774.1 749.365 238.891"
+"sound_csv_include" "destruct_lockers"
+"precache_script" "common_scripts _destructible_types_anim_lockers"
+"targetname" "destructible_toy"
+"destructible_type" "toy_locker_double"
+"csv_include" "destructible_locker_double"
+"origin" "2786.2 745 200"
+"model" "com_locker_double"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"gndLt" "2a28250000"
+"ltOrigin" "2746.1 749.365 238.891"
+"sound_csv_include" "destruct_lockers"
+"precache_script" "common_scripts _destructible_types_anim_lockers"
+"targetname" "destructible_toy"
+"destructible_type" "toy_locker_double"
+"csv_include" "destructible_locker_double"
+"origin" "2758.2 745 200"
+"model" "com_locker_double"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"gndLt" "2724232601"
+"ltOrigin" "-1134.1 1776.38 229.311"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-1113.5 1777.7 194.5"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "339.94 55.1249 -23.6796"
+}
+{
+"gndLt" "2e28218901"
+"ltOrigin" "-681.411 1753.58 276.056"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-685.5 1762.7 258.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "26.9322 287.984 -2.77053"
+}
+{
+"gndLt" "1d1b1b2201"
+"ltOrigin" "-849.568 1735.61 249.506"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-844.7 1747.6 234.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "331.712 10.2989 32.986"
+}
+{
+"gndLt" "2b251e0101"
+"ltOrigin" "-880.038 1796.44 338.611"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-880.6 1795.8 317.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.726 235.283 0.927886"
+}
+{
+"gndLt" "2b28263f01"
+"ltOrigin" "-1136.45 1761.51 206.029"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1130.7 1762.7 187.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "347.081 331.237 9.03416"
+}
+{
+"gndLt" "2624233d01"
+"ltOrigin" "-824.794 1865.85 330.097"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-827.1 1865.5 309"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "4.40578 46.0981 4.56379"
+}
+{
+"gndLt" "211f1e1a01"
+"ltOrigin" "-909.616 1877.53 316.309"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-904.7 1877.2 296.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.30101 104.311 -12.7195"
+}
+{
+"origin" "-1292 804 76"
+"angles" "0 85 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "-1292 804 92"
+"angles" "0 85 0"
+"classname" "mp_dm_spawn"
+}
+{
+"classname" "script_struct"
+"origin" "187.757 1379.91 279.576"
+"targetname" "light_glow_white_bulb_FX_origin"
+"angles" "45.3775 177.165 85.1891"
+}
+{
+"origin" "-285.6 -731.4 37.6"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1824 1024 144"
+"angles" "0 150 0"
+"classname" "info_player_start"
+}
+{
+"gndLt" "413c363c01"
+"ltOrigin" "232.45 2540.21 237.205"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "238.8 2533.9 219.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "26.7342 141.147 1.3432"
+}
+{
+"gndLt" "322e2cc901"
+"ltOrigin" "-28.0184 2299.82 219.803"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-30.9 2297.2 199.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.576 297.787 -9.92876"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto621"
+"origin" "3229.6 2445 128"
+"angles" "0 5 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto621"
+"origin" "4122.4 2523 696"
+"angles" "0 185 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto622"
+"origin" "2020.7 1604 128"
+"angles" "0 40 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto622"
+"origin" "2707.3 2180 696"
+"angles" "0 220 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto623"
+"origin" "1906.2 977.3 128"
+"angles" "0 280 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto623"
+"origin" "2061.8 94.7 696"
+"angles" "0 100 0"
+}
+{
+"origin" "-357.6 -627.4 -4"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-365.6 -555.4 -12.3"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-207 -572.8 -12.6"
+"angles" "0 25 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-395.1 -688.1 -7.5"
+"angles" "0 25 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-285.6 -579.4 3.6"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-237.6 -635.4 25.8"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-197.6 -683.4 32"
+"angles" "0 30 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-272.8 -510.8 -7.8"
+"angles" "0 25 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "4139.1 2616.2 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4142.8 2558.6 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4149.4 2490.1 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4120.4 2423.8 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4113.1 2363.3 84"
+"angles" "0 165 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4054.8 2406.2 84"
+"angles" "0 165 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4063.1 2484.5 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4049.5 2557 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4038.9 2618.6 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "4046.5 2327.8 84"
+"angles" "0 180 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "trigger_use_touch"
+"targetname" "bombtrigger"
+"origin" "-4030 5979 4872"
+"model" "?4"
+}
+{
+"script_gameobjectname" "airdrop_pallet"
+"targetname" "pf487_auto1"
+"classname" "script_brushmodel"
+"origin" "-4030 5979 4850"
+"model" "*4"
+}
+{
+"ltOrigin" "-4030.15 5979.19 4864.89"
+"target" "pf487_auto1"
+"targetname" "airdrop_crate"
+"origin" "-4030.1 5979 4850"
+"classname" "script_model"
+"model" "com_plasticcase_green_big_us_dirt"
+"angles" "0 16.1829 0"
+}
+{
+"gndLt" "433d38dd01"
+"ltOrigin" "3495.06 2461.58 -36.8967"
+"spawnflags" "4"
+"script_gameobjectname" "sd"
+"origin" "3494.9 2461.6 -40.4"
+"targetname" "sd_bomb"
+"model" "mil_tntbomb_mp"
+"classname" "script_model"
+"angles" "0 16.1829 0"
+}
+{
+"script_gameobjectname" "sd"
+"targetname" "sd_bomb_pickup_trig"
+"classname" "trigger_multiple"
+"origin" "3495 2462 -40"
+"model" "?5"
+}
+{
+"script_label" "_b"
+"script_bombmode_original" "1"
+"target" "pf489_auto1"
+"script_gameobjectname" "bombzone"
+"targetname" "bombzone"
+"classname" "trigger_use_touch"
+"origin" "-450 1508 205"
+"model" "?6"
+}
+{
+"targetname" "pf489_auto2"
+"classname" "trigger_use_touch"
+"script_gameobjectname" "bombzone"
+"origin" "-450 1508 205"
+"model" "?7"
+}
+{
+"gndLt" "2f2c2cd401"
+"ltOrigin" "-451.31 1508.19 222.856"
+"target" "pf489_auto2"
+"targetname" "pf489_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "bombzone"
+"script_exploder" "pf489_2"
+"origin" "-452.164 1508.65 194.617"
+"angles" "354.226 354.469 5.55325"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"gndLt" "2f2c2cd201"
+"ltOrigin" "-453.39 1504.73 209.513"
+"script_gameobjectname" "bombzone"
+"script_exploder" "pf489_2"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "-449.411 1508.19 196.899"
+"angles" "5.77407 174.469 -5.55325"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "script_brushmodel"
+"origin" "-454 1507 224"
+"model" "*5"
+}
+{
+"script_label" "_a"
+"script_bombmode_original" "1"
+"target" "pf490_auto1"
+"script_gameobjectname" "bombzone"
+"targetname" "bombzone"
+"classname" "trigger_use_touch"
+"origin" "1727 786 54"
+"model" "?8"
+}
+{
+"targetname" "pf490_auto2"
+"classname" "trigger_use_touch"
+"script_gameobjectname" "bombzone"
+"origin" "1727 786 54"
+"model" "?9"
+}
+{
+"gndLt" "2a26225401"
+"ltOrigin" "1726.72 785.939 61.6374"
+"target" "pf490_auto2"
+"targetname" "pf490_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "bombzone"
+"script_exploder" "pf490_2"
+"origin" "1727.8 786.697 46.5998"
+"angles" "2.30802 251.558 2.10634"
+"model" "com_plasticcase_black_big_us_dirt"
+"classname" "script_model"
+}
+{
+"gndLt" "2925225001"
+"ltOrigin" "1726.36 786.05 61.6237"
+"classname" "script_model"
+"model" "com_plasticcase_black_big_us_dirt"
+"angles" "357.692 71.5581 -2.10634"
+"origin" "1727.8 786.697 46.5998"
+"spawnflags" "4"
+"targetname" "exploder"
+"script_exploder" "pf490_2"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "script_brushmodel"
+"origin" "1727 787 61"
+"model" "*6"
+}
+{
+"gndLt" "1917164f01"
+"ltOrigin" "-6.81355 2714.86 192.171"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2.7 2711.8 174.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "331.569 341.884 1.14266"
+}
+{
+"gndLt" "1d1a194e01"
+"ltOrigin" "-19.485 2676.12 190.893"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-13.3 2671.2 172.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "349.001 33.4092 -22.8594"
+}
+{
+"gndLt" "2a28266f01"
+"ltOrigin" "-342.179 2404.57 137.888"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-342.5 2406.2 116.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.22 16.9272 2.56155"
+}
+{
+"gndLt" "1b1b1c3f01"
+"ltOrigin" "-276.316 2784.14 168.912"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-277.2 2783.7 148.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "355.601 216.771 0.232972"
+}
+{
+"gndLt" "2c29275b01"
+"ltOrigin" "240.325 3065.38 182.424"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "242.8 3066.5 162.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "349.448 35.732 -2.50279"
+}
+{
+"gndLt" "34302c6f01"
+"ltOrigin" "-211.199 2412.15 166.6"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-204.7 2420.3 127.5"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "345.093 54.7693 -0.857444"
+}
+{
+"gndLt" "2b29274b01"
+"ltOrigin" "195.438 2927.65 246.471"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "219.2 2914.1 170.3"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "9.42126 212.792 17.4398"
+}
+{
+"gndLt" "1916140000"
+"ltOrigin" "-417.164 2470.01 -26.4364"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-380.5 2452.9 -25.8"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "1.29379 64.9568 -90.9014"
+}
+{
+"gndLt" "3f34290000"
+"ltOrigin" "-249.263 2635.22 -33.9933"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf517_auto1"
+"origin" "-249.3 2635.2 -56"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "0 147.48 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf517_auto1"
+"classname" "script_brushmodel"
+"origin" "-249 2635 -33"
+"model" "*7"
+}
+{
+"gndLt" "2b2a2ad701"
+"ltOrigin" "-493.586 2087.44 86.0067"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf519_auto1"
+"origin" "-493.6 2087.4 64"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "0 192.305 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf519_auto1"
+"classname" "script_brushmodel"
+"origin" "-494 2087 87"
+"model" "*8"
+}
+{
+"gndLt" "2c2b2cdd01"
+"ltOrigin" "196.571 3269.47 126.007"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf520_auto1"
+"origin" "196.6 3269.5 104"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "0 346.619 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf520_auto1"
+"classname" "script_brushmodel"
+"origin" "197 3270 127"
+"model" "*9"
+}
+{
+"ltOrigin" "-385.52 2529.11 85.2057"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "-381 2528 86"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 251.6 0"
+}
+{
+"gndLt" "3a31280000"
+"ltOrigin" "-300 2651.77 3"
+"origin" "-300 2656 3"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox2"
+"destructible_type" "toy_electricbox2"
+"targetname" "destructible_toy"
+"model" "me_electricbox2"
+"classname" "script_model"
+}
+{
+"gndLt" "22201f3301"
+"ltOrigin" "-387.6 2203 91.1259"
+"target" "pf529_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "-387.6 2203 64"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 328.315 0"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf529_auto1"
+"classname" "script_brushmodel"
+"origin" "-388 2203 91"
+"model" "*10"
+}
+{
+"gndLt" "2a2829af01"
+"ltOrigin" "-216.126 3002.05 -19"
+"target" "pf531_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "-210.01 3027.42 -19"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "270 73.5644 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf531_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "-218 3002 -19"
+"model" "*11"
+}
+{
+"gndLt" "2d2c2cd801"
+"ltOrigin" "-171.277 3048.63 -19"
+"target" "pf533_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "-148.222 3059.6 -19"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 117.554 -90"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf533_auto1"
+"classname" "script_brushmodel"
+"origin" "-172 3047 -19"
+"model" "*12"
+}
+{
+"gndLt" "36322c5701"
+"ltOrigin" "-131.33 2159.78 220.728"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "-123.2 2154.8 181.4"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "357.045 250.828 13.3051"
+}
+{
+"gndLt" "332f2a8901"
+"ltOrigin" "-97.6907 2155.22 215.039"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-93.4 2152.9 195.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.628 317.306 2.62775"
+}
+{
+"gndLt" "2b27255901"
+"ltOrigin" "-196.667 2433.65 153.372"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-194.4 2432.8 132.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "4.41075 187.773 1.5962"
+}
+{
+"gndLt" "1817170000"
+"ltOrigin" "-194.041 2394.81 148.323"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-189.9 2399.2 128.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "14.4858 217.104 -3.65767"
+}
+{
+"gndLt" "342f2b2d01"
+"ltOrigin" "168.949 2259.2 250.243"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "184.6 2255.6 213.1"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "351.475 56.7552 -21.8554"
+}
+{
+"gndLt" "37322d5b01"
+"ltOrigin" "163.713 2240.62 228.289"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "171.1 2238.1 209.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.741 74.1255 -23.3512"
+}
+{
+"gndLt" "35302b9c01"
+"ltOrigin" "320.115 2686.82 256.517"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "324.3 2691.7 237.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "13.4028 250.6 4.17825"
+}
+{
+"angles" "0 28 0"
+"classname" "script_origin"
+"targetname" "heli_crash_start"
+"origin" "689.4 1664 1464"
+"target" "auto482"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 290 0"
+"_color" ".5 1 1"
+"origin" "552 4340 754"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto640"
+"target" "auto481"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 80 0"
+"_color" ".5 1 1"
+"origin" "1686 1516 1038"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto479"
+"target" "auto480"
+}
+{
+"classname" "script_origin"
+"angles" "0 350 0"
+"_color" ".5 1 1"
+"origin" "-2176 1266 882"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto643"
+"target" "auto479"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 70 0"
+"_color" ".5 1 1"
+"origin" "4480 716 1506"
+"targetname" "auto477"
+"script_accel" "15"
+"script_airspeed" "40"
+"target" "auto478"
+}
+{
+"classname" "script_origin"
+"angles" "0 340 0"
+"_color" ".5 1 1"
+"origin" "1780 1562 1226"
+"targetname" "auto476"
+"script_accel" "15"
+"script_airspeed" "40"
+"target" "auto477"
+}
+{
+"origin" "1720 1558 1338"
+"targetname" "heli_loop_start"
+"_color" ".5 1 1"
+"angles" "0 1.00179e-005 0"
+"classname" "script_origin"
+"target" "auto476"
+}
+{
+"classname" "script_origin"
+"origin" "3085.5 3443.8 2159"
+"_color" "0 1 .5"
+"angles" "0 260 0"
+"targetname" "auto474"
+"script_accel" "15"
+"script_airspeed" "40"
+"target" "auto475"
+}
+{
+"classname" "script_origin"
+"origin" "8587.1 6267.8 -212"
+"_color" "0 1 .5"
+"angles" "0 186 0"
+"targetname" "auto472"
+"script_accel" "20"
+"script_airspeed" "40"
+"target" "auto473"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_start"
+"origin" "8637.5 6283.1 -220"
+"_color" "0 1 .5"
+"angles" "0 196 0"
+"target" "auto472"
+}
+{
+"targetname" "auto475"
+"script_airspeed" "30"
+"script_accel" "15"
+"angles" "0 220 0"
+"_color" "0 1 .5"
+"origin" "2225.2 2745.1 2066"
+"classname" "script_origin"
+"target" "auto494"
+}
+{
+"target" "auto494"
+"classname" "script_origin"
+"origin" "1493.1 2721.2 2154"
+"_color" "0 1 .5"
+"angles" "0 270 0"
+"script_accel" "15"
+"script_airspeed" "30"
+"targetname" "auto471"
+}
+{
+"target" "auto494"
+"classname" "script_origin"
+"_color" "0 1 .5"
+"angles" "0 30 0"
+"origin" "1402 1524 1462"
+"targetname" "heli_dest"
+}
+{
+"classname" "script_origin"
+"targetname" "auto494"
+"origin" "1534.4 1513.8 1621.5"
+"_color" "0 1 .5"
+"angles" "0 90 0"
+"script_accel" "10"
+"script_airspeed" "30"
+}
+{
+"target" "auto494"
+"classname" "script_origin"
+"targetname" "auto463"
+"origin" "1924.9 -1862.4 2381"
+"_color" "0 1 .5"
+"angles" "0 90 0"
+"script_accel" "20"
+"script_airspeed" "40"
+}
+{
+"classname" "script_origin"
+"targetname" "auto462"
+"origin" "1795.8 -2836.8 2590"
+"_color" "0 1 .5"
+"angles" "0 90 0"
+"target" "auto463"
+"script_accel" "20"
+"script_airspeed" "40"
+}
+{
+"classname" "script_origin"
+"targetname" "auto461"
+"origin" "699.4 -4541.5 2442"
+"_color" "0 1 .5"
+"angles" "0 30 0"
+"target" "auto462"
+"script_accel" "20"
+"script_airspeed" "60"
+}
+{
+"classname" "script_origin"
+"targetname" "auto460"
+"origin" "-2533.9 -8206.1 2054"
+"_color" "0 1 .5"
+"angles" "0 40 0"
+"target" "auto461"
+"script_accel" "20"
+"script_airspeed" "60"
+}
+{
+"angles" "0 31.9 0"
+"script_accel" "30"
+"script_airspeed" "50"
+"target" "auto43"
+"origin" "3646.9 3691.1 1298"
+"targetname" "auto44"
+"classname" "script_origin"
+}
+{
+"angles" "0 28 0"
+"classname" "script_origin"
+"targetname" "auto42"
+"origin" "2095.4 2112.6 1404"
+"target" "auto44"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 31.9 0"
+"classname" "script_origin"
+"origin" "4602.4 5209.9 372.1"
+"targetname" "auto43"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 28 0"
+"classname" "script_origin"
+"targetname" "auto482"
+"origin" "714.1 1677.2 1464"
+"target" "auto42"
+"script_airspeed" "40"
+"script_accel" "20"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_start"
+"origin" "-2589.8 -8218.9 2046"
+"_color" "0 1 .5"
+"angles" "0 40 0"
+"target" "auto460"
+}
+{
+"target" "auto484"
+"targetname" "auto480"
+"script_airspeed" "30"
+"script_accel" "20"
+"origin" "3702 1706 1376"
+"_color" ".5 1 1"
+"angles" "0 195 0"
+"classname" "script_origin"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 260 0"
+"_color" ".5 1 1"
+"origin" "395 1418 1068"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto646"
+"target" "auto476"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_leave"
+"origin" "-6374.5 8580.5 -888"
+}
+{
+"target" "auto466"
+"angles" "0 240 0"
+"_color" "0 1 .5"
+"origin" "-6230.6 8380.9 -1164"
+"targetname" "heli_start"
+"classname" "script_origin"
+}
+{
+"target" "auto468"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto466"
+"angles" "0 260 0"
+"_color" "0 1 .5"
+"origin" "-6248.8 8330.2 -1156"
+"classname" "script_origin"
+}
+{
+"target" "auto469"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto468"
+"angles" "0 50 0"
+"_color" "0 1 .5"
+"origin" "-4767.1 6945 998"
+"classname" "script_origin"
+}
+{
+"target" "auto470"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto469"
+"angles" "0 50 0"
+"_color" "0 1 .5"
+"origin" "-3163 5347.1 2011"
+"classname" "script_origin"
+}
+{
+"target" "auto471"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto470"
+"angles" "0 50 0"
+"_color" "0 1 .5"
+"origin" "-1390.9 4367.2 2219.5"
+"classname" "script_origin"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_leave"
+"origin" "9293.5 8356.5 2696"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_leave"
+"origin" "9277.5 -4671.5 2696"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_leave"
+"origin" "-2762.5 -8515.5 2184"
+}
+{
+"target" "auto474"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto473"
+"angles" "0 170 0"
+"_color" "0 1 .5"
+"origin" "4951.3 4193 1322"
+"classname" "script_origin"
+}
+{
+"classname" "trigger_radius"
+"radius" "160"
+"height" "128"
+"targetname" "flag_primary"
+"origin" "426.1 -321.4 -22.2"
+"script_gameobjectname" "dom onslaught"
+"model" "prop_flag_neutral"
+"script_label" "_a"
+"angles" "3.8274 323.212 3.20923"
+}
+{
+"script_label" "_b"
+"model" "prop_flag_neutral"
+"script_gameobjectname" "dom onslaught"
+"origin" "3673.6 841.6 78.4"
+"targetname" "flag_primary"
+"height" "128"
+"radius" "160"
+"classname" "trigger_radius"
+"angles" "2.86353 227.91 -2.25924"
+}
+{
+"targetname" "flag_descriptor"
+"origin" "3640 848 176"
+"script_linkto" "flag1 flag3"
+"script_linkname" "flag2"
+"classname" "script_origin"
+}
+{
+"angles" "0 270 0"
+"targetname" "flag_descriptor"
+"origin" "1320 3272 360"
+"script_linkto" "flag2 flag1"
+"script_linkname" "flag3"
+"classname" "script_origin"
+}
+{
+"targetname" "flag_descriptor"
+"origin" "474 -325 80"
+"script_linkto" "flag2 flag3"
+"script_linkname" "flag1"
+"classname" "script_origin"
+}
+{
+"origin" "-472 -792 -113.4"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-440 -840 -112.6"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-512 -736 -114.6"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-520 -664 -110.8"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-544 -608 -110.1"
+"angles" "0 15 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-472 -616 -101.7"
+"angles" "0 15 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-440 -688 -102.5"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-392 -744 -100.3"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-364 -684 -98.5"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-400 -608 -100.8"
+"angles" "0 30 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "4031.1 2604.2 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "4034.8 2546.6 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "4041.4 2478.1 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "4012.4 2411.8 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "4117.1 2439.3 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "3946.8 2410.2 92"
+"angles" "0 165 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "3955.1 2472.5 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "3941.5 2545 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "3930.9 2606.6 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "4122.5 2507.8 92"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "8 -472 -16"
+"angles" "0 25 0"
+"classname" "mp_dom_spawn"
+"script_linkto" "flag1"
+}
+{
+"script_linkto" "flag1"
+"origin" "392 374 40"
+"angles" "0 271 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "1320 2856 288"
+"angles" "0 60 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "2056 2872 316"
+"angles" "0 105 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "2832 3728 148.6"
+"angles" "0 270 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "3380 -220 192"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "4030 1138 164"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "3786 1782 114"
+"angles" "0 195 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag1"
+"origin" "-856 1710 220"
+"angles" "0 317 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "2877.6 774.9 178"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag1"
+"origin" "454 1120 180"
+"angles" "0 89 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"origin" "2119.5 -280.3 144"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag1"
+"origin" "1752 -272 144"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "4048 2888 152"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag1"
+"origin" "1058 -342 10"
+"angles" "0 108 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag1"
+"origin" "-1292 804 84"
+"angles" "0 85 0"
+"classname" "mp_dom_spawn"
+}
+{
+"classname" "script_struct"
+"origin" "2116 8 218.5"
+"targetname" "light_glow_white_bulb_FX_origin"
+}
+{
+"gndLt" "2926250801"
+"ltOrigin" "2667.87 1437.85 156.044"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2667.2 1437 134.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.25127 71.6106 0.252213"
+}
+{
+"gndLt" "66594a0101"
+"ltOrigin" "2645.03 1634.34 208.042"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2657.7 1634.7 192.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "321.588 31.8349 -21.0943"
+}
+{
+"gndLt" "51483f0d01"
+"ltOrigin" "2734.88 1559.02 329.117"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2746.2 1559.4 312.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.70586 259.842 33.0934"
+}
+{
+"gndLt" "35312e0c01"
+"ltOrigin" "2757.37 1541.63 339.743"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2763.9 1547.5 322"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "18.3739 257.44 12.6398"
+}
+{
+"gndLt" "2f2d2d1901"
+"ltOrigin" "2817.54 1555.54 371.095"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2819.4 1550.8 351.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "9.86522 148.011 8.84851"
+}
+{
+"gndLt" "584c3f0501"
+"ltOrigin" "2986.27 1665.27 229.383"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2988.2 1660.5 209.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "352.745 352.122 -11.0847"
+}
+{
+"gndLt" "4940360a01"
+"ltOrigin" "3028.14 1679.59 201.792"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3025.8 1682 181.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "355.724 197.659 -7.64709"
+}
+{
+"gndLt" "3b35304c01"
+"ltOrigin" "3041.63 1824.56 296.43"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3037 1820.3 277"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.565 259.426 -9.94067"
+}
+{
+"gndLt" "332f2c2a01"
+"ltOrigin" "3093.29 1683.22 155.032"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3090.7 1693.3 137.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.14243 5.17427 30.5963"
+}
+{
+"gndLt" "2f2b273f01"
+"ltOrigin" "3133.49 1793.73 230.371"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3129.2 1793.8 210.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "9.00551 26.5257 3.79098"
+}
+{
+"gndLt" "554a3b1601"
+"ltOrigin" "2973.09 1606.98 245.666"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2970.7 1601.9 225.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.52167 347.654 -15.9583"
+}
+{
+"gndLt" "342f2c0001"
+"ltOrigin" "2783.16 1420.31 194.922"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2785.5 1417.7 174.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.592 226.354 10.2236"
+}
+{
+"gndLt" "29292cd101"
+"ltOrigin" "1601.8 3767.16 264.636"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1603.4 3769.1 243.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.16701 296.705 4.53036"
+}
+{
+"gndLt" "2523224401"
+"ltOrigin" "1438.36 3549.15 269.026"
+"sound_csv_include" "vehicle_car_exp"
+"csv_include" "destructible_uaz_open"
+"classname" "script_model"
+"model" "vehicle_uaz_open_destructible"
+"origin" "1433.1 3546.2 231.5"
+"targetname" "destructible_vehicle"
+"destructible_type" "vehicle_uaz_open"
+"angles" "3.00008 1.68829 -3.04696"
+}
+{
+"gndLt" "393531a701"
+"ltOrigin" "1014.9 3250.66 273.219"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1017.2 3248.3 253"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.63 23.8851 -7.78099"
+}
+{
+"gndLt" "3c3833a001"
+"ltOrigin" "1026.38 3275.39 273.7"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1028.9 3274.6 253.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.051 56.0894 -7.64707"
+}
+{
+"gndLt" "2f2d2de201"
+"ltOrigin" "2003.31 3799.37 270"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2002.3 3804 249.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.23 191.607 -12.4726"
+}
+{
+"gndLt" "322d28cc01"
+"ltOrigin" "1486.21 2705.81 383.067"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1486.4 2705.3 362"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.02 235.558 2.26807"
+}
+{
+"ltOrigin" "562 1860.71 277.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "562 1856 278"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"gndLt" "3a3632db01"
+"ltOrigin" "1838.85 3796.08 272.476"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf735_auto1"
+"origin" "1839.4 3797.1 250.5"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "359.265 136.49 -3.01536"
+}
+{
+"spawnflags" "1"
+"targetname" "pf735_auto1"
+"classname" "script_brushmodel"
+"origin" "1839 3796 273"
+"model" "*13"
+}
+{
+"gndLt" "33302fe401"
+"ltOrigin" "1438.26 3128.47 279.862"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf736_auto1"
+"origin" "1437 3129.1 257.9"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "357.184 191.8 -2.37002"
+}
+{
+"spawnflags" "1"
+"targetname" "pf736_auto1"
+"classname" "script_brushmodel"
+"origin" "1438 3128 281"
+"model" "*14"
+}
+{
+"gndLt" "363331e001"
+"ltOrigin" "1864.79 3769.96 271.954"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf737_auto1"
+"origin" "1865.5 3771.3 250"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "356.358 83.0209 -1.50171"
+}
+{
+"spawnflags" "1"
+"targetname" "pf737_auto1"
+"classname" "script_brushmodel"
+"origin" "1865 3770 273"
+"model" "*15"
+}
+{
+"gndLt" "373330da01"
+"ltOrigin" "1927.92 3794.23 273.68"
+"sound_csv_include" "destruct_mtl_barrel"
+"csv_include" "interactive_barrel_benzin"
+"spawnflags" "4"
+"target" "pf738_auto1"
+"origin" "1927.8 3795.3 251.7"
+"targetname" "explodable_barrel"
+"model" "com_barrel_russian_fuel_dirt"
+"classname" "script_model"
+"angles" "358.582 38.0935 2.31058"
+}
+{
+"spawnflags" "1"
+"targetname" "pf738_auto1"
+"classname" "script_brushmodel"
+"origin" "1928 3794 275"
+"model" "*16"
+}
+{
+"gndLt" "302d2db701"
+"ltOrigin" "1195.87 3187.49 267.963"
+"target" "pf745_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1219.95 3178.41 267.699"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0.791123 66.8719 -89.2832"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf745_auto1"
+"classname" "script_brushmodel"
+"origin" "1195 3189 268"
+"model" "*17"
+}
+{
+"gndLt" "2f2c2caa01"
+"ltOrigin" "1211.24 3203.02 267.685"
+"target" "pf747_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1232.02 3188.69 267.574"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "270.461 13.3963 -49.1474"
+}
+{
+"spawnflags" "1"
+"targetname" "pf747_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1210 3204 268"
+"model" "*18"
+}
+{
+"gndLt" "2c29255701"
+"ltOrigin" "1244.73 3168.84 289.61"
+"target" "pf748_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1244.6 3168.8 262.5"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "359.821 137.392 0.309762"
+}
+{
+"spawnflags" "1"
+"targetname" "pf748_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1245 3169 289"
+"model" "*19"
+}
+{
+"gndLt" "423b359301"
+"ltOrigin" "184.689 -135.312 68.4353"
+"csv_include" "destructible_vehicle_hummer_destructible"
+"destructible_type" "vehicle_hummer"
+"targetname" "destructible_vehicle"
+"origin" "187.8 -130.4 -4"
+"model" "vehicle_hummer_destructible"
+"classname" "script_model"
+"angles" "358.02 65.2777 2.71956"
+}
+{
+"gndLt" "2825244a01"
+"ltOrigin" "3054.49 2260.79 474.774"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "3010.6 2176.6 120.2"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "353.398 312.78 -6.07352"
+}
+{
+"gndLt" "2625276d01"
+"ltOrigin" "3023.67 2202.71 173.191"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3019.2 2193.5 157.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "331.103 204.474 19.6566"
+}
+{
+"gndLt" "3c37327c01"
+"ltOrigin" "2984.68 2174.31 187.088"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2988.8 2167.5 168.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "13.6679 165.833 15.3447"
+}
+{
+"gndLt" "363230b401"
+"ltOrigin" "3035.66 2159.77 188.487"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3032.9 2155.6 168.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.84439 122.831 12.9594"
+}
+{
+"gndLt" "332e2b2a01"
+"ltOrigin" "3114.67 2265.61 81.2825"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3113.2 2265.8 60.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.52395 302.076 -2.74163"
+}
+{
+"gndLt" "443c330f01"
+"ltOrigin" "3051.77 3175.77 264.013"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3051.8 3175.7 243"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.925 116.974 -0.95409"
+}
+{
+"gndLt" "403a340d01"
+"ltOrigin" "2916.18 3227.6 180.801"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2921.6 3226.2 162.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "345.727 312.191 9.58788"
+}
+{
+"gndLt" "312d2a2401"
+"ltOrigin" "3018.64 2941.9 180.599"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3026.1 2952.7 165"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "351.036 337.257 39.0702"
+}
+{
+"gndLt" "443d360001"
+"ltOrigin" "2982.68 3257.98 213.345"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2982.5 3257.8 192.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.538 90.022 -0.458077"
+}
+{
+"gndLt" "4d44390001"
+"ltOrigin" "3009.73 3269.38 233.506"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3009.5 3269.3 212.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.478 173.267 -0.501148"
+}
+{
+"gndLt" "4d43380001"
+"ltOrigin" "3027.16 3288.23 230.374"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3023.8 3283.8 211.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "15.4982 61.1691 0.573735"
+}
+{
+"gndLt" "4840377e01"
+"ltOrigin" "2970.01 3173.77 178.881"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2969.2 3174.7 157.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.39777 302.596 -0.723416"
+}
+{
+"gndLt" "3e38323001"
+"ltOrigin" "2929.04 3201.35 181.718"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2935.8 3208.3 164.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "21.525 262.232 13.0404"
+}
+{
+"gndLt" "35302c1501"
+"ltOrigin" "3007.84 2951.76 181.745"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3016 2962.2 166.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "16.3582 166.925 -36.9419"
+}
+{
+"gndLt" "2c2a2bd701"
+"ltOrigin" "3197.96 2905.23 156.433"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3194.6 2911.4 137.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "10.7819 346.382 12.9714"
+}
+{
+"gndLt" "2e2c2bd301"
+"ltOrigin" "3139.21 2885.1 149.907"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3138.1 2892.8 131.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "21.6603 254.673 -9.09923"
+}
+{
+"gndLt" "2b2a2bc901"
+"ltOrigin" "3259.13 2922.21 152.71"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3255.7 2926.9 132.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.307 39.7478 16.7208"
+}
+{
+"gndLt" "2120212c01"
+"ltOrigin" "3183.76 2950.82 199.364"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3182.8 2950.9 178.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.442 146.495 1.88191"
+}
+{
+"gndLt" "4c443b1201"
+"ltOrigin" "3297.49 3032.76 216.814"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3295.3 3028.8 196.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.39831 12.3065 -8.20266"
+}
+{
+"gndLt" "33302fd801"
+"ltOrigin" "3384.97 2965.95 149.728"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3377.6 2966.3 130.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.13428 278.396 -20.3259"
+}
+{
+"gndLt" "393532bc01"
+"ltOrigin" "3378.98 2996.08 151.822"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3371.6 2996.4 132.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.05195 286.423 -19.6819"
+}
+{
+"gndLt" "322f2fd101"
+"ltOrigin" "3397.6 2988.57 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3397.2 2988.2 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 86.8359 0"
+}
+{
+"gndLt" "4a41379501"
+"ltOrigin" "3315.27 3264.74 205.854"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3314.6 3263.6 185"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.48716 12.6237 -3.02371"
+}
+{
+"gndLt" "423b33a301"
+"ltOrigin" "3388.72 3276.2 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3389.1 3275.8 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 172.782 0"
+}
+{
+"gndLt" "3f3933a801"
+"ltOrigin" "3396.27 3244.1 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3395.9 3244.5 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 358 0"
+}
+{
+"gndLt" "4a4239ec01"
+"ltOrigin" "3341.9 3193.9 163.977"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3335.6 3200.1 144.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.63 45.8052 23.4297"
+}
+{
+"gndLt" "3e3833cc01"
+"ltOrigin" "3406.32 3216.88 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3406.7 3216.5 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 159.796 0"
+}
+{
+"gndLt" "3e3832d001"
+"ltOrigin" "3426.7 3234.74 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3426.8 3235 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 302.091 0"
+}
+{
+"gndLt" "4c43394101"
+"ltOrigin" "3299.65 3457.13 186.255"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3303.8 3452.5 166.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "353.737 20.4589 -15.4417"
+}
+{
+"gndLt" "4039320401"
+"ltOrigin" "3261.27 3413.93 242.038"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3258.6 3413.1 220.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.25676 27.8707 0.433313"
+}
+{
+"gndLt" "2f2c2b1d01"
+"ltOrigin" "3142.56 3330.57 295.072"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3142.8 3329.4 274.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.684 214.481 3.36691"
+}
+{
+"gndLt" "302c2a4e01"
+"ltOrigin" "3155.12 3296.39 293.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3155.5 3296 272"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 167.322 0"
+}
+{
+"gndLt" "2e2a270001"
+"ltOrigin" "3129.57 3492.01 206.796"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3128.7 3495.1 186.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "351.779 103.445 -0.898102"
+}
+{
+"gndLt" "2e2a294501"
+"ltOrigin" "3143.59 3567.79 156.244"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3143.6 3560.6 137.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.732 327.356 -18.1688"
+}
+{
+"gndLt" "35312d5401"
+"ltOrigin" "3247.07 3554.29 148.965"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3243.9 3548.4 129.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "15.7397 37.036 -8.29685"
+}
+{
+"gndLt" "2f2d2c4701"
+"ltOrigin" "3102.61 3403.02 270.548"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3110.8 3400.3 251.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.815 259.093 24.8186"
+}
+{
+"gndLt" "4c42370101"
+"ltOrigin" "3025.66 3002.95 238.706"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3030.7 3005.2 218.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.196 111.455 -14.8479"
+}
+{
+"gndLt" "27231f2501"
+"ltOrigin" "3122.79 3022.55 280.899"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3119.8 3023.8 259.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.19552 2.87153 2.14789"
+}
+{
+"gndLt" "3431308101"
+"ltOrigin" "2949.06 2955.28 149.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2948.7 2954.9 128"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 65.7092 0"
+}
+{
+"gndLt" "3d37301801"
+"ltOrigin" "2526.58 3065.18 304.492"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2517.5 3064.8 286.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "8.30271 73.0303 25.3243"
+}
+{
+"gndLt" "231f1d2901"
+"ltOrigin" "2622.68 3104.93 241.429"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2623.4 3103.6 220.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.26302 55.0447 -2.21406"
+}
+{
+"gndLt" "3a35320301"
+"ltOrigin" "2187.77 2830.88 420.448"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2191.1 2821.5 402.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "344.799 228.882 24.4622"
+}
+{
+"gndLt" "332f2d5601"
+"ltOrigin" "2203.71 2868.54 420.493"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2211.6 2860.6 403.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "331.983 349.519 -19.1631"
+}
+{
+"gndLt" "2f2d2d3801"
+"ltOrigin" "2243.35 2858.74 432.438"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2247.1 2856 412.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.546 318.984 0.200212"
+}
+{
+"gndLt" "2a292c5001"
+"ltOrigin" "2317.42 3053.93 420.36"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2317.1 3054.8 399"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.4912 320.887 3.06011"
+}
+{
+"gndLt" "2c2b2e8701"
+"ltOrigin" "2327.84 3120.94 427.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2327.5 3121.3 406"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 223.286 0"
+}
+{
+"gndLt" "2726297f01"
+"ltOrigin" "2325.24 3187.92 414.883"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2324.9 3182.7 394.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.55925 10.2992 -13.8056"
+}
+{
+"gndLt" "3f3a342101"
+"ltOrigin" "2290.78 3166.27 411.326"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2300.6 3162.4 395"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "344.953 47.2606 -32.4846"
+}
+{
+"gndLt" "4a423a1301"
+"ltOrigin" "2262.26 3073.64 400.568"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2274.3 3074 384.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "26.1445 129.651 -27.998"
+}
+{
+"gndLt" "38332f3c01"
+"ltOrigin" "2051.91 2729.18 455.543"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2050.1 2729.9 434.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.098 62.9324 3.97873"
+}
+{
+"gndLt" "433b332401"
+"ltOrigin" "2559.57 3096.62 287.683"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2551 3097 269.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "348.878 246.848 -24.2801"
+}
+{
+"gndLt" "3b352f2b01"
+"ltOrigin" "2549.48 3125.81 292.601"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2541.2 3125.5 274.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "350.957 108.561 25.0843"
+}
+{
+"gndLt" "2a26223001"
+"ltOrigin" "2378.1 3397.48 288.198"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2371.8 3399 268.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "14.5162 352.801 0.61529"
+}
+{
+"gndLt" "2f2c2b8301"
+"ltOrigin" "2572.4 3253.03 290.054"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2575.2 3252.8 269.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "354.07 310.882 7.3465"
+}
+{
+"gndLt" "2624232901"
+"ltOrigin" "2554.33 3185.76 289.232"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2564.4 3184.3 272.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "32.2061 171.447 -2.26738"
+}
+{
+"gndLt" "1f1e206901"
+"ltOrigin" "2575.55 3154.05 293.679"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2580.4 3164.3 276.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "328.937 101.427 -18.5698"
+}
+{
+"gndLt" "2422233401"
+"ltOrigin" "2568.32 3214.08 295.298"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2574.1 3209.9 276.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "339.722 332.737 -4.58964"
+}
+{
+"gndLt" "443c345601"
+"ltOrigin" "2682.86 3178.68 161.984"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2684.2 3178.2 141.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.55 288.489 1.36648"
+}
+{
+"gndLt" "4940374c01"
+"ltOrigin" "2638.38 3032.5 220.896"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2643.1 3034.7 201"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "353.674 323.395 12.7532"
+}
+{
+"gndLt" "453d369301"
+"ltOrigin" "2440.8 2918.54 365.598"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2447.8 2915.3 347.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "18.0821 172.65 3.87394"
+}
+{
+"gndLt" "413a349801"
+"ltOrigin" "2396.33 2888.68 394.947"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2393 2887.1 375.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "350.918 200.759 -0.645603"
+}
+{
+"gndLt" "322d290401"
+"ltOrigin" "2883.72 3845.19 246.557"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2878.3 3846.7 226.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.505 252.593 -16.8703"
+}
+{
+"gndLt" "302d2bab01"
+"ltOrigin" "2801.93 3963.2 334.106"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2798.7 3962.3 313.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "5.88917 317.477 -7.90613"
+}
+{
+"gndLt" "302c2a1101"
+"ltOrigin" "2962.42 3927.53 364.597"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2961.3 3928.3 343.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.495 197.956 -3.3912"
+}
+{
+"gndLt" "2626283701"
+"ltOrigin" "3013.56 4021.48 448.908"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3014.9 4030.6 431.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "27.8736 245.427 -9.83056"
+}
+{
+"gndLt" "2926252d01"
+"ltOrigin" "2772.1 3917.02 299.61"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2772.9 3917.8 278.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.281501 138.258 -2.18455"
+}
+{
+"gndLt" "2824225f01"
+"ltOrigin" "3160.11 3880.36 337.624"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3160 3892.8 322.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "326.896 136.863 -28.0056"
+}
+{
+"gndLt" "2625261901"
+"ltOrigin" "2260.77 3899.06 357.235"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2265.5 3909 340.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "327.046 57.4471 2.40296"
+}
+{
+"gndLt" "2221221301"
+"ltOrigin" "2271.29 4008.27 466.094"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2270.3 4007.9 444.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.996 90.5482 1.27643"
+}
+{
+"gndLt" "4b42381701"
+"ltOrigin" "2191.89 3997.57 379.518"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2196.6 3996.5 360.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.351 25.7422 -9.88519"
+}
+{
+"gndLt" "2d28230001"
+"ltOrigin" "2234.12 4071.47 472.17"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2233.7 4071.3 451.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.926 234.549 0.690085"
+}
+{
+"gndLt" "3a35330d01"
+"ltOrigin" "2163.51 3878.98 324.44"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2168.8 3874.3 305"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "9.92242 191.005 12.4331"
+}
+{
+"gndLt" "2926230701"
+"ltOrigin" "2973.89 2271.09 118.015"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2976.8 2272.9 98.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "349.222 28.4599 -0.838414"
+}
+{
+"gndLt" "2b26220000"
+"ltOrigin" "2800.36 2029.82 142.705"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2800.9 2028.8 121.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.925866 155.331 1.12561"
+}
+{
+"gndLt" "433b350201"
+"ltOrigin" "2721.27 2115.88 37.7915"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2728.9 2109.8 20.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "340.106 19.2835 -24.2813"
+}
+{
+"gndLt" "322f2d9e01"
+"ltOrigin" "2936.84 2043.39 212.654"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2937.3 2043.5 191.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.279 13.1543 -1.0208"
+}
+{
+"gndLt" "312c280001"
+"ltOrigin" "2780.2 1917.43 297.094"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2785.9 1907.1 280.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "329.506 334.372 -21.4898"
+}
+{
+"gndLt" "352f290001"
+"ltOrigin" "2751.27 1436.17 190.103"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2756.9 1432.4 170.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.209 62.3243 -19.5177"
+}
+{
+"gndLt" "4a41360001"
+"ltOrigin" "2779.64 1594.8 419.765"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "2778.8 1591.6 338.9"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "357.791 274.911 -0.784615"
+}
+{
+"gndLt" "4d44381401"
+"ltOrigin" "3627.24 1875.36 161.514"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3628.1 1872.2 140.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "5.56379 72.6237 -4.52745"
+}
+{
+"gndLt" "3c352f3c01"
+"ltOrigin" "3667.27 1957.75 221.262"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3668.7 1955 201"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.82 29.4678 -7.94061"
+}
+{
+"gndLt" "35302d0001"
+"ltOrigin" "3686.03 2154.27 125.024"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3685.5 2149.6 105.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "352.232 327.35 -12.6255"
+}
+{
+"gndLt" "2e2b2a0b01"
+"ltOrigin" "3762.3 2219.83 74.8974"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3758.9 2215.8 54.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.89316 117.909 13.9983"
+}
+{
+"gndLt" "453e360201"
+"ltOrigin" "3905.33 1546.02 232.061"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3903.5 1544.1 211.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "4.52288 11.7121 -4.13851"
+}
+{
+"gndLt" "443c340001"
+"ltOrigin" "3996.38 1618.92 298.474"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3994.1 1622.8 277.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "4.90035 357.616 7.30018"
+}
+{
+"gndLt" "2f2a248d01"
+"ltOrigin" "3842.43 1951.81 285.088"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3845.3 1947.2 265.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.86015 69.1575 -10.8182"
+}
+{
+"gndLt" "2b28289601"
+"ltOrigin" "4088.31 1706.07 397.088"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "4097.2 1715.5 317.2"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "351.396 67.8572 -3.31402"
+}
+{
+"gndLt" "322e2d8201"
+"ltOrigin" "4115.86 1804.13 404.579"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "4114.7 1782.5 326.6"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "344.475 267.741 -0.213845"
+}
+{
+"gndLt" "3d3733a301"
+"ltOrigin" "3221.94 2376.73 29.3312"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "3213.9 2369.7 -9.7"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "12.0119 80.1261 9.55586"
+}
+{
+"gndLt" "443d37b801"
+"ltOrigin" "3612.19 2599.86 18.8335"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "3612.7 2613.6 -19.2"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "343.574 119.708 -11.5155"
+}
+{
+"gndLt" "48413ad901"
+"ltOrigin" "3569.43 2556.44 9.42637"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "3564.2 2556.7 -30.7"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "5.8625 319.018 -4.57749"
+}
+{
+"gndLt" "413b36c001"
+"ltOrigin" "3443.36 2575.04 -3.69635"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3444.7 2578.3 -24"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.193 147.495 -10.2299"
+}
+{
+"gndLt" "433d376601"
+"ltOrigin" "3458.78 2280.43 -3.99125"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3461.4 2278.4 -23.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "351.573 297.772 4.13052"
+}
+{
+"gndLt" "403a356b01"
+"ltOrigin" "3481.69 2303.72 -4.96417"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3485.6 2299.1 -23.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "347.239 275.91 6.30985"
+}
+{
+"gndLt" "3d3834cf01"
+"ltOrigin" "3294.69 2242.86 11.8662"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3291.3 2239.5 -8.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.86 136.711 12.8214"
+}
+{
+"gndLt" "35312f8801"
+"ltOrigin" "3081.11 2405.67 14.4162"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3079.9 2401 -6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.777619 158.004 12.1434"
+}
+{
+"gndLt" "37312a6e01"
+"ltOrigin" "3235.51 1360.95 85.0956"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3235.9 1361.3 64"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 279.174 0"
+}
+{
+"gndLt" "3d3833db01"
+"ltOrigin" "3232.42 1201.47 82.5504"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3230.3 1203.6 62.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "351.138 150.057 -3.39472"
+}
+{
+"gndLt" "3d3732bf01"
+"ltOrigin" "3250.8 1227.98 84.2901"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3250.8 1228.3 63.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.223 47.8171 2.45212"
+}
+{
+"gndLt" "473f389e01"
+"ltOrigin" "3250.8 1695.95 122.813"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "3256.2 1701 42.2"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "354.932 35.2202 0.545194"
+}
+{
+"gndLt" "3c36312f01"
+"ltOrigin" "2164.56 2693.3 263.947"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "2162.8 2703 224.7"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "13.2945 260.436 -4.75041"
+}
+{
+"gndLt" "4840382601"
+"ltOrigin" "2103.82 2671.06 240.002"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2101.3 2679.5 222.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "20.0312 320.436 13.1383"
+}
+{
+"gndLt" "50463cc101"
+"ltOrigin" "2259.85 2568.12 450.39"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "2213.5 2751.1 112.5"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "1.40618 11.943 26.1512"
+}
+{
+"gndLt" "413a34cc01"
+"ltOrigin" "1378.17 2010.31 516.201"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1374.9 2018 497.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "352.85 185.557 -22.3626"
+}
+{
+"gndLt" "413b36ca01"
+"ltOrigin" "2690.91 2630.97 62.4114"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2694.3 2637.8 44.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "14.634 288.069 12.2495"
+}
+{
+"angles" "0 300 0"
+"origin" "620.8 -213.9 120"
+"targetname" "remoteMissileTarget1"
+"classname" "script_origin"
+}
+{
+"gndLt" "473f357101"
+"ltOrigin" "3738.67 3417.37 333.566"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3746.3 3417 315.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "22.5369 155.914 -9.72262"
+}
+{
+"gndLt" "463e365701"
+"ltOrigin" "3720.88 3450.67 325.604"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3730 3451 307.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "16.0879 230.618 18.6532"
+}
+{
+"classname" "script_struct"
+"origin" "2116 -200 218.5"
+"targetname" "light_glow_white_bulb_FX_origin"
+}
+{
+"gndLt" "2b25200000"
+"ltOrigin" "1926.64 94.0976 174.891"
+"sound_csv_include" "destruct_lockers"
+"precache_script" "common_scripts _destructible_types_anim_lockers"
+"targetname" "destructible_toy"
+"destructible_type" "toy_locker_double"
+"csv_include" "destructible_locker_double"
+"origin" "1931 106.2 136"
+"model" "com_locker_double"
+"classname" "script_model"
+"angles" "0 270 0"
+}
+{
+"gndLt" "27231f0000"
+"ltOrigin" "1926.64 118.098 174.891"
+"sound_csv_include" "destruct_lockers"
+"precache_script" "common_scripts _destructible_types_anim_lockers"
+"targetname" "destructible_toy"
+"destructible_type" "toy_locker_double"
+"csv_include" "destructible_locker_double"
+"origin" "1931 130.2 136"
+"model" "com_locker_double"
+"classname" "script_model"
+"angles" "0 270 0"
+}
+{
+"gndLt" "1211100000"
+"ltOrigin" "1768.1 -302.635 174.891"
+"sound_csv_include" "destruct_lockers"
+"precache_script" "common_scripts _destructible_types_anim_lockers"
+"targetname" "destructible_toy"
+"destructible_type" "toy_locker_double"
+"csv_include" "destructible_locker_double"
+"origin" "1780.2 -307 136"
+"model" "com_locker_double"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"gndLt" "1c19150000"
+"ltOrigin" "1952.9 87.6 163.126"
+"target" "pf1722_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1952.9 87.6 136"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "0 266.627 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf1722_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1953 88 163"
+"model" "*20"
+}
+{
+"gndLt" "1a17140000"
+"ltOrigin" "1962.5 94.8 163.126"
+"target" "pf1724_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1962.5 94.8 136"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 108.864 0"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf1724_auto1"
+"classname" "script_brushmodel"
+"origin" "1963 95 163"
+"model" "*21"
+}
+{
+"gndLt" "1312110000"
+"ltOrigin" "1806.84 -267.86 141"
+"target" "pf1726_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1799.68 -292.824 141"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 341.235 -90"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf1726_auto1"
+"classname" "script_brushmodel"
+"origin" "1808 -267 141"
+"model" "*22"
+}
+{
+"gndLt" "1614120000"
+"ltOrigin" "1948.23 -120 195"
+"origin" "1944 -120 195"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox2"
+"destructible_type" "toy_electricbox2"
+"targetname" "destructible_toy"
+"model" "me_electricbox2"
+"classname" "script_model"
+"angles" "0 90 0"
+}
+{
+"gndLt" "2723217001"
+"ltOrigin" "2910.52 -144.327 218.959"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2902.1 -150.9 201.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "350.996 142.722 29.1308"
+}
+{
+"gndLt" "1f1d1c4a01"
+"ltOrigin" "2688.62 -170.788 238.372"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2691 -175.8 218.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "354.334 217.912 16.176"
+}
+{
+"gndLt" "52463a1501"
+"ltOrigin" "2429.1 133.171 209.077"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2419.3 138.4 191.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "27.7804 305.336 -15.1733"
+}
+{
+"gndLt" "332d284101"
+"ltOrigin" "2410.6 23.0316 179.253"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2414.6 28.3 160"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "15.6969 216.005 -6.18819"
+}
+{
+"gndLt" "3d37320a01"
+"ltOrigin" "-755.308 729.838 248.242"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-760.2 720.9 230.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "345.136 181.781 25.4323"
+}
+{
+"gndLt" "37312c2e01"
+"ltOrigin" "-739.093 719.937 248.061"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-745.9 712.5 230"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.71233 126.721 29.5297"
+}
+{
+"gndLt" "4c433a0001"
+"ltOrigin" "-854.219 718.27 295.547"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "-854.4 684.6 273.1"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "22.6951 163.811 53.0402"
+}
+{
+"targetname" "radiation"
+"classname" "trigger_multiple"
+"origin" "3984 -288 608"
+"model" "?10"
+}
+{
+"gndLt" "2421210000"
+"ltOrigin" "2096.9 4914.64 43.0984"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "2096.9 4906.3 3.5"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "357.996 350.432 -11.7209"
+}
+{
+"gndLt" "2c28270000"
+"ltOrigin" "2089.5 5003.8 68.9328"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "2089.5 5003.8 -12"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "0 269.637 0"
+}
+{
+"dmg" "9000"
+"classname" "trigger_hurt"
+"origin" "2180 5060 -8064"
+"model" "?11"
+}
+{
+"gndLt" "3935339701"
+"ltOrigin" "1280.08 3983.76 280.139"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1282.4 3981.2 260.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "348.989 317.918 -1.08117"
+}
+{
+"gndLt" "383431d101"
+"ltOrigin" "842.654 3476.28 269.972"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "841 3476 249"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.395 117.278 3.1087"
+}
+{
+"gndLt" "302c2a9201"
+"ltOrigin" "2152.57 4531.7 366.796"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2152.2 4532.1 345.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+}
+{
+"gndLt" "302c295001"
+"ltOrigin" "-218.678 2425.58 148.299"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-215.1 2428.4 128.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "349.834 9.58627 3.58597"
+}
+{
+"gndLt" "4a423a1f01"
+"ltOrigin" "-905.812 1078.95 218.743"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-882.7 1087.7 186.7"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "24.8138 253.915 29.264"
+}
+{
+"gndLt" "2a27262401"
+"ltOrigin" "-1137.39 1787.45 207.713"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1132.6 1788.9 187.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "10.1611 173.923 -5.05787"
+}
+{
+"gndLt" "3f38306501"
+"ltOrigin" "-809.08 1359.38 212.739"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-803.9 1351 194.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.413 238.242 24.7065"
+}
+{
+"gndLt" "3b36322901"
+"ltOrigin" "-951.294 1116.57 182.218"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-951.7 1114.1 161.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.83902 134.525 6.35477"
+}
+{
+"gndLt" "3b36315301"
+"ltOrigin" "-853.54 1103.78 233.516"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-859.4 1101.4 213.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.424947 293.504 -17.2346"
+}
+{
+"gndLt" "26231f0000"
+"ltOrigin" "-1482.78 925.202 199.842"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "-1384.6 932.9 17.1"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "355.216 290.22 12.7569"
+}
+{
+"gndLt" "1f1d1d6a01"
+"ltOrigin" "-1401.3 954.1 120.748"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "-1362 954.1 50"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "28.9702 175.228 -2.31527"
+}
+{
+"gndLt" "2d2b2b5101"
+"ltOrigin" "-1345.77 947.345 80.661"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1343.5 947 60.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.966165 99.709 -5.62853"
+}
+{
+"gndLt" "2a28274901"
+"ltOrigin" "-1371.85 933.821 66.9306"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1361.8 934.2 50.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "332.538 339.309 9.88018"
+}
+{
+"gndLt" "2926263c01"
+"ltOrigin" "-1371.93 960.577 67.3417"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1361.6 960.9 50.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "18.2785 233.52 22.9848"
+}
+{
+"gndLt" "3b3530a501"
+"ltOrigin" "-1296.85 1349.16 81.7371"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1293.3 1350.2 61.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "354.757 310.399 10.916"
+}
+{
+"gndLt" "3c3632bf01"
+"ltOrigin" "-695.35 1656.04 514.047"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "-718.3 1722.6 158.5"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "351.429 96.1418 3.91098"
+}
+{
+"gndLt" "35312e8e01"
+"ltOrigin" "-1332.91 1491.15 85.2751"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1327.7 1492.1 65.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "352.315 74.1556 -14.6481"
+}
+{
+"gndLt" "2d29266c01"
+"ltOrigin" "-1069.67 884.2 208.82"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-1072.8 880.9 188.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.34226 113.577 10.4735"
+}
+{
+"gndLt" "312c286c01"
+"ltOrigin" "-1051.87 753.278 332.669"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "-1069.6 800.1 149.7"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "2.95614 12.565 2.7531"
+}
+{
+"gndLt" "322f2d2e01"
+"ltOrigin" "-248.9 1214.5 544.933"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "-248.9 1214.5 464"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "0 85.9241 0"
+}
+{
+"gndLt" "2827292601"
+"ltOrigin" "-245.212 1227.24 485.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-245.6 1226.9 464"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 102.458 0"
+}
+{
+"gndLt" "2928293501"
+"ltOrigin" "-254.648 1204.71 485.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-255 1205.1 464"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 7.44873 0"
+}
+{
+"gndLt" "2e2b2a0000"
+"ltOrigin" "-246.253 1082.06 484.31"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-244.6 1082.1 463.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.93859 140.706 -1.63731"
+}
+{
+"gndLt" "2826262601"
+"ltOrigin" "-259.641 1169.5 544.933"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "-257.5 1169.5 464"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "0 311.254 0"
+}
+{
+"gndLt" "2e29270000"
+"ltOrigin" "-306.1 1102.64 645.356"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "-256.3 1137.4 458.5"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "351.582 59.3757 -11.8327"
+}
+{
+"ltOrigin" "648.124 1257.74 227.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "650.6 1253.9 228"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 208.4 0"
+}
+{
+"ltOrigin" "543.403 1120.8 243.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "547.5 1122.9 244"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 292.8 0"
+}
+{
+"ltOrigin" "685.124 1277.74 227.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "687.6 1273.9 228"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 208.4 0"
+}
+{
+"gndLt" "1313130000"
+"ltOrigin" "509.009 1178.84 268.203"
+"csv_include" "destructible_transformer_ratnest01"
+"destructible_type" "toy_transformer_ratnest01"
+"targetname" "destructible_toy"
+"origin" "509.51 1181.39 242.5"
+"model" "utility_transformer_ratnest01"
+"classname" "script_model"
+"sound_csv_include" "destruct_transformer"
+"angles" "359.196 325.453 -0.107521"
+}
+{
+"classname" "script_struct"
+"origin" "50.6 1656.3 390"
+"targetname" "light_glow_white_bulb_FX_origin"
+"angles" "0 50 0"
+}
+{
+"gndLt" "13100f0004"
+"ltOrigin" "322.488 1131.08 190.859"
+"target" "pf2062_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "322.6 1136.7 165.3"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "358.131 172.007 -15.2"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2062_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "322 1130 191"
+"model" "*23"
+}
+{
+"gndLt" "1311110000"
+"ltOrigin" "331.214 1141.29 193.009"
+"target" "pf2063_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "329.8 1145.8 167.1"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "9.34515 331.632 8.98017"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2063_auto1"
+"classname" "script_brushmodel"
+"origin" "332 1140 193"
+"model" "*24"
+}
+{
+"gndLt" "1b1c1c0002"
+"ltOrigin" "385.617 1422.9 171.421"
+"target" "pf2090_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "402.681 1405 167.804"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "285.58 262.368 50.36"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2090_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "384 1424 172"
+"model" "*25"
+}
+{
+"gndLt" "1d1d1c0003"
+"ltOrigin" "-98.942 1608.26 205"
+"target" "pf2092_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "-114.333 1588.31 205"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 321.522 -90"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2092_auto1"
+"classname" "script_brushmodel"
+"origin" "-98 1609 205"
+"model" "*26"
+}
+{
+"gndLt" "1d1c1b0003"
+"ltOrigin" "-116.177 1608.25 226.679"
+"target" "pf2093_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "-117.8 1606.5 200"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "359.435 142.1 6.46322"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2093_auto1"
+"classname" "script_brushmodel"
+"origin" "-116 1609 227"
+"model" "*27"
+}
+{
+"gndLt" "1b1a190003"
+"ltOrigin" "-118.1 1620 227.126"
+"target" "pf2094_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "-118.1 1620 200"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "0 120.641 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2094_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "-118 1620 227"
+"model" "*28"
+}
+{
+"gndLt" "1817160000"
+"ltOrigin" "-123.77 1408 251"
+"origin" "-128 1408 251"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox2"
+"destructible_type" "toy_electricbox2"
+"targetname" "destructible_toy"
+"model" "me_electricbox2"
+"classname" "script_model"
+"angles" "0 90 0"
+}
+{
+"ltOrigin" "-123.29 1408 311.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "-128 1408 312"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 90 0"
+}
+{
+"gndLt" "2523230000"
+"ltOrigin" "-320.3 1679 240.466"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-320.3 1679 200"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "0 80.9912 0"
+}
+{
+"gndLt" "2321210000"
+"ltOrigin" "-329.215 1691.98 221.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-328.9 1691.6 200"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 198.534 0"
+}
+{
+"gndLt" "2624240000"
+"ltOrigin" "-319.281 1669.37 221.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-318.9 1669 200"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 156.764 0"
+}
+{
+"gndLt" "2927270000"
+"ltOrigin" "-364.876 1317.3 218.752"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-363 1314.1 198.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.816 33.1669 -10.4939"
+}
+{
+"gndLt" "2c28260000"
+"ltOrigin" "-344.359 1031.33 238.295"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-337.3 1039.5 221.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "19.0846 277.581 22.2255"
+}
+{
+"gndLt" "25221f0000"
+"ltOrigin" "644.455 2027.84 185.15"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "647.2 2031.8 164.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.885135 310.184 12.9061"
+}
+{
+"gndLt" "23201f4001"
+"ltOrigin" "673.76 2784.57 270.203"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "674.1 2784.9 249.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.994 145.348 0.0895654"
+}
+{
+"gndLt" "342e270000"
+"ltOrigin" "782.798 1958.33 560.254"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "830.4 1960.9 494.8"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "326.627 25.0781 -14.436"
+}
+{
+"gndLt" "24201e0000"
+"ltOrigin" "783.784 1994.01 562.178"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "829.7 2000 495.8"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "337.86 61.7523 -27.6936"
+}
+{
+"gndLt" "2925220000"
+"ltOrigin" "814.153 2023.26 511.944"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "825.6 2026 495.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "9.69443 121.258 -34.57"
+}
+{
+"gndLt" "2e2b290401"
+"ltOrigin" "767.425 2735.72 469.645"
+"csv_include" "animated_models_foliage_pacific_bushtree01"
+"precache_script" "maps animated_models foliage_pacific_bushtree01"
+"targetname" "animated_model"
+"origin" "787.9 2732.8 391.4"
+"model" "foliage_pacific_bushtree01_animated"
+"classname" "script_model"
+"angles" "347.225 320.937 7.54851"
+}
+{
+"gndLt" "34302d0001"
+"ltOrigin" "787.031 2711.32 412.046"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "792.3 2711.4 393"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "346.969 336.05 5.03634"
+}
+{
+"gndLt" "36312e0001"
+"ltOrigin" "776.001 2738.7 408.774"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "780.5 2738.1 389.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "347.321 23.5412 -7.71128"
+}
+{
+"gndLt" "544b3f3101"
+"ltOrigin" "206.423 1902.74 469.097"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "212.3 1894 451.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.452 208.83 32.1641"
+}
+{
+"gndLt" "51483d2c01"
+"ltOrigin" "231.264 1891.5 480.712"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "235 1884.6 462.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "13.3035 58.7442 -21.9184"
+}
+{
+"gndLt" "554b3f5701"
+"ltOrigin" "258.134 1906.01 482.021"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "263 1897.7 463.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "24.1484 99.2473 -8.34804"
+}
+{
+"gndLt" "574d406c01"
+"ltOrigin" "274.749 1914.76 481.724"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "277.9 1907.3 463.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "5.93732 41.5915 -24.812"
+}
+{
+"gndLt" "2d2a2ac001"
+"ltOrigin" "596.627 2792.59 572.225"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "437 2801.7 239.7"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "13.8362 320.2 -8.32621"
+}
+{
+"gndLt" "2d2a297b01"
+"ltOrigin" "442.566 2814.2 273.964"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "446.2 2814.3 253.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "352.484 56.3245 -9.13823"
+}
+{
+"gndLt" "302d2a9101"
+"ltOrigin" "455.7 2802.75 275.492"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "453 2799.5 255.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.376 329.256 -12.0005"
+}
+{
+"gndLt" "3b352f8d01"
+"ltOrigin" "-708.668 -607.404 -46.1795"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "-719 -580.2 -121.7"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "342.785 74.3212 12.342"
+}
+{
+"gndLt" "37322dc101"
+"ltOrigin" "-694.299 -781.693 -123.967"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-696 -781.3 -144.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "355.153 182.806 -1.93645"
+}
+{
+"gndLt" "28231f0000"
+"ltOrigin" "-889.489 -802.867 23.1424"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "-766.5 -730.3 -157.6"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "357.09 311.198 24.7944"
+}
+{
+"ltOrigin" "366 412.71 173.206"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox4"
+"destructible_type" "toy_electricbox4"
+"targetname" "destructible_toy"
+"origin" "366 408 174"
+"model" "me_electricbox4"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"gndLt" "322f2d2b01"
+"ltOrigin" "-488.552 -526.462 -34.6907"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "-483.3 -510.7 -113.9"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "0.88679 337.339 11.8129"
+}
+{
+"gndLt" "3b36326e01"
+"ltOrigin" "-384.361 -492.768 -83.9766"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-381.4 -489.8 -104.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.873 138.677 -13.4726"
+}
+{
+"gndLt" "3d37339c01"
+"ltOrigin" "-360.886 -495.201 -80.9518"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-357.8 -491.1 -100.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "345.518 59.6963 -3.30576"
+}
+{
+"gndLt" "3f3935cf01"
+"ltOrigin" "-33.9393 -316.139 -16.4036"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-33.6 -312.9 -37.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "6.62315 290.028 2.33008"
+}
+{
+"gndLt" "423c36c401"
+"ltOrigin" "-31.3311 -341.452 -20.325"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-31.5 -339 -40.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "353.719 118.318 -3.81326"
+}
+{
+"gndLt" "403933a101"
+"ltOrigin" "-20.9385 -654.439 -36.9201"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-17.6 -658.3 -56"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "341.904 306.269 0.594352"
+}
+{
+"gndLt" "3b35317601"
+"ltOrigin" "-354.991 -891.199 -88.2856"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-349 -892.6 -108.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.74 265.047 12.523"
+}
+{
+"gndLt" "3b36319201"
+"ltOrigin" "184.402 -581.062 9.35662"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "188.3 -584.5 -9.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "345.912 292.891 6.05382"
+}
+{
+"gndLt" "3b3632b901"
+"ltOrigin" "218.138 -589.337 16.0984"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "221.6 -591.9 -3.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "351.6 284.585 4.66758"
+}
+{
+"gndLt" "433a2e0000"
+"ltOrigin" "-1240.04 -1270.39 60.0659"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "-1241.2 -1369.3 -123.9"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "343.472 286.988 -15.4898"
+}
+{
+"gndLt" "3f3832d001"
+"ltOrigin" "874.341 -9.54563 370.188"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_02"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_02"
+"targetname" "animated_model"
+"origin" "809.1 81.4 22"
+"model" "foliage_cod5_tree_jungle_02_animated"
+"classname" "script_model"
+"angles" "359.497 223.75 -9.22613"
+}
+{
+"gndLt" "38332fd501"
+"ltOrigin" "1959.72 1662.28 5.67885"
+"target" "pf2224_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1955.12 1637.65 -0.25217"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "7.51715 349.055 -73.8612"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2224_auto1"
+"classname" "script_brushmodel"
+"origin" "1961 1663 7"
+"model" "*29"
+}
+{
+"gndLt" "443b339601"
+"ltOrigin" "1881.91 1765.64 24.3339"
+"target" "pf2226_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1900.2 1749.04 20.5466"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "283.939 274.753 41.8552"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2226_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1881 1767 25"
+"model" "*30"
+}
+{
+"gndLt" "3c3734c601"
+"ltOrigin" "1797.99 574.595 66.4492"
+"target" "pf2228_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1780.73 592.423 63.1963"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "352.307 222.981 -81.0541"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2228_auto1"
+"classname" "script_brushmodel"
+"origin" "1799 573 67"
+"model" "*31"
+}
+{
+"gndLt" "494138be01"
+"ltOrigin" "1527.23 990.382 53.0598"
+"target" "pf2230_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1553.64 989.867 56.3335"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "6.04978 87.6327 -98.9724"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2230_auto1"
+"classname" "script_brushmodel"
+"origin" "1527 991 52"
+"model" "*32"
+}
+{
+"gndLt" "3c3631d901"
+"ltOrigin" "1543.02 1035.4 51.0147"
+"target" "pf2232_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "1524.45 1018.43 51.2229"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "274.245 125.07 97.656"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2232_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "1544 1037 51"
+"model" "*33"
+}
+{
+"gndLt" "493f36e501"
+"ltOrigin" "1030.14 1607.74 138.004"
+"target" "pf2246_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1024.07 1632.86 140.665"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "354.881 197.093 -97.2712"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2246_auto1"
+"classname" "script_brushmodel"
+"origin" "1032 1607 137"
+"model" "*34"
+}
+{
+"gndLt" "3d3630e601"
+"ltOrigin" "1123.33 1154.14 139.161"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1118.7 1154.5 118.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "358.619 263.115 -10.8571"
+}
+{
+"gndLt" "5044394c01"
+"ltOrigin" "1082.38 1729.92 154.703"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1080.4 1731.4 133.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "4.44912 336.529 0.665834"
+}
+{
+"gndLt" "473d34ea01"
+"ltOrigin" "1146.66 1816.68 158.868"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1142.5 1821.4 139.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "15.2819 303.876 -2.94969"
+}
+{
+"gndLt" "5c4f40c401"
+"ltOrigin" "1490.87 1863.83 97.4582"
+"target" "pf2269_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "1497.9 1844 84.3"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "26.456 183.441 52.7806"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2269_auto1"
+"classname" "script_brushmodel"
+"origin" "1489 1865 99"
+"model" "*35"
+}
+{
+"gndLt" "4a4138ed01"
+"ltOrigin" "1580.66 1806.87 67.1813"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1570.7 1808.7 50"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "328.425 192.531 -11.4831"
+}
+{
+"gndLt" "453a2f5d01"
+"ltOrigin" "1427.58 1940.08 91.5093"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1432.5 1944.8 72.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "347.141 88.1095 -11.071"
+}
+{
+"gndLt" "39332d8401"
+"ltOrigin" "-195.946 85.6119 54.2316"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "-191.4 100.3 16.8"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "358.545 159.258 -22.286"
+}
+{
+"gndLt" "4b40357b01"
+"ltOrigin" "-457.184 166.544 108.989"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "-475.9 162 73.4"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "332.135 205.976 -5.83329"
+}
+{
+"gndLt" "51473c7001"
+"ltOrigin" "-506.208 459.993 138.349"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "-497 465.3 122.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "23.8563 254.019 21.3808"
+}
+{
+"dmg" "9000"
+"classname" "trigger_hurt"
+"origin" "-984 1988 -8136"
+"model" "?12"
+}
+{
+"gndLt" "52473a4b01"
+"ltOrigin" "2404 163.96 246.626"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "2404 177.8 208.6"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "0 0 20"
+}
+{
+"gndLt" "37312b9901"
+"ltOrigin" "2993.18 194.217 178.352"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "2977.1 212.8 146.2"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "332.593 83.5873 26.492"
+}
+{
+"gndLt" "37322eb501"
+"ltOrigin" "3072.32 552.12 91.1152"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3063.9 555.7 74.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "334.822 115.819 17.9776"
+}
+{
+"gndLt" "26272ba401"
+"ltOrigin" "4078 646 272.037"
+"sound_csv_include" "destruct_water_collector"
+"csv_include" "destructible_water_collector"
+"destructible_type" "toy_water_collector"
+"targetname" "destructible_toy"
+"origin" "4078 646 250"
+"model" "utility_water_collector"
+"classname" "script_model"
+"angles" "0 249 0"
+}
+{
+"gndLt" "2b2b2ebf01"
+"ltOrigin" "3282 646 272.037"
+"sound_csv_include" "destruct_water_collector"
+"csv_include" "destructible_water_collector"
+"destructible_type" "toy_water_collector"
+"targetname" "destructible_toy"
+"origin" "3282 646 250"
+"model" "utility_water_collector"
+"classname" "script_model"
+"angles" "0 339 0"
+}
+{
+"gndLt" "3935325501"
+"ltOrigin" "3126.64 837.841 84.7009"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3125.6 837.8 63.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.772 123.651 2.45603"
+}
+{
+"gndLt" "3230308001"
+"ltOrigin" "3584.54 916.464 99.083"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3586.1 917.9 78.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "355.542 356.1 2.53989"
+}
+{
+"gndLt" "343130b401"
+"ltOrigin" "3588.23 609.774 86.0986"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3589.5 609.5 65.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "357.152 43.007 -2.21216"
+}
+{
+"gndLt" "322f30c701"
+"ltOrigin" "3748.15 736.693 95.7625"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3749.2 736 74.9"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.3539 99.8828 -2.91315"
+}
+{
+"gndLt" "322f30bb01"
+"ltOrigin" "3738.95 750.998 95.7627"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3739 751.2 74.8"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.144 109.477 -1.2637"
+}
+{
+"gndLt" "312e2fc201"
+"ltOrigin" "3752.78 766.451 96.4946"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3753.6 767.2 75.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.82876 277.05 1.01554"
+}
+{
+"gndLt" "322f2fb801"
+"ltOrigin" "3716.3 559.071 116.875"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "3718.8 558 76.5"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "359.207 258.675 3.77372"
+}
+{
+"gndLt" "2e2b290000"
+"ltOrigin" "3934.86 1239.92 174.721"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "3941 1242.4 134.8"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "353.336 336.74 6.67193"
+}
+{
+"gndLt" "2c29270000"
+"ltOrigin" "3963.64 1205.87 176.611"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "3967.9 1209.1 136.5"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "354.229 356.436 4.946"
+}
+{
+"gndLt" "36312e0000"
+"ltOrigin" "3933.43 1222.18 152.594"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3937.4 1223.6 132.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.21843 128.535 -11.5772"
+}
+{
+"gndLt" "2f2d2db801"
+"ltOrigin" "3839.67 1077.46 110.822"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3842.9 1081.1 90.6"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "8.16731 267.184 5.69561"
+}
+{
+"gndLt" "373331b001"
+"ltOrigin" "3892.87 1069.24 118.657"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3898.6 1071.9 99.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "349.054 330.325 12.4592"
+}
+{
+"gndLt" "2f2b2b7e01"
+"ltOrigin" "3777.98 1273.35 124.096"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3779.1 1274 103.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "356.168 33.0799 -0.305925"
+}
+{
+"gndLt" "4d443cc501"
+"ltOrigin" "2892.72 1349.81 86.627"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "2886.5 1352.7 67.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "3.86093 262.639 -18.9852"
+}
+{
+"gndLt" "2c26223801"
+"ltOrigin" "3138 1332.01 85.0956"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3138.4 1331.7 64"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 52.1667 0"
+}
+{
+"gndLt" "2322224e01"
+"ltOrigin" "4001.51 1225.41 325.127"
+"csv_include" "animated_models_foliage_cod5_tree_pine05_large"
+"precache_script" "maps animated_models foliage_cod5_tree_pine05_large"
+"targetname" "animated_model"
+"origin" "3988.7 1229.8 140.2"
+"model" "foliage_cod5_tree_pine05_large_animated"
+"classname" "script_model"
+"angles" "0.555032 128.151 -7.84347"
+}
+{
+"gndLt" "2d29270000"
+"ltOrigin" "3635.7 1420.58 120.212"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3640.4 1417.4 100.2"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "2.81317 215.492 15.0349"
+}
+{
+"gndLt" "3532309d01"
+"ltOrigin" "3237.29 1128.58 105.179"
+"csv_include" "animated_models_foliage_pacific_bushtree01_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree01_halfsize"
+"targetname" "animated_model"
+"origin" "3239.1 1123.3 65.1"
+"model" "foliage_pacific_bushtree01_halfsize_animated"
+"classname" "script_model"
+"angles" "357.648 216.106 7.57597"
+}
+{
+"gndLt" "353231c801"
+"ltOrigin" "3235.31 1088.38 88.2294"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3235.9 1086.8 67.4"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "1.99652 43.4388 -3.34355"
+}
+{
+"gndLt" "343130cf01"
+"ltOrigin" "3286.69 1109.16 88.481"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "3287.3 1108.3 67.3"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0.737466 167.485 0.860775"
+}
+{
+"gndLt" "3d38337a01"
+"ltOrigin" "954.018 -193.917 74.2251"
+"csv_include" "destructible_vehicle_hummer_destructible"
+"destructible_type" "vehicle_hummer"
+"targetname" "destructible_vehicle"
+"origin" "960.6 -197.1 -2.3"
+"model" "vehicle_hummer_destructible"
+"classname" "script_model"
+"angles" "359.913 355.001 -0.9962"
+}
+{
+"script_gameobjectname" "ctf"
+"target" "ctf_flag_allies"
+"targetname" "ctf_trig_allies"
+"origin" "-511.581 1203.65 204.064"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "359.98 300.441 -3.8335"
+}
+{
+"gndLt" "2a28298d01"
+"ltOrigin" "-490.795 1182.23 237.487"
+"spawnflags" "4"
+"script_gameobjectname" "ctf"
+"origin" "-512.5 1203.1 188.1"
+"targetname" "ctf_flag_allies"
+"model" "prop_flag_neutral"
+"classname" "script_model"
+"angles" "359.98 300.441 -3.8335"
+}
+{
+"script_gameobjectname" "ctf"
+"targetname" "ctf_zone_allies"
+"origin" "-511.581 1203.65 204.064"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "359.98 300.441 -3.8335"
+}
+{
+"script_gameobjectname" "ctf"
+"target" "ctf_flag_axis"
+"targetname" "ctf_trig_axis"
+"origin" "3452.84 1622.53 64.8069"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "355.882 240.711 4.61684"
+}
+{
+"gndLt" "363230cf01"
+"ltOrigin" "3438.17 1603.94 98.0984"
+"spawnflags" "4"
+"script_gameobjectname" "ctf"
+"origin" "3453.4 1620.9 48.9"
+"targetname" "ctf_flag_axis"
+"model" "prop_flag_neutral"
+"classname" "script_model"
+"angles" "355.882 240.711 4.61684"
+}
+{
+"script_gameobjectname" "ctf"
+"targetname" "ctf_zone_axis"
+"origin" "3452.84 1622.53 64.8069"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "355.882 240.711 4.61684"
+}
+{
+"origin" "4031.1 2612.2 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "4034.8 2554.6 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "4041.4 2486.1 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "4012.4 2419.8 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "4117.1 2447.3 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "3946.8 2418.2 92"
+"angles" "0 165 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "3955.1 2480.5 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "3941.5 2553 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "3930.9 2614.6 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "4122.5 2515.8 92"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "-480 -792 -113.4"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-448 -840 -112.6"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-520 -736 -114.6"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-528 -664 -110.8"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-552 -608 -110.1"
+"angles" "0 15 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-480 -616 -101.7"
+"angles" "0 15 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-448 -688 -102.5"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-400 -744 -100.3"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-372 -684 -98.5"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-408 -608 -100.8"
+"angles" "0 30 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "8 -472 -20"
+"angles" "0 25 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "392 374 32"
+"angles" "0 271 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "-856 1710 220"
+"angles" "0 317 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "454 1120 172"
+"angles" "0 89 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "688 1820 160"
+"angles" "0 270 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "1752 -272 136"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "1058 -342 2"
+"angles" "0 108 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "-192 2584 -40"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_allies"
+}
+{
+"origin" "1320 2856 280"
+"angles" "0 60 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "2056 2872 316"
+"angles" "0 105 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "2832 3728 156.6"
+"angles" "0 270 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "3380 -220 184"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "4030 1138 162"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "3786 1782 114"
+"angles" "0 195 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "2016 1872 4"
+"angles" "0 270 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "4048 2888 144"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "3918 154 186"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"script_label" "_c"
+"model" "prop_flag_neutral"
+"script_gameobjectname" "dom onslaught"
+"origin" "1338.4 3233 261.4"
+"targetname" "flag_primary"
+"height" "128"
+"radius" "160"
+"classname" "trigger_radius"
+"angles" "359.928 269.546 -0.895893"
+}
+{
+"origin" "2392 512 68"
+"angles" "0 90 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "2392 512 84"
+"angles" "0 90 0"
+"classname" "mp_dm_spawn"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto624"
+"origin" "810.7 1441.8 128"
+"angles" "0 350 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto624"
+"origin" "1693.3 1286.2 696"
+"angles" "0 170 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto625"
+"origin" "-179.2 1520 128"
+"angles" "0 195 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto625"
+"origin" "-1044.8 1288 696"
+"angles" "0 15 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto626"
+"origin" "769 -210.7 128"
+"angles" "0 200 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto626"
+"origin" "-73 -517.3 696"
+"angles" "0 20 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto627"
+"origin" "3048 -56 128"
+"angles" "0 60 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto627"
+"origin" "3496 720 696"
+"angles" "0 240 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto628"
+"origin" "1824 124 168"
+"angles" "0 90 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto628"
+"origin" "1824 1020 736"
+"angles" "0 270 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto629"
+"origin" "-582.7 462 168"
+"angles" "0 115 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto629"
+"origin" "-961.3 1274 736"
+"angles" "0 295 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto630"
+"origin" "-1016 1268 168"
+"angles" "0 180 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto630"
+"origin" "-1912 1268 736"
+"angles" "0 1.00179e-005 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto631"
+"origin" "-458.8 2194.2 168"
+"angles" "0 170 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto631"
+"origin" "-1341.2 2349.8 736"
+"angles" "0 350 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto632"
+"origin" "83.2 2712 168"
+"angles" "0 140 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto632"
+"origin" "-843.2 3416 736"
+"angles" "0 320 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto633"
+"origin" "660 3180 268"
+"angles" "0 120 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto633"
+"origin" "212 3956 836"
+"angles" "0 300 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto634"
+"origin" "1640 3376 268"
+"angles" "0 120 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto634"
+"origin" "1000 4812 1004"
+"angles" "0 300 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto635"
+"origin" "2858.8 3461 268"
+"angles" "0 290 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto635"
+"origin" "3165.2 2619 836"
+"angles" "0 110 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto636"
+"origin" "3368 828 128"
+"angles" "0 1.00179e-005 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto636"
+"origin" "4264 828 696"
+"angles" "0 180 0"
+}
+{
+"classname" "script_origin"
+"targetname" "heli_attack_area"
+"target" "auto637"
+"origin" "3483 1626.3 128"
+"angles" "0 265 0"
+}
+{
+"classname" "script_origin"
+"targetname" "auto637"
+"origin" "3405 733.7 696"
+"angles" "0 85 0"
+}
+{
+"script_linkto" "flag3"
+"origin" "2052 4348 288"
+"angles" "0 250 0"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag3"
+"origin" "12 3204 116"
+"angles" "0 1.00179e-005 0"
+"classname" "mp_dom_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "3656 824 152"
+"targetname" "remoteMissileTarget"
+"classname" "script_origin"
+}
+{
+"angles" "0 90 0"
+"script_targetoffset_z" "10000"
+"origin" "7048 792 4616"
+"target" "remoteMissileTarget"
+"targetname" "remoteMissileSpawn"
+"classname" "script_origin"
+}
+{
+"origin" "4031.1 2604.2 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "4034.8 2546.6 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "4041.4 2478.1 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "4012.4 2411.8 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "4117.1 2439.3 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "3946.8 2410.2 92"
+"angles" "0 165 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "3955.1 2472.5 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "3941.5 2545 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "3930.9 2606.6 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "4122.5 2507.8 92"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "-472 -800 -113.4"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-440 -848 -112.6"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-512 -744 -114.6"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-520 -672 -110.8"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-544 -616 -110.1"
+"angles" "0 15 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-472 -624 -101.7"
+"angles" "0 15 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-440 -696 -102.5"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-392 -752 -100.3"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-364 -692 -98.5"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-400 -616 -100.8"
+"angles" "0 30 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "8 -472 -20"
+"angles" "0 25 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "392 374 32"
+"angles" "0 271 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "-856 1710 220"
+"angles" "0 317 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "454 1120 172"
+"angles" "0 89 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "688 1820 160"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "1752 -272 136"
+"angles" "0 90 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "1058 -342 2"
+"angles" "0 108 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "-192 2584 -40"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "2832 3728 156.6"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "3380 -220 184"
+"angles" "0 90 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "4030 1138 162"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "3786 1782 114"
+"angles" "0 195 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "2016 1872 4"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "4048 2888 144"
+"angles" "0 180 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "3918 154 186"
+"angles" "0 90 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"gndLt" "2b2826e601"
+"ltOrigin" "1935.07 1137.09 102.101"
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"origin" "1934.7 1138.1 99.2"
+"targetname" "sab_bomb"
+"model" "mil_tntbomb_mp"
+"classname" "script_model"
+"angles" "12.8357 249.087 -14.4548"
+}
+{
+"script_gameobjectname" "sab"
+"targetname" "sab_bomb_pickup_trig"
+"classname" "trigger_multiple"
+"origin" "1935 1138 99"
+"model" "?13"
+}
+{
+"classname" "trigger_use_touch"
+"targetname" "sab_bomb_allies"
+"script_gameobjectname" "sab"
+"target" "pf2454_auto1"
+"origin" "-520 1186 196"
+"model" "?14"
+}
+{
+"targetname" "sab_bomb_defuse_allies"
+"script_gameobjectname" "sab"
+"classname" "trigger_use_touch"
+"origin" "-520 1186 196"
+"model" "?15"
+}
+{
+"script_gameobjectname" "sab"
+"classname" "script_brushmodel"
+"origin" "-522 1186 216"
+"model" "*36"
+}
+{
+"gndLt" "2927288401"
+"ltOrigin" "-521.624 1186.16 215.687"
+"targetname" "pf2454_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"script_exploder" "pf2454_1"
+"origin" "-523.135 1186.13 186.053"
+"angles" "1.00437 0.0166068 1.02115"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"gndLt" "2927288301"
+"ltOrigin" "-525.596 1182.71 204.958"
+"script_gameobjectname" "sab"
+"script_exploder" "pf2454_1"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "-520.1 1186.1 188"
+"angles" "358.996 180.017 -1.02115"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"classname" "trigger_use_touch"
+"targetname" "sab_bomb_axis"
+"script_gameobjectname" "sab"
+"target" "pf2455_auto1"
+"origin" "3459 1624 57"
+"model" "?16"
+}
+{
+"targetname" "sab_bomb_defuse_axis"
+"script_gameobjectname" "sab"
+"classname" "trigger_use_touch"
+"origin" "3459 1624 57"
+"model" "?17"
+}
+{
+"gndLt" "3a3532d001"
+"ltOrigin" "3458.91 1625.49 75.1901"
+"targetname" "pf2455_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"script_exploder" "pf2455_2"
+"origin" "3458.96 1626.38 46.5056"
+"angles" "354.145 270.225 1.99341"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"gndLt" "373330ce01"
+"ltOrigin" "3455.52 1629.46 62.8156"
+"script_gameobjectname" "sab"
+"script_exploder" "pf2455_2"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "3458.9 1623.6 48.8"
+"angles" "5.85485 90.225 -1.99342"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "sab"
+"classname" "script_brushmodel"
+"origin" "3458 1628 76"
+"model" "*37"
+}
+{
+"origin" "4139.1 2624.2 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4142.8 2566.6 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4149.4 2498.1 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4120.4 2431.8 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4113.1 2371.3 84"
+"angles" "0 165 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4054.8 2414.2 84"
+"angles" "0 165 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4063.1 2492.5 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4049.5 2565 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4038.9 2626.6 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "4046.5 2335.8 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker_start"
+}
+{
+"origin" "-325.6 -675.4 21"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-293.6 -723.4 37.6"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-365.6 -619.4 -4"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-373.6 -547.4 -12.3"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-215 -564.8 -12.6"
+"angles" "0 25 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-403.1 -680.1 -7.5"
+"angles" "0 25 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-293.6 -571.4 3.6"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-245.6 -627.4 25.8"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-205.6 -675.4 32"
+"angles" "0 30 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"origin" "-280.8 -502.8 -7.8"
+"angles" "0 25 0"
+"classname" "mp_dd_spawn_defender_start"
+}
+{
+"classname" "mp_dd_spawn_defender"
+"angles" "0 25 0"
+"origin" "9 -468.8 -4.6"
+}
+{
+"origin" "1065 -340.8 11.4"
+"angles" "0 85 0"
+"classname" "mp_dd_spawn_defender"
+}
+{
+"origin" "-855 1707.2 227.4"
+"angles" "0 325 0"
+"classname" "mp_dd_spawn_defender"
+}
+{
+"angles" "0 1.00179e-005 0"
+"origin" "16 3208 120"
+"classname" "mp_dd_spawn_defender"
+}
+{
+"angles" "0 330 0"
+"origin" "1000 3840 264"
+"classname" "mp_dd_spawn_defender"
+}
+{
+"origin" "3782.5 1783.8 116"
+"angles" "0 195 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"origin" "3942.5 2511.8 84"
+"angles" "0 180 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"origin" "3542.5 -160.2 204"
+"angles" "0 150 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"origin" "3982.5 663.8 108"
+"angles" "0 165 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"origin" "3502.5 3623.8 156"
+"angles" "0 210 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"origin" "2054.5 4351.8 284"
+"angles" "0 270 0"
+"classname" "mp_dd_spawn_attacker"
+}
+{
+"gndLt" "37312c8a01"
+"ltOrigin" "2512.6 3239.54 455.608"
+"csv_include" "animated_models_foliage_cod5_tree_jungle_01"
+"precache_script" "maps animated_models foliage_cod5_tree_jungle_01"
+"targetname" "animated_model"
+"origin" "2473.2 3204 183.9"
+"model" "foliage_cod5_tree_jungle_01_animated"
+"classname" "script_model"
+"angles" "358.445 282.46 -11.5875"
+}
+{
+"gndLt" "2b29260000"
+"ltOrigin" "1699.87 48.1351 150.889"
+"spawnflags" "4"
+"targetname" "pf2509_auto1"
+"script_gameobjectname" "hq"
+"origin" "1700 48 136"
+"angles" "0 44.5 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "2b29260000"
+"ltOrigin" "1704.98 48.6385 173.453"
+"spawnflags" "4"
+"target" "pf2509_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "1705.66 47.9506 166"
+"angles" "0 314.5 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "1715.96 55.2589 166.578"
+"spawnflags" "4"
+"targetname" "pf2509_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "0 84.5 -89.9997"
+"origin" "1719.44 54.9017 166"
+}
+{
+"targetname" "pf2509_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1700 48 152"
+"model" "*38"
+}
+{
+"targetname" "pf2509_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1700 53 175"
+"model" "*39"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "1766 -74 180"
+"model" "?18"
+}
+{
+"gndLt" "302d290000"
+"ltOrigin" "2772.89 911.84 214.889"
+"spawnflags" "4"
+"targetname" "pf2510_auto1"
+"script_gameobjectname" "hq"
+"origin" "2772.7 911.8 200"
+"angles" "0 284.5 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "2f2d290000"
+"ltOrigin" "2770.7 907.167 237.453"
+"spawnflags" "4"
+"target" "pf2510_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "2769.83 906.926 230"
+"angles" "0 194.5 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "2771.06 894.019 230.578"
+"spawnflags" "4"
+"targetname" "pf2510_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "0 324.5 -89.9997"
+"origin" "2768.96 891.517 230"
+}
+{
+"targetname" "pf2510_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "2773 912 216"
+"model" "*40"
+}
+{
+"targetname" "pf2510_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "2777 909 239"
+"model" "*41"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "2708 868 244"
+"model" "?19"
+}
+{
+"gndLt" "3b3832d501"
+"ltOrigin" "1860.49 3432.15 260.883"
+"spawnflags" "4"
+"targetname" "pf2511_auto1"
+"script_gameobjectname" "hq"
+"origin" "1860.6 3429.9 245.8"
+"angles" "3.23974 33.7952 -4.87004"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "3b3832da01"
+"ltOrigin" "1865.6 3433.39 282.439"
+"spawnflags" "4"
+"target" "pf2511_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "1866.14 3431.88 275.757"
+"angles" "355.138 304.071 -3.25145"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "1877.74 3437.19 275.804"
+"spawnflags" "4"
+"targetname" "pf2511_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "5.61106 73.8523 -91.6467"
+"origin" "1880.96 3436.16 275.325"
+}
+{
+"targetname" "pf2511_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1860 3431 262"
+"model" "*42"
+}
+{
+"targetname" "pf2511_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1862 3439 284"
+"model" "*43"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "1836 3258 296"
+"model" "?20"
+}
+{
+"gndLt" "1818170000"
+"ltOrigin" "642.271 1272.84 170.225"
+"spawnflags" "4"
+"targetname" "pf2512_auto1"
+"script_gameobjectname" "hq"
+"origin" "642.2 1273.4 155.3"
+"angles" "0.43111 207.943 -0.726689"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "1c1b190002"
+"ltOrigin" "637.217 1273.7 192.644"
+"spawnflags" "4"
+"target" "pf2512_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "636.771 1274.62 185.317"
+"angles" "359.273 117.948 -0.431145"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "624.605 1270.51 185.828"
+"spawnflags" "4"
+"targetname" "pf2512_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "0.797353 247.944 -90.2793"
+"origin" "621.582 1271.88 185.266"
+}
+{
+"targetname" "pf2512_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "643 1273 171"
+"model" "*44"
+}
+{
+"targetname" "pf2512_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "640 1268 194"
+"model" "*45"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "368 1440 240"
+"model" "?21"
+}
+{
+"gndLt" "423b35e101"
+"ltOrigin" "247.156 -152.408 13.8161"
+"spawnflags" "4"
+"targetname" "pf2513_auto1"
+"script_gameobjectname" "hq"
+"origin" "247.1 -151.3 -1.2"
+"angles" "357.839 67.3604 1.44581"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "413b35de01"
+"ltOrigin" "251.818 -150.462 36.1956"
+"spawnflags" "4"
+"target" "pf2513_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "252.594 -150.482 28.8191"
+"angles" "1.44478 337.415 2.16169"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "259.172 -139.699 29.8165"
+"spawnflags" "4"
+"targetname" "pf2513_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "357.415 107.394 -90.2821"
+"origin" "262.587 -138.729 29.2549"
+}
+{
+"targetname" "pf2513_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "247 -152 15"
+"model" "*46"
+}
+{
+"targetname" "pf2513_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "246 -148 37"
+"model" "*47"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "336 -240 36"
+"model" "?22"
+}
+{
+"gndLt" "323030df01"
+"ltOrigin" "4411.69 604.669 94.7824"
+"spawnflags" "4"
+"targetname" "pf2514_auto1"
+"script_gameobjectname" "hq"
+"origin" "4410.6 604.1 79.8"
+"angles" "358.819 273.922 -2.054"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "313030df01"
+"ltOrigin" "4409.08 600.762 117.094"
+"spawnflags" "4"
+"target" "pf2514_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "4407.92 600.53 110"
+"angles" "357.946 183.88 1.18177"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "4406.83 587.697 110.892"
+"spawnflags" "4"
+"targetname" "pf2514_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "0.415083 313.892 -92.3323"
+"origin" "4404.23 585.549 110.472"
+}
+{
+"targetname" "pf2514_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "4411 605 96"
+"model" "*48"
+}
+{
+"targetname" "pf2514_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "4416 601 118"
+"model" "*49"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "4076 648 124"
+"model" "?23"
+}
+{
+"gndLt" "2423240000"
+"ltOrigin" "-357.631 2795.52 -7.11142"
+"spawnflags" "4"
+"targetname" "pf2515_auto1"
+"script_gameobjectname" "hq"
+"origin" "-357.8 2795.6 -22"
+"angles" "0 243.795 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"gndLt" "2523250000"
+"ltOrigin" "-362.328 2793.35 15.453"
+"spawnflags" "4"
+"target" "pf2515_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "-363.155 2793.78 8"
+"angles" "0 153.795 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"ltOrigin" "-370.387 2783.43 8.57839"
+"spawnflags" "4"
+"targetname" "pf2515_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "0 283.795 -89.9997"
+"origin" "-373.863 2782.66 8"
+}
+{
+"targetname" "pf2515_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-358 2796 -6"
+"model" "*50"
+}
+{
+"targetname" "pf2515_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-356 2790 17"
+"model" "*51"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "-380 2736 24"
+"model" "?24"
+}
+{
+"gndLt" "302c289801"
+"ltOrigin" "3253 178.9 171.126"
+"target" "pf2520_auto1"
+"sound_csv_include" "destruct_oxygen_tank"
+"classname" "script_model"
+"model" "machinery_oxygen_tank02"
+"origin" "3253 178.9 144"
+"targetname" "destructible_toy"
+"destructible_type" "toy_oxygen_tank_02"
+"csv_include" "destructible_oxygen_tank"
+"angles" "0 36.6284 0"
+}
+{
+"spawnflags" "1"
+"targetname" "pf2520_auto1"
+"script_destruct_collision" "pre"
+"classname" "script_brushmodel"
+"origin" "3253 179 171"
+"model" "*52"
+}
+{
+"gndLt" "2b28268501"
+"ltOrigin" "3267.8 186.7 171.126"
+"target" "pf2521_auto1"
+"csv_include" "destructible_oxygen_tank"
+"destructible_type" "toy_oxygen_tank_01"
+"targetname" "destructible_toy"
+"origin" "3267.8 186.7 144"
+"model" "machinery_oxygen_tank01"
+"classname" "script_model"
+"sound_csv_include" "destruct_oxygen_tank"
+"angles" "0 145.382 0"
+}
+{
+"script_destruct_collision" "pre"
+"spawnflags" "1"
+"targetname" "pf2521_auto1"
+"classname" "script_brushmodel"
+"origin" "3268 187 171"
+"model" "*53"
+}
+{
+"targetname" "nuke"
+"origin" "1278.1 1343.2 80.8"
+"classname" "script_origin"
+}
+{
+"gndLt" "302f31ab01"
+"ltOrigin" "4865.64 125.322 183.363"
+"csv_include" "animated_models_foliage_pacific_bushtree02_halfsize"
+"precache_script" "maps animated_models foliage_pacific_bushtree02_halfsize"
+"targetname" "animated_model"
+"origin" "4868.8 119.8 143.4"
+"model" "foliage_pacific_bushtree02_halfsize_animated"
+"classname" "script_model"
+"angles" "4.62069 60.2989 -7.7875"
+}
+{
+"gndLt" "2e2e2fc501"
+"ltOrigin" "4843 76.3147 227.784"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "4836 73.6 147.2"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "4.77997 355.001 -2.34714"
+}
+{
+"gndLt" "2e2c2eb901"
+"ltOrigin" "4687.75 737.087 113.858"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "4690.5 737.7 93"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "5.18077 169.169 -3.18476"
+}
+{
+"target" "auto638"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto645"
+"origin" "296 -449 1746"
+"_color" ".5 1 1"
+"angles" "0 65 0"
+"classname" "script_origin"
+"script_delay" "2"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 170 0"
+"_color" ".5 1 1"
+"origin" "-734.5 3111 415"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto481"
+"target" "auto639"
+}
+{
+"classname" "script_origin"
+"angles" "0 255 0"
+"_color" ".5 1 1"
+"origin" "1655 4791 857"
+"script_accel" "20"
+"script_airspeed" "30"
+"targetname" "auto641"
+"target" "auto640"
+}
+{
+"classname" "script_origin"
+"angles" "0 205 0"
+"_color" ".5 1 1"
+"origin" "3150.5 3568.5 1476.5"
+"script_accel" "20"
+"script_airspeed" "30"
+"targetname" "auto642"
+"target" "auto641"
+}
+{
+"classname" "script_origin"
+"angles" "0 180 0"
+"_color" ".5 1 1"
+"origin" "4034.3 2525.3 1642.3"
+"script_accel" "20"
+"script_airspeed" "30"
+"targetname" "auto484"
+"target" "auto642"
+}
+{
+"target" "auto643"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto638"
+"origin" "-980 168.5 1410"
+"_color" ".5 1 1"
+"angles" "0 65 0"
+"classname" "script_origin"
+"script_delay" "2"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 125 0"
+"_color" ".5 1 1"
+"origin" "3460 -50.5 1602"
+"targetname" "auto478"
+"script_accel" "15"
+"script_airspeed" "40"
+"target" "auto644"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 105 0"
+"_color" ".5 1 1"
+"origin" "2006 -465.8 1986"
+"targetname" "auto644"
+"script_accel" "15"
+"script_airspeed" "40"
+"target" "auto645"
+}
+{
+"script_delay" "2"
+"classname" "script_origin"
+"angles" "0 1.00179e-005 0"
+"_color" ".5 1 1"
+"origin" "-2281.8 1424.5 421.5"
+"script_accel" "20"
+"script_airspeed" "40"
+"targetname" "auto639"
+"target" "auto646"
+}
+{
+"gndLt" "3b36336901"
+"ltOrigin" "5172.94 2333.8 47.085"
+"csv_include" "animated_models_foliage_pacific_bushtree02"
+"precache_script" "maps animated_models foliage_pacific_bushtree02"
+"targetname" "animated_model"
+"origin" "5182.6 2318.5 -31.8"
+"model" "foliage_pacific_bushtree02_animated"
+"classname" "script_model"
+"angles" "357.153 19.7425 -12.6041"
+}
+{
+"angles" "0 300 0"
+"script_targetoffset_z" "10000"
+"origin" "-2332.8 -1882.1 4584"
+"target" "remoteMissileTarget1"
+"targetname" "remoteMissileSpawn"
+"classname" "script_origin"
+}
+{
+"angles" "0 270 0"
+"origin" "-696 1288 264"
+"targetname" "remoteMissileTarget2"
+"classname" "script_origin"
+}
+{
+"angles" "0 270 0"
+"script_targetoffset_z" "10000"
+"origin" "-4088 1320 4728"
+"target" "remoteMissileTarget2"
+"targetname" "remoteMissileSpawn"
+"classname" "script_origin"
+}
+{
+"angles" "0 180 0"
+"origin" "1752 3192 280"
+"targetname" "remoteMissileTarget3"
+"classname" "script_origin"
+}
+{
+"angles" "0 180 0"
+"script_targetoffset_z" "10000"
+"origin" "1784 6584 4744"
+"target" "remoteMissileTarget3"
+"targetname" "remoteMissileSpawn"
+"classname" "script_origin"
+}
+{
+"angles" "0 90 0"
+"origin" "1256 1432 168"
+"targetname" "remoteMissileTarget4"
+"classname" "script_origin"
+}
+{
+"angles" "0 90 0"
+"script_targetoffset_z" "10000"
+"origin" "4408 104 1608"
+"target" "remoteMissileTarget4"
+"targetname" "remoteMissileSpawn"
+"classname" "script_origin"
+}
+{
+"gndLt" "2f2e2b0001"
+"ltOrigin" "2648 748.23 259"
+"origin" "2648 744 259"
+"sound_csv_include" "destruct_spark_box"
+"csv_include" "destructible_electricalbox2"
+"destructible_type" "toy_electricbox2"
+"targetname" "destructible_toy"
+"model" "me_electricbox2"
+"classname" "script_model"
+"angles" "0 180 0"
+}
+{
+"script_gameobjectname" "airdrop_pallet"
+"targetname" "pf2562_auto1"
+"classname" "script_brushmodel"
+"origin" "-4440 5232 2903"
+"model" "*54"
+}
+{
+"ltOrigin" "-4440 5232.19 2902.89"
+"target" "pf2562_auto1"
+"targetname" "care_package"
+"origin" "-4440 5232 2888"
+"classname" "script_model"
+"model" "com_plasticcase_green_big_us_dirt"
+}
+{
+"script_linkto" "flag2"
+"origin" "2564 156 144"
+"angles" "0 270 0"
+"classname" "mp_dom_spawn"
+}
+{
+"classname" "script_origin"
+"targetname" "airstrikeheight"
+"origin" "1875.7 1261.8 1456.6"
+}
+{
+"script_gameobjectname" "gtnw"
+"targetname" "gtnw_zone"
+"origin" "1724.5 791.9 47.5"
+"height" "128"
+"radius" "80"
+"classname" "trigger_radius"
+"angles" "2.4006 248.966 1.99984"
+}
+{
+"script_gameobjectname" "gtnw"
+"classname" "script_brushmodel"
+"origin" "1724 790 75"
+"model" "*55"
+}
+{
+"gndLt" "2b27235801"
+"ltOrigin" "1724.84 791.491 74.7771"
+"spawnflags" "4"
+"classname" "script_model"
+"model" "com_bomb_objective"
+"angles" "1.99808 158.882 -2.40206"
+"origin" "1726.45 791.23 45.6726"
+"script_exploder" "pf2584_1"
+"script_gameobjectname" "gtnw"
+}
+{
+"origin" "2564 156 152"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"angles" "0 283 0"
+"classname" "script_origin"
+"targetname" "heli_crash_start"
+"origin" "1847.8 1321.8 1464"
+"target" "auto647"
+}
+{
+"angles" "0 286.9 0"
+"script_accel" "30"
+"script_airspeed" "50"
+"target" "auto649"
+"origin" "3040.4 -2059.6 1298"
+"targetname" "auto650"
+"classname" "script_origin"
+}
+{
+"angles" "0 283 0"
+"classname" "script_origin"
+"targetname" "auto651"
+"origin" "1917.2 -152.4 1404"
+"target" "auto650"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 286.9 0"
+"classname" "script_origin"
+"origin" "3852.4 -3962.9 -161.1"
+"targetname" "auto649"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 283 0"
+"classname" "script_origin"
+"targetname" "auto647"
+"origin" "1854.2 1294.5 1464"
+"target" "auto651"
+"script_airspeed" "40"
+"script_accel" "20"
+}
+{
+"angles" "0 163 0"
+"classname" "script_origin"
+"targetname" "heli_crash_start"
+"origin" "1874.5 1184.6 1464"
+"target" "auto652"
+}
+{
+"angles" "0 166.9 0"
+"script_accel" "30"
+"script_airspeed" "50"
+"target" "auto654"
+"origin" "-1650.1 1394.5 618"
+"targetname" "auto655"
+"classname" "script_origin"
+}
+{
+"angles" "0 163 0"
+"classname" "script_origin"
+"targetname" "auto656"
+"origin" "-236.9 1765.6 1404"
+"target" "auto655"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 166.9 0"
+"classname" "script_origin"
+"origin" "-3063.2 1229.5 -860"
+"targetname" "auto654"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"angles" "0 163 0"
+"classname" "script_origin"
+"targetname" "auto652"
+"origin" "1847.7 1192.7 1464"
+"target" "auto656"
+"script_airspeed" "40"
+"script_accel" "20"
+}

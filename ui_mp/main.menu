@@ -1,0 +1,23 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "main"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fullscreen 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		soundLoop "music_mainmenu_mp"
+		onOpen
+		{
+			open "main_text";
+			setdvar "ui_showEndOfGame" 0;
+		}
+	}
+}

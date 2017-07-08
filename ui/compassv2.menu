@@ -1,0 +1,106 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "compassv2"
+		rect 2 -16 640 480 4 4
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && ( dvarbool( "compass" ) == 1 ) && ( dvarbool( "compassHideSansObjectivePointer" ) == 0 ) )
+		itemDef
+		{
+			name "weaponbar_circle"
+			rect -86 -74.6667 88 56 10 10
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_weaponbar_circle"
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			name "Shadow_Pass1"
+			rect -107 -94 130 130 10 10
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_compass_alpha"
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+		}
+		itemDef
+		{
+			name "Shadow_Pass2"
+			rect -107 -94 130 130 10 10
+			decoration
+			visible 1
+			ownerdraw 166
+			forecolor 1 1 1 1
+			background "hud_compass_letters_shadow_step2"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) - 0.25 )
+		}
+		itemDef
+		{
+			name "Shadow_Pass3"
+			rect -107 -94 130 130 10 10
+			decoration
+			visible 1
+			ownerdraw 166
+			forecolor 1 1 1 1
+			background "hud_compass_letters_shadow_step3"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+		}
+		itemDef
+		{
+			name "Pass1"
+			rect -108 -95 130 130 10 10
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_compass_alpha"
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+		}
+		itemDef
+		{
+			name "Pass2"
+			rect -108 -95 130 130 10 10
+			decoration
+			visible 1
+			ownerdraw 166
+			forecolor 1 1 1 1
+			background "hud_compass_letters_step2"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+		}
+		itemDef
+		{
+			name "Pass3"
+			rect -108 -95 130 130 10 10
+			decoration
+			visible 1
+			ownerdraw 166
+			forecolor 1 1 1 1
+			background "hud_compass_letters_step3"
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "compass" ) )
+		}
+	}
+}

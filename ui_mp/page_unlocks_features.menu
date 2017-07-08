@@ -1,0 +1,1013 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "page_unlocks_features"
+		rect -272 50 544 337 2 1
+		popup
+		outOfBoundsClick
+		style 1
+		forecolor 1 1 1 1
+		backcolor 1 1 1 1
+		background "white"
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		allowedBinding "+talk"
+		execKey 1
+		{
+			close self;
+		}
+		onOpen
+		{
+			setLocalVarInt "ui_centerPopup" ( 1 );
+			if ( localvarint( "ui_autoopened" ) )
+			{
+				play "new_feature_unlocks";
+			}
+			setLocalVarInt "ui_leftArrow" ( 0 );
+			setLocalVarInt "ui_rightArrow" ( 0 );
+			setLocalVarString "ui_navbutton_a" ( "@PLATFORM_BACK_CAPS" );
+			setLocalVarInt "ui_startFeature" ( 0 );
+			setLocalVarInt "ui_startChallenge" ( unlockeditemcount( "feature" ) );
+			if ( unlockeditem( "feature" , 0 ) == "challenges" || unlockeditem( "feature" , 1 ) == "challenges" || unlockeditem( "feature" , 2 ) == "challenges" || unlockeditem( "feature" , 3 ) == "challenges" || unlockeditem( "feature" , 4 ) == "challenges" || unlockeditem( "feature" , 5 ) == "challenges" || unlockeditem( "feature" , 6 ) == "challenges" || unlockeditem( "feature" , 7 ) == "challenges" )
+			{
+				setLocalVarBool "ui_showingChallengeFeature" ( 1 );
+			}
+		}
+		onRequestClose
+		{
+			setLocalVarInt "ui_centerPopup" ( 0 );
+			if ( "page_unlocks_features" == "page_unlocks_titles" )
+			{
+				if ( ( unlockeditemcount( "icon" ) ) )
+				{
+					open "page_unlocks_emblems";
+				}
+				else
+				{
+					if ( ( unlockeditemcount( "perk" ) ) )
+					{
+						open "page_unlocks_perks";
+					}
+					else
+					{
+						if ( ( unlockeditemcount( "weapon" ) || unlockeditemcount( "attachment" ) || unlockeditemcount( "camo" ) ) )
+						{
+							open "page_unlocks_weapons";
+						}
+						else
+						{
+							if ( ( unlockeditemcount( "feature" ) || unlockeditemcount( "challenge" ) ) )
+							{
+								open "page_unlocks_features";
+							}
+							else
+							{
+								open "page_summary";
+							}
+						}
+					}
+				}
+			}
+			if ( "page_unlocks_features" == "page_unlocks_emblems" )
+			{
+				if ( ( unlockeditemcount( "perk" ) ) )
+				{
+					open "page_unlocks_perks";
+				}
+				else
+				{
+					if ( ( unlockeditemcount( "weapon" ) || unlockeditemcount( "attachment" ) || unlockeditemcount( "camo" ) ) )
+					{
+						open "page_unlocks_weapons";
+					}
+					else
+					{
+						if ( ( unlockeditemcount( "feature" ) || unlockeditemcount( "challenge" ) ) )
+						{
+							open "page_unlocks_features";
+						}
+						else
+						{
+							open "page_summary";
+						}
+					}
+				}
+			}
+			if ( "page_unlocks_features" == "page_unlocks_perks" )
+			{
+				if ( ( unlockeditemcount( "weapon" ) || unlockeditemcount( "attachment" ) || unlockeditemcount( "camo" ) ) )
+				{
+					open "page_unlocks_weapons";
+				}
+				else
+				{
+					if ( ( unlockeditemcount( "feature" ) || unlockeditemcount( "challenge" ) ) )
+					{
+						open "page_unlocks_features";
+					}
+					else
+					{
+						open "page_summary";
+					}
+				}
+			}
+			if ( "page_unlocks_features" == "page_unlocks_weapons" )
+			{
+				if ( ( unlockeditemcount( "feature" ) || unlockeditemcount( "challenge" ) ) )
+				{
+					open "page_unlocks_features";
+				}
+				else
+				{
+					open "page_summary";
+				}
+			}
+			if ( "page_unlocks_features" == "page_unlocks_features" )
+			{
+				open "page_summary";
+			}
+			play "mouse_over";
+		}
+		onEsc
+		{
+			close self;
+			close self;
+		}
+		itemDef
+		{
+			rect -1126 -430 3416 1920 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.66
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -1126 -430 3416 1920 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 1
+			background "xpbar_stencilbase"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -272 50 544 337 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.5 0.5 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -272 50 1708 480 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.4
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( 0 - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -272 50 -1708 -480 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( 0 - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -272 50 544 0 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mockup_popup_bg_stencilfill"
+			textscale 0.55
+			exp rect h ( 337 )
+		}
+		itemDef
+		{
+			rect -272 50 -1708 -480 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.4
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( ( - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -272 50 -1708 -480 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( ( - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -336 -14 64 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -272 -14 544 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 272 -14 64 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 272 50 64 0 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			exp rect h ( 337 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 272 50 64 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			exp rect y ( ( 0 - 0 ) + ( 337 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -272 50 544 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			exp rect y ( ( 0 - 0 ) + ( 337 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -336 50 64 64 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			exp rect y ( ( 0 - 0 ) + ( 337 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -336 50 64 0 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			exp rect h ( 337 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -267 363 272 24 2 1
+			visible 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 8
+			textalignx -1
+			textscale 0.375
+			exp text ( localvarstring( "ui_navbutton_a" ) )
+			action
+			{
+				play "mouse_click";
+				"escape" self;
+			}
+		}
+		itemDef
+		{
+			rect -272 50 544 28 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 5
+			textscale 0.5833
+			text "@MPUI_FEATURE_UNLOCKS"
+		}
+		itemDef
+		{
+			rect -272 50 544 285 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 0.3
+			background "white"
+			textscale 0.55
+			exp rect x ( 0 )
+			exp rect y ( 28 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -272 50 544 285 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 0.125
+			background "gradient_vertical_rect"
+			textscale 0.55
+			exp rect x ( 0 )
+			exp rect y ( 28 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "feature" ) ) && ( ( 0 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "feature" ) ) && ( ( 0 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "feature" ) ) && ( ( 0 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 0 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 0 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 0 < ( unlockeditemcount( "feature" ) ) && ( ( 0 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 0 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 1 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 1 < ( unlockeditemcount( "feature" ) ) && ( ( 1 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 1 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 1 < ( unlockeditemcount( "feature" ) ) && ( ( 1 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 1 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 1 < ( unlockeditemcount( "feature" ) ) && ( ( 1 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 1 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 1 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 1 < ( unlockeditemcount( "feature" ) ) && ( ( 1 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 1 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 2 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 2 < ( unlockeditemcount( "feature" ) ) && ( ( 2 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 2 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 2 < ( unlockeditemcount( "feature" ) ) && ( ( 2 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 2 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 2 < ( unlockeditemcount( "feature" ) ) && ( ( 2 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 2 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 2 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 2 < ( unlockeditemcount( "feature" ) ) && ( ( 2 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 2 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 3 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 3 < ( unlockeditemcount( "feature" ) ) && ( ( 3 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 3 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 3 < ( unlockeditemcount( "feature" ) ) && ( ( 3 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 3 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 3 < ( unlockeditemcount( "feature" ) ) && ( ( 3 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 3 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 3 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 3 < ( unlockeditemcount( "feature" ) ) && ( ( 3 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 3 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 4 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 4 < ( unlockeditemcount( "feature" ) ) && ( ( 4 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 4 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 4 < ( unlockeditemcount( "feature" ) ) && ( ( 4 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 4 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 4 < ( unlockeditemcount( "feature" ) ) && ( ( 4 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 4 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 4 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 4 < ( unlockeditemcount( "feature" ) ) && ( ( 4 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 4 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 5 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 5 < ( unlockeditemcount( "feature" ) ) && ( ( 5 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 5 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 5 < ( unlockeditemcount( "feature" ) ) && ( ( 5 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 5 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 5 < ( unlockeditemcount( "feature" ) ) && ( ( 5 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 5 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 5 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 5 < ( unlockeditemcount( "feature" ) ) && ( ( 5 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 5 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 6 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 6 < ( unlockeditemcount( "feature" ) ) && ( ( 6 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 6 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 6 < ( unlockeditemcount( "feature" ) ) && ( ( 6 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 6 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 6 < ( unlockeditemcount( "feature" ) ) && ( ( 6 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 6 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 6 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 6 < ( unlockeditemcount( "feature" ) ) && ( ( 6 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 6 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 7 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 7 < ( unlockeditemcount( "feature" ) ) && ( ( 7 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 7 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 7 < ( unlockeditemcount( "feature" ) ) && ( ( 7 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 7 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 7 < ( unlockeditemcount( "feature" ) ) && ( ( 7 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( locstring( "@" + tablelookup( "mp/statstable.csv" , 4 , "feature_" + unlockeditem( "feature" , 7 ) , 3 ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startFeature" ) ) + 7 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 7 < ( unlockeditemcount( "feature" ) ) && ( ( 7 + ( localvarint( "ui_startFeature" ) ) ) < 8 ) ) )
+			exp text ( "@" + tablelookup( "mp/statsTable.csv" , 4 , "feature_" + unlockeditem( "feature" , 7 ) , 7 ) )
+		}
+		itemDef
+		{
+			rect -220 50 440 38 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.15 0.15 0.15 1
+			background "white"
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startChallenge" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "challenge" ) ) && ( ( 0 + ( localvarint( "ui_startChallenge" ) ) ) < 8 ) && !localvarbool( "ui_showingChallengeFeature" ) ) )
+		}
+		itemDef
+		{
+			rect -220 50 -440 18 2 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.125
+			textscale 0.55
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startChallenge" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "challenge" ) ) && ( ( 0 + ( localvarint( "ui_startChallenge" ) ) ) < 8 ) && !localvarbool( "ui_showingChallengeFeature" ) ) )
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect -220 50 440 18 2 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 1
+			textalignx 3
+			textaligny 16
+			textscale 0.3333
+			text "@MPUI_NEW_CHALLENGES"
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startChallenge" ) ) + 0 ) ) + ( ( 28 ) + 10 ) )
+			visible when ( ( 0 < ( unlockeditemcount( "challenge" ) ) && ( ( 0 + ( localvarint( "ui_startChallenge" ) ) ) < 8 ) && !localvarbool( "ui_showingChallengeFeature" ) ) )
+		}
+		itemDef
+		{
+			rect -202 50 422 18 2 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 0.8
+			textfont 3
+			textaligny 18
+			textscale 0.35
+			text "@MPUI_NEW_CHALLENGES_DESC"
+			exp rect y ( ( ( 38 + 2 ) * ( ( localvarint( "ui_startChallenge" ) ) + 0 ) ) + ( ( 28 ) + 10 ) + 18 )
+			visible when ( ( 0 < ( unlockeditemcount( "challenge" ) ) && ( ( 0 + ( localvarint( "ui_startChallenge" ) ) ) < 8 ) && !localvarbool( "ui_showingChallengeFeature" ) ) )
+		}
+		itemDef
+		{
+			rect -422 110 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Weapons:" )
+		}
+		itemDef
+		{
+			rect -422 110 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( unlockeditemcount( "weapon" ) )
+		}
+		itemDef
+		{
+			rect -422 130 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Attachments:" )
+		}
+		itemDef
+		{
+			rect -422 130 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( unlockeditemcount( "attachment" ) )
+		}
+		itemDef
+		{
+			rect -422 150 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Camos:" )
+		}
+		itemDef
+		{
+			rect -422 150 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( unlockeditemcount( "camo" ) )
+		}
+		itemDef
+		{
+			rect -422 170 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Features:" )
+		}
+		itemDef
+		{
+			rect -422 170 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( unlockeditemcount( "feature" ) )
+		}
+		itemDef
+		{
+			rect -422 190 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Perks:" )
+		}
+		itemDef
+		{
+			rect -422 190 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( unlockeditemcount( "perk" ) )
+		}
+		itemDef
+		{
+			rect -422 210 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Challenges:" )
+		}
+		itemDef
+		{
+			rect -422 210 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "(" + unlockeditemcount( "challenge" ) + ")" + int( min( unlockeditemcount( "challenge" ) , 1 ) ) )
+		}
+		itemDef
+		{
+			rect -422 230 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 4
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( "Total:" )
+		}
+		itemDef
+		{
+			rect -422 230 100 18 2 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textalign 6
+			textscale 0.35
+			visible when ( dvarstring( "ui_debug_unlocks" ) != "" )
+			exp text ( int( unlockeditemcount( "weapon" ) + unlockeditemcount( "attachment" ) + unlockeditemcount( "camo" ) + unlockeditemcount( "feature" ) + unlockeditemcount( "perk" ) + min( unlockeditemcount( "challenge" ) , 1 ) ) )
+		}
+	}
+}

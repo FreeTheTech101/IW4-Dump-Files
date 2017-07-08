@@ -1,0 +1,632 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "select_difficulty"
+		rect -150 -92 300 184 2 2
+		popup
+		outOfBoundsClick
+		visible 1
+		style 1
+		forecolor 1 1 1 1
+		backcolor 1 1 1 1
+		background "white"
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		allowedBinding "+talk"
+		exp rect y ( 0 - ( 24 + 8 * 20 ) / 2 )
+		execKey 2
+		{
+		}
+		execKeyInt 14
+		{
+		}
+		onOpen
+		{
+			if ( dvarint( "recommended_gameskill" ) != 0 )
+			{
+				setItemColor "newgame_easy" forecolor 1 "0.4" "0.4" 1;
+			}
+			if ( dvarint( "recommended_gameskill" ) != 1 )
+			{
+				setItemColor "newgame_regular" forecolor 1 "0.4" "0.4" 1;
+			}
+			if ( dvarint( "recommended_gameskill" ) != 2 )
+			{
+				setItemColor "newgame_hardened" forecolor 1 "0.4" "0.4" 1;
+			}
+			if ( dvarint( "recommended_gameskill" ) != 3 )
+			{
+				setItemColor "newgame_veteran" forecolor 1 "0.4" "0.4" 1;
+			}
+			setfocusbydvar "recommended_gameskill";
+		}
+		onClose
+		{
+		}
+		onEsc
+		{
+			close self;
+			open "select_difficulty";
+		}
+		itemDef
+		{
+			rect -1004 -572 3416 1920 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.35
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -1004 -572 3416 1920 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 1
+			background "xpbar_stencilbase"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -427 -92 854 184 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.5 0.5 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -150 -92 1708 480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.75
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -150 -92 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -427 -92 854 0 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mockup_popup_bg_stencilfill"
+			textscale 0.55
+			exp rect h ( ( 24 + 8 * 20 ) )
+		}
+		itemDef
+		{
+			rect -150 -92 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.75
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) + ( 0 - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -150 -92 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) + ( 0 - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -491 -156 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -427 -156 854 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 -156 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 -92 64 184 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 92 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -427 92 854 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -491 92 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -491 -92 64 184 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -150 -92 300 24 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			background "gradient_fadein"
+			textfont 9
+			textalign 4
+			textalignx 4
+			textscale 0.375
+			text "@MENU_SELECT_DIFFICULTY"
+		}
+		itemDef
+		{
+			rect -146 40 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_easy" )
+			exp text ( locstring( "@MENU_REGULAR_DESC_3" ) + "
+" + locstring( "@MENU_REGULAR_DESC_4" ) )
+		}
+		itemDef
+		{
+			rect -146 40 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_regular" )
+			exp text ( locstring( "@MENU_SKILLED_DESC" ) + "
+" + locstring( "@MENU_SKILLED_DESC_2" ) )
+		}
+		itemDef
+		{
+			rect -146 40 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_hardened" )
+			exp text ( "@MENU_HARDENED_DESC" )
+		}
+		itemDef
+		{
+			rect -146 40 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_veteran" )
+			exp text ( "@MENU_VETERAN_DESC" )
+		}
+		itemDef
+		{
+			rect -146 40 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "try_again" )
+			exp text ( "@MENU_TRY_AGAIN_DESC" )
+		}
+		itemDef
+		{
+			name "newgame_easy"
+			rect -146 -68 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_RECRUIT_CAPS"
+			dvarTest "recommended_gameskill"
+			focusDvar { 0 }
+			action
+			{
+				play "mouse_click";
+				if ( dvarint( "recommended_gameskill" ) > 0 )
+				{
+					exec "profile_difficultySave 0";
+					setLocalVarString "ui_exec_diff" ( "difficultyeasy" );
+					open "con_areyousure_easier";
+				}
+				else
+				{
+					exec "profile_difficultySave 0";
+					execnow "difficultyeasy";
+					scriptmenuresponse "continue";
+					; close self;
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				if ( dvarint( "recommended_gameskill" ) == 0 )
+				{
+					setItemColor self forecolor 1 1 1 1;
+				}
+				if ( dvarint( "recommended_gameskill" ) != 0 )
+				{
+					setItemColor self forecolor 1 "0.4" "0.4" 1;
+				}
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_easy" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "newgame_regular"
+			rect -146 -48 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_REGULAR_CAPS"
+			dvarTest "recommended_gameskill"
+			focusDvar { 1 }
+			action
+			{
+				play "mouse_click";
+				if ( dvarint( "recommended_gameskill" ) != 1 )
+				{
+					exec "profile_difficultySave 1";
+					setLocalVarString "ui_exec_diff" ( "difficultymedium" );
+					if ( dvarint( "recommended_gameskill" ) > 1 )
+					{
+						open "con_areyousure_easier";
+					}
+					else
+					{
+						setLocalVarString "ui_question" ( "@MENU_DIFFICULTY_WARNING" );
+						open "con_areyousure";
+					}
+				}
+				else
+				{
+					exec "profile_difficultySave 1";
+					execnow "difficultymedium";
+					scriptmenuresponse "continue";
+					; close self;
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				if ( dvarint( "recommended_gameskill" ) == 1 )
+				{
+					setItemColor self forecolor 1 1 1 1;
+				}
+				if ( dvarint( "recommended_gameskill" ) != 1 )
+				{
+					setItemColor self forecolor 1 "0.4" "0.4" 1;
+				}
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_regular" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "newgame_hardened"
+			rect -146 -28 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_HARDENED_CAPS"
+			dvarTest "recommended_gameskill"
+			focusDvar { 2 }
+			action
+			{
+				play "mouse_click";
+				if ( dvarint( "recommended_gameskill" ) != 2 )
+				{
+					exec "profile_difficultySave 2";
+					setLocalVarString "ui_exec_diff" ( "difficultyhard" );
+					if ( dvarint( "recommended_gameskill" ) > 2 )
+					{
+						open "con_areyousure_easier";
+					}
+					else
+					{
+						setLocalVarString "ui_question" ( "@MENU_DIFFICULTY_WARNING" );
+						open "con_areyousure";
+					}
+				}
+				else
+				{
+					exec "profile_difficultySave 2";
+					execnow "difficultyhard";
+					scriptmenuresponse "continue";
+					; close self;
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				if ( dvarint( "recommended_gameskill" ) == 2 )
+				{
+					setItemColor self forecolor 1 1 1 1;
+				}
+				if ( dvarint( "recommended_gameskill" ) != 2 )
+				{
+					setItemColor self forecolor 1 "0.4" "0.4" 1;
+				}
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_hardened" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "newgame_veteran"
+			rect -146 -8 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_VETERAN_CAPS"
+			dvarTest "recommended_gameskill"
+			focusDvar { 3 }
+			action
+			{
+				play "mouse_click";
+				if ( dvarint( "recommended_gameskill" ) != 3 )
+				{
+					exec "profile_difficultySave 3";
+					setLocalVarString "ui_exec_diff" ( "difficultyfu" );
+					setLocalVarString "ui_question" ( "@MENU_DIFFICULTY_WARNING" );
+					open "con_areyousure";
+				}
+				else
+				{
+					exec "profile_difficultySave 3";
+					setLocalVarString "ui_exec_diff" ( "difficultyfu" );
+					setLocalVarString "ui_question" ( "@MENU_ARE_YOU_SURE" );
+					open "con_areyousure";
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				if ( dvarint( "recommended_gameskill" ) == 3 )
+				{
+					setItemColor self forecolor 1 1 1 1;
+				}
+				if ( dvarint( "recommended_gameskill" ) != 3 )
+				{
+					setItemColor self forecolor 1 "0.4" "0.4" 1;
+				}
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_veteran" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -150 12 280 1 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.65
+			background "gradient_fadein"
+			textscale 0.55
+			exp rect w ( - 216 - 64 )
+		}
+		itemDef
+		{
+			name "try_again"
+			rect -146 12 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_TRY_AGAIN_CAPS"
+			action
+			{
+				play "mouse_click";
+				scriptmenuresponse "tryagain";
+				close self;
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "try_again" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+	}
+}

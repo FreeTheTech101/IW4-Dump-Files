@@ -1,0 +1,210 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "weaponinfo"
+		rect 2 -20 640 480 4 4
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && !( gamemsgwndactive( 2 ) ) && ( dvarint( "ammoCounterHide" ) == 0 ) )
+		itemDef
+		{
+			name "weaponbar_line"
+			rect -347.333 -74.6667 261.333 56 10 10
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_weaponbar_line"
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -131.333 -32.6667 37.3333 0.666667 10 10
+			decoration
+			visible 1
+			ownerdraw 119
+			forecolor 1 1 1 1
+			type 8
+			textfont 9
+			textscale 0.437475
+			exp forecolor a ( hudfade( "weapon" ) )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -148.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 104
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 3 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -155.333 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 104
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 2 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -162 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 104
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) > 1 )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -168.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 104
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) )
+		}
+		itemDef
+		{
+			name "offhandSmokeIcon"
+			rect -168.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 104
+			forecolor 0.5 0.3 0.3 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "smokeAmmo" ) ) == 0 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -100.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 103
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 3 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -107.333 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 103
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 2 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -114 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 103
+			forecolor 0.7 0.7 0.7 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) > 1 )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -120.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 103
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) )
+		}
+		itemDef
+		{
+			name "offhandFragIcon"
+			rect -120.667 -32 18.6667 18.6667 10 10
+			decoration
+			visible 1
+			ownerdraw 103
+			forecolor 0.5 0.3 0.3 1
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( player( "fragAmmo" ) ) == 0 )
+		}
+		itemDef
+		{
+			name "clipGraphic"
+			rect -135.333 -40 0 0 10 10
+			decoration
+			visible 1
+			ownerdraw 117
+			forecolor 1 1 1 0.65
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			name "clipGraphic"
+			rect -135.333 -46 0 0 10 10
+			decoration
+			visible 1
+			ownerdraw 121
+			forecolor 1 1 1 0.65
+			type 8
+			textscale 0.55
+			exp forecolor a ( hudfade( "weapon" ) * 0.65 )
+		}
+		itemDef
+		{
+			rect -103.333 -52.6667 37.3333 0.666667 10 10
+			decoration
+			visible 1
+			ownerdraw 81
+			forecolor 1 1 1 1
+			type 8
+			textfont 10
+			textalign 2
+			textscale 0.3333
+			exp forecolor a ( hudfade( "weaponName" ) )
+			visible when ( 1 )
+		}
+	}
+}

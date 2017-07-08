@@ -1,0 +1,24 @@
+/********************************************
+*          dumped by: aerosoul94            *
+*********************************************/
+
+{
+	menuDef
+	{
+		name "default_menu"
+		rect 0 0 0 0 0 0
+		forecolor 1 1 1 1
+		itemDef
+		{
+			name "default"
+			rect 0 0 0 0 0 0
+			visible 1
+			forecolor 0.9 0.9 0.9 0.9
+			type 1
+			textfont 1
+			textaligny 14
+			textscale 0.4583
+			text "@MENU_MENU_COULDNT_BE_FOUND"
+		}
+	}
+}

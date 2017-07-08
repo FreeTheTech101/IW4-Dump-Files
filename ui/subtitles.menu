@@ -1,0 +1,28 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "subtitles"
+		rect 0 0 0 0 2 3
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( dvarbool( "credits_active" ) == 0 )
+		itemDef
+		{
+			rect 0 0 0 0 2 3
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textalign 5
+			textscale 0.38
+			gamemsgwindowindex 2
+			gamemsgwindowmode 1
+		}
+	}
+}

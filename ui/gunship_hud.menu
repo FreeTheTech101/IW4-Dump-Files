@@ -1,0 +1,138 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "gunship_hud"
+		rect 0 0 640 480 0 0
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( ( ( weaponname( ) == "viper_20mm" ) || ( weaponname( ) == "viper_hydra" ) || ( weaponname( ) == "viper_hellfire" ) || ( weaponname( ) == "viper_tow" ) ) && !( dvarbool( "remotemissile_active" ) == 1 ) )
+		exp rect x ( ( ( sin( milliseconds( ) / 30 ) ) * dvarfloat( "viper_firing" ) ) )
+		exp rect y ( ( ( cos( milliseconds( ) / 20 ) ) * dvarfloat( "viper_firing" ) ) )
+		itemDef
+		{
+			rect 0 -30 100 30 8 10
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 8
+			textscale 0.45
+			text "@GUNSHIP_20MM"
+			visible when ( ( weaponname( ) == "viper_20mm" ) )
+		}
+		itemDef
+		{
+			rect 0 -30 100 30 8 10
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 8
+			textscale 0.45
+			text "@GUNSHIP_HYDRA"
+			visible when ( ( weaponname( ) == "viper_hydra" ) )
+		}
+		itemDef
+		{
+			rect 0 -30 100 30 8 10
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 8
+			textscale 0.45
+			text "@GUNSHIP_HELLFIRE"
+			visible when ( ( weaponname( ) == "viper_hellfire" ) )
+		}
+		itemDef
+		{
+			rect 0 -30 100 30 8 10
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 8
+			textscale 0.45
+			text "@GUNSHIP_TOW"
+			visible when ( ( weaponname( ) == "viper_tow" ) )
+		}
+		itemDef
+		{
+			rect -100 50 100 30 10 8
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 10
+			textscale 0.45
+			text "@GUNSHIP_HUD_RIGHT_BLOCK"
+		}
+		itemDef
+		{
+			rect -50 -30 100 30 9 10
+			decoration
+			visible 1
+			forecolor 1 1 1 0.7
+			textalign 9
+			textscale 0.45
+			text "@GUNSHIP_HUD_BOTTOM_BLOCK"
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gunship_overlay_20mm"
+			textscale 0.55
+			visible when ( ( weaponname( ) == "viper_20mm" ) )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gunship_overlay_hydra"
+			textscale 0.55
+			visible when ( ( weaponname( ) == "viper_hydra" ) )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gunship_overlay_hellfire"
+			textscale 0.55
+			visible when ( ( weaponname( ) == "viper_hellfire" ) )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gunship_overlay_tow"
+			textscale 0.55
+			visible when ( ( weaponname( ) == "viper_tow" ) )
+		}
+		itemDef
+		{
+			rect -200 0 400 32 2 8
+			decoration
+			visible 1
+			ownerdraw 145
+			forecolor 1 1 1 1
+			background "viper_heading"
+			type 8
+			textscale 0.55
+		}
+	}
+}

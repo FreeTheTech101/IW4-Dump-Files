@@ -1,0 +1,291 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "brightness_adjust"
+		rect 0 0 640 480 0 0
+		legacySplitScreenScale
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			execnow "profile_menuDvarsSetup; resetViewport";
+			setLocalVarBool "ui_show_recommendation" ( 1 );
+			setLocalVarBool "ui_brightness_adjusted" ( 0 );
+		}
+		onClose
+		{
+			execnow "profile_menuDvarsFinish; resetViewport";
+			open "offensive_warning";
+		}
+		onEsc
+		{
+			if ( localvarbool( "ui_brightness_adjusted" ) )
+			{
+				close self;
+			}
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_background"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 1708 480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x 0 - 107 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect 0 0 -1708 -480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x - 107 + 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_sp_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "sp" )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_co_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "so" )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_mp_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "mp" )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 1500 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 480 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect 0 0 272 28 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 6
+			textalignx -60
+			textscale 0.5
+			text "@MENU_BRIGHTNESS_CAP"
+		}
+		itemDef
+		{
+			name "accept"
+			rect -85 0 170 20 2 3
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			background "white"
+			type 1
+			textfont 9
+			textalign 9
+			textscale 0.375
+			text "@MENU_ACCEPT"
+			visible when ( localvarbool( "ui_brightness_adjusted" ) )
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				close self;
+			}
+			onFocus
+			{
+				setItemColor self backcolor 0 0 0 1;
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 0;
+			}
+		}
+		itemDef
+		{
+			name "slider_r_gamma"
+			rect -160 48 320 20 2 1
+			visible 1
+			forecolor 1 1 1 1
+			type 10
+			textalign 5
+			textscale 0.55
+			dvarFloat "(null)" 1 0.5 1.5
+			action
+			{
+				execnow "profile_menuDvarsFinish" ;;
+				setLocalVarBool "ui_brightness_adjusted" ( 1 );
+			}
+			onFocus
+			{
+				play "mouse_over";
+				setItemColor "button_r_gamma" backcolor 0 0 0 1;
+				setLocalVarString "ui_options_hint_text" ( "@MENU_BRIGHTNESS_DESC1" );
+			}
+			leaveFocus
+			{
+				setItemColor "button_r_gamma" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			rect -160 88 320 20 2 1
+			decoration
+			autowrapped
+			visible 1
+			group "brightness_demo"
+			forecolor 1 1 1 0.65
+			textfont 3
+			textalign 5
+			textscale 0.375
+			text "@MENU_BRIGHTNESS_DESC1"
+		}
+		itemDef
+		{
+			rect -160 108 320 20 2 1
+			decoration
+			autowrapped
+			visible 1
+			group "brightness_demo"
+			forecolor 1 1 1 0.65
+			textfont 3
+			textalign 5
+			textscale 0.375
+			text "@MENU_BRIGHTNESS_DESC2"
+			visible when ( dvarbool( "hidef" ) )
+		}
+		itemDef
+		{
+			rect -150 202 285 60 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			textscale 0.55
+			exp backcolor rgb ( 0.08 - 0.06 )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect -150 262 285 60 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			textscale 0.55
+			exp backcolor rgb ( 0.125 - 0.06 )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect -150 322 285 60 2 1
+			decoration
+			visible 1
+			style 1
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			textscale 0.55
+			exp backcolor rgb ( 0.25 - 0.06 )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect -150 202 300 60 2 1
+			decoration
+			visible 1
+			forecolor 0 0 0 1
+			type 1
+			textfont 2
+			textalign 9
+			textscale 0.5833
+			exp text ( "@MENU_BRIGHTNESS_NOT_VISIBLE" )
+		}
+		itemDef
+		{
+			rect -150 262 300 60 2 1
+			decoration
+			visible 1
+			forecolor 0 0 0 1
+			type 1
+			textfont 2
+			textalign 9
+			textscale 0.5833
+			exp text ( "@MENU_BRIGHTNESS_BARELY_VISIBLE" )
+		}
+		itemDef
+		{
+			rect -150 322 300 60 2 1
+			decoration
+			visible 1
+			forecolor 0 0 0 1
+			type 1
+			textfont 2
+			textalign 9
+			textscale 0.5833
+			exp text ( "@MENU_BRIGHTNESS_EASILY_VISIBLE" )
+		}
+	}
+}

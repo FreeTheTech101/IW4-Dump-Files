@@ -1,0 +1,341 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "startpb_popmenu"
+		rect -142 -72 284 144 2 2
+		popup
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			setLocalVarInt "ui_centerPopup" ( 1 );
+			focusfirst;
+		}
+		onRequestClose
+		{
+			play "mouse_click";
+			setLocalVarInt "ui_centerPopup" ( 0 );
+			;;
+		}
+		onEsc
+		{
+			close self;
+		}
+		itemDef
+		{
+			rect -742 -872 2000 2000 2 2
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textscale 0.55
+			action
+			{
+				close self;
+			}
+			onFocus
+			{
+				setdvar "ui_popup_close_icon" 1;
+			}
+			leaveFocus
+			{
+				setdvar "ui_popup_close_icon" 0;
+			}
+		}
+		itemDef
+		{
+			rect -146 -76 284 144 2 2
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textscale 0.55
+			action
+			{
+			}
+		}
+		itemDef
+		{
+			rect -144 -74 288 148 2 2
+			decoration
+			visible 1
+			style 3
+			border 1
+			bordersize 2
+			forecolor 0.2 0.21 0.25 1
+			bordercolor 0.4 0.405 0.42 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -142 -72 284 144 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.7
+			background "gradient_bottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -176 -106 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -144 -106 288 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 144 -106 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 144 -74 32 0 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 7 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 144 -72 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 7 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -144 -72 288 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 7 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -176 -72 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 7 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -176 -74 32 0 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 7 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -138 -68 280 0 2 2
+			decoration
+			autowrapped
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 4
+			textscale 0.375
+			exp text ( "@MPUI_SYNCPUNKBUSTERSTARTLISTENSERVER" )
+		}
+		itemDef
+		{
+			rect -140 32 275.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			textscale 0.55
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect 135.5 32 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			background "button_highlight_end"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -140 32 275.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			bordersize 2
+			forecolor 0.9 0.95 1 0.25
+			bordercolor 0.8 0.95 1 0.4
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 6 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect 135.5 32 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.95 1 0.25
+			background "button_highlight_end"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 6 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect -140 32 280 18 2 2
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 10
+			textalignx -6
+			textscale 0.4
+			exp text ( "@MENU_YES" )
+			action
+			{
+				play "mouse_click";
+				close self;
+				close "createserver";
+				close "pc_join_unranked";
+				uiScript "setPbClStatus" 1;
+				uiScript "StartServer" ;;
+			}
+			onFocus
+			{
+				play "mouse_submenu_over";
+				setLocalVarInt "ui_highlight" ( 6 );
+				setLocalVarString "ui_choicegroup" ( "popmenu" );
+			}
+			leaveFocus
+			{
+				setLocalVarInt "ui_highlight" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -140 52 275.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			textscale 0.55
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect 135.5 52 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			background "button_highlight_end"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -140 52 275.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			bordersize 2
+			forecolor 0.9 0.95 1 0.25
+			bordercolor 0.8 0.95 1 0.4
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 7 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect 135.5 52 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.95 1 0.25
+			background "button_highlight_end"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 7 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect -140 52 280 18 2 2
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 10
+			textalignx -6
+			textscale 0.4
+			exp text ( "@MENU_NO" )
+			action
+			{
+				play "mouse_click";
+				close self;
+			}
+			onFocus
+			{
+				play "mouse_submenu_over";
+				setLocalVarInt "ui_highlight" ( 7 );
+				setLocalVarString "ui_choicegroup" ( "popmenu" );
+			}
+			leaveFocus
+			{
+				setLocalVarInt "ui_highlight" ( 0 );
+			}
+		}
+	}
+}

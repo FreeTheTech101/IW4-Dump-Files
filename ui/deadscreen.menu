@@ -1,0 +1,57 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "deadscreen"
+		rect 0 0 640 480 0 0
+		visible 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !dvarbool( "specialops" ) )
+		itemDef
+		{
+			name "quote"
+			rect 80 200 480 20 0 0
+			decoration
+			visible 1
+			ownerdraw 97
+			forecolor 1 1 1 1
+			type 8
+			textalign 1
+			textscale 0.4583
+			dvar "ui_deadquote"
+		}
+		itemDef
+		{
+			name "hud_grenadeicon"
+			rect 315 300 60 60 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_grenadeicon"
+			textscale 0.55
+			dvarTest "ui_grenade_death"
+			showDvar { 1 }
+		}
+		itemDef
+		{
+			name "hud_grenadepointer"
+			rect 320 270 50 25 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "hud_grenadepointer"
+			textscale 0.55
+			dvarTest "ui_grenade_death"
+			showDvar { 1 }
+		}
+	}
+}

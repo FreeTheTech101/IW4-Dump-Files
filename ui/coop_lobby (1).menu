@@ -1,0 +1,2319 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "coop_lobby"
+		rect 0 0 640 480 0 0
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fullscreen 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		soundLoop "music_challenge_factory"
+		onOpen
+		{
+			execnow "set ui_hint_text @NULL_EMPTY";
+			setLocalVarString "ui_hint_focus" ( "" );
+			if ( gamehost( ) )
+			{
+				focusfirst;
+			}
+			else
+			{
+				setfocus "selectdiff";
+			}
+			setGameMode "so";
+			setdvar "specialops" 1;
+			setdvar "splitscreen" 0;
+			if ( dvarstring( "ui_skip_level_select" ) != "1" && gamehost( ) )
+			{
+				open "levels_challenge";
+			}
+			setdvar "ui_skip_level_select" 1;
+		}
+		onEsc
+		{
+			open "leave_lobby_warning";
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_background"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 1708 480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x 0 - 107 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect 0 0 -1708 -480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x - 107 + 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 1500 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 480 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect -64 0 280 480 1 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.1
+			background "gradient_fadein_fadebottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 272 28 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 6
+			textalignx -60
+			textscale 0.5
+			text "@MENU_SPECIAL_OPS"
+		}
+		itemDef
+		{
+			name "act_group"
+			rect 0 0 272 28 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 4
+			textalignx 234
+			textscale 0.5
+			text "@MENU_SP_TWO_PLAYER_ONLINE"
+		}
+		itemDef
+		{
+			name "act_group"
+			rect 222 0 272 28 1 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 4
+			textscale 0.5
+			exp text ( ":" )
+		}
+		itemDef
+		{
+			name "startmatch"
+			rect -64 28 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SP_START_OP"
+			disabled when ( !gamehost( ) || !coopready( ) )
+			action
+			{
+				play "mouse_click";
+				if ( ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "percentcompleteso" ) < int( tablelookup( "sp/specOpsTable.csv" , 1 , tablelookup( "sp/specopstable.csv" , 1 , dvarstring( "coop_mapName" ) , 13 ) , 5 ) ) ) ) )
+				{
+					setLocalVarString "ui_unlock_desc" ( "@MENU_SP_FRIEND_LOCK_OP_DESC" );
+					open "so_locked_for_friend";
+				}
+				else
+				{
+					if ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 11 ) ) == 2 )
+					{
+						open "so_character_select_coop";
+					}
+					else
+					{
+						if ( coopready( ) )
+						{
+							exec "coopLaunch";
+						}
+					}
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "startmatch" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect 0 48 216 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.65
+			background "gradient_fadein"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "selectmap"
+			rect -64 48 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SP_CHANGE_OP"
+			visible when ( gamehost( ) )
+			action
+			{
+				play "mouse_click";
+				open "levels_challenge";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "selectmap" );
+				setLocalVarString "ui_hint_text" ( "@MENU_SP_CHANGE_OP_DESC" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "viewmap"
+			rect -64 48 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SP_VIEW_OP"
+			visible when ( !gamehost( ) )
+			action
+			{
+				play "mouse_click";
+				open "levels_challenge";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "viewmap" );
+				setLocalVarString "ui_hint_text" ( "@MENU_SP_VIEW_OP_DESC" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "selectdiff"
+			rect -64 68 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SELECT_DIFFICULTY"
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			action
+			{
+				play "mouse_click";
+				open "popmenu_specialops_online_difficulty";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "selectdiff" );
+				setLocalVarString "ui_hint_text" ( "@MENU_SP_SELECT_YOUR_DIFF" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "dont_selectdiff"
+			rect -64 68 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			visible when ( !int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			action
+			{
+				play "mouse_click";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "dont_selectdiff" );
+				setLocalVarString "ui_hint_text" ( "@MENU_SP_NA_FOR_THIS_OP" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -64 68 336 20 1 1
+			decoration
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 0.6 0.55 0.55 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SELECT_DIFFICULTY"
+			visible when ( !int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			action
+			{
+				play "mouse_click";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "invitefriend"
+			rect -64 88 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_INVITE_FRIEND"
+			disabled when ( !gamehost( ) || coopplayer( 1 , "exists" ) )
+			action
+			{
+				play "mouse_click";
+				exec "xshowfriendslist";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				setLocalVarString "ui_hint_focus" ( "invitefriend" );
+				setLocalVarString "ui_hint_text" ( "@MENU_DESC_INVITE_FRIEND" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "description"
+			rect 0 -278 212 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			forecolor 0.65 0.65 0.65 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_hint_focus" ) != "startmatch" )
+			exp text ( localvarstring( "ui_hint_text" ) )
+		}
+		itemDef
+		{
+			name "description2"
+			rect 0 -258 212 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			text "@MENU_SP_INVITE_FRIEND_PC_CPU"
+			visible when ( localvarstring( "ui_hint_focus" ) != "startmatch" && localvarstring( "ui_hint_text" ) == "@MENU_DESC_INVITE_FRIEND" )
+		}
+		itemDef
+		{
+			rect 0 -278 212 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			forecolor 0.65 0.65 0.65 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_hint_focus" ) == "startmatch" && !coopplayer( 1 , "exists" ) )
+			exp text ( "@MENU_SP_NEED_ONE_MORE_PLAYER" )
+		}
+		itemDef
+		{
+			rect 0 -278 212 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			forecolor 0.65 0.65 0.65 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_hint_focus" ) == "startmatch" && coopplayer( 1 , "exists" ) && gamehost( ) )
+			exp text ( "@MENU_SP_START_OP_DESC" )
+		}
+		itemDef
+		{
+			rect 0 -278 212 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			forecolor 0.65 0.65 0.65 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_hint_focus" ) == "startmatch" && coopplayer( 1 , "exists" ) && !gamehost( ) )
+			exp text ( "@MENU_SP_WAITING_FOR_HOST" )
+		}
+		itemDef
+		{
+			rect 0 -198 216 120 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp material ( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 4 ) )
+		}
+		itemDef
+		{
+			rect 0 -218 216 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.15
+			background "white"
+			textfont 3
+			textalign 4
+			textalignx 4
+			textscale 0.375
+			exp text ( "@" + tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 2 ) )
+		}
+		itemDef
+		{
+			rect 173 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 0 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 173 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 0 , "exists" ) && ( int( getcharbyindex( coopplayer( 0 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 2 ) )
+		}
+		itemDef
+		{
+			rect 186 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 0 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 186 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 0 , "exists" ) && ( int( getcharbyindex( coopplayer( 0 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 3 ) )
+		}
+		itemDef
+		{
+			rect 199 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 0 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 199 -74 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 0 , "exists" ) && ( int( getcharbyindex( coopplayer( 0 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 4 ) )
+		}
+		itemDef
+		{
+			rect 0 -78 216 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.15
+			background "white"
+			textfont 3
+			textalign 6
+			textalignx -48
+			textscale 0.375
+			visible when ( coopplayer( 0 , "exists" ) )
+			exp text ( coopplayer( 0 , "name" ) )
+		}
+		itemDef
+		{
+			rect 173 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 1 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 173 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 1 , "exists" ) && ( int( getcharbyindex( coopplayer( 1 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 2 ) )
+		}
+		itemDef
+		{
+			rect 186 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 1 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 186 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 1 , "exists" ) && ( int( getcharbyindex( coopplayer( 1 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 3 ) )
+		}
+		itemDef
+		{
+			rect 199 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( coopplayer( 1 , "exists" ) )
+		}
+		itemDef
+		{
+			rect 199 -55 0 0 1 3
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( coopplayer( 1 , "exists" ) && ( int( getcharbyindex( coopplayer( 1 , "missionsohighestdifficulty" ) , int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 0 ) ) ) ) >= 4 ) )
+		}
+		itemDef
+		{
+			rect 0 -58 216 20 1 3
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.15
+			background "white"
+			textfont 3
+			textalign 6
+			textalignx -48
+			textscale 0.375
+			visible when ( coopplayer( 1 , "exists" ) )
+			exp text ( coopplayer( 1 , "name" ) )
+		}
+		itemDef
+		{
+			rect -280 52 -268 74 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 0.5
+			textscale 0.55
+			visible when ( coopplayer( 0 , "exists" ) )
+			exp material ( "line_horizontal" )
+		}
+		itemDef
+		{
+			rect -280 130 -268 74 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 0.5
+			textscale 0.55
+			visible when ( coopplayer( 1 , "exists" ) )
+			exp material ( "line_horizontal" )
+		}
+		itemDef
+		{
+			name "different_diff"
+			rect -280 206 268 74 3 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 5
+			textaligny 24
+			textscale 0.375
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) )
+			exp text ( locstring( "@MENU_SP_DIFFERENT_DIFF" ) )
+		}
+		itemDef
+		{
+			name "different_diff"
+			rect -280 206 268 74 3 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 6
+			textalignx -116
+			textaligny 44
+			textscale 0.375
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) )
+			exp text ( locstring( "@MENU_SP_MAX_REWARD" ) )
+		}
+		itemDef
+		{
+			rect -124 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) )
+		}
+		itemDef
+		{
+			rect -124 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) && int( min( coopplayer( 0 , "skill" ) , coopplayer( 1 , "skill" ) ) ) >= 1 )
+		}
+		itemDef
+		{
+			rect -111 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) )
+		}
+		itemDef
+		{
+			rect -111 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) && int( min( coopplayer( 0 , "skill" ) , coopplayer( 1 , "skill" ) ) ) >= 2 )
+		}
+		itemDef
+		{
+			rect -98 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star_empty"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) )
+		}
+		itemDef
+		{
+			rect -98 252 0 0 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "difficulty_star"
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			exp forecolor a ( 1 )
+			visible when ( int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) && coopplayer( 0 , "exists" ) && coopplayer( 1 , "exists" ) && ( coopplayer( 0 , "skill" ) != coopplayer( 1 , "skill" ) ) && int( min( coopplayer( 0 , "skill" ) , coopplayer( 1 , "skill" ) ) ) == 3 )
+		}
+		itemDef
+		{
+			name "locked_warning"
+			rect -280 206 268 74 3 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 5
+			textaligny 104
+			textscale 0.375
+			visible when ( ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "percentcompleteso" ) < int( tablelookup( "sp/specOpsTable.csv" , 1 , tablelookup( "sp/specopstable.csv" , 1 , dvarstring( "coop_mapName" ) , 13 ) , 5 ) ) ) ) && gamehost( ) )
+			exp text ( "@MENU_SP_FRIEND_LOCK_OP_DESC" )
+		}
+		itemDef
+		{
+			name "locked_warning_you"
+			rect -280 206 268 74 3 1
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 5
+			textaligny 104
+			textscale 0.375
+			visible when ( ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "percentcompleteso" ) < int( tablelookup( "sp/specOpsTable.csv" , 1 , tablelookup( "sp/specopstable.csv" , 1 , dvarstring( "coop_mapName" ) , 13 ) , 5 ) ) ) ) && !gamehost( ) )
+			exp text ( "@MENU_SP_YOU_LOCK_OP_DESC" )
+		}
+		itemDef
+		{
+			name "steam_hint"
+			rect -280 206 268 74 3 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 3
+			textalign 5
+			textaligny 164
+			textscale 0.375
+			visible when ( 1 )
+			exp text ( "@MENU_SP_STEAM_CHAT_HINT" )
+		}
+		itemDef
+		{
+			rect -144 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textscale 0.375
+			visible when ( coopplayer( 0 , "exists" ) )
+			exp text ( coopplayer( 0 , "name" ) )
+		}
+		itemDef
+		{
+			rect -144 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 0 , "exists" ) && ( coopplayer( 0 , "skill" ) == 1 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_REGULAR" )
+		}
+		itemDef
+		{
+			rect -144 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 0 , "exists" ) && ( coopplayer( 0 , "skill" ) == 2 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_HARDENED" )
+		}
+		itemDef
+		{
+			rect -144 72 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 0 , "exists" ) && ( coopplayer( 0 , "skill" ) == 3 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_VETERAN" )
+		}
+		itemDef
+		{
+			rect -144 150 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textscale 0.375
+			visible when ( coopplayer( 1 , "exists" ) )
+			exp text ( coopplayer( 1 , "name" ) )
+		}
+		itemDef
+		{
+			rect -144 150 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "skill" ) == 1 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_REGULAR" )
+		}
+		itemDef
+		{
+			rect -144 150 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "skill" ) == 2 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_HARDENED" )
+		}
+		itemDef
+		{
+			rect -144 150 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 1
+			textaligny 14
+			textscale 0.375
+			visible when ( coopplayer( 1 , "exists" ) && ( coopplayer( 1 , "skill" ) == 3 ) && int( tablelookup( "sp/specOpsTable.csv" , 1 , dvarstring( "coop_mapName" ) , 14 ) ) )
+			exp text ( "@MENU_VETERAN" )
+		}
+		itemDef
+		{
+			rect -176 70 64 64 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "pc_keyboard_mouse"
+			textscale 0.55
+			visible when ( coopplayer( 0 , "exists" ) )
+		}
+		itemDef
+		{
+			rect -176 148 64 64 3 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "pc_keyboard_mouse"
+			textscale 0.55
+			visible when ( coopplayer( 1 , "exists" ) )
+		}
+		itemDef
+		{
+			rect -64 -20 336 20 1 3
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@PLATFORM_BACK_CAPS"
+			visible when ( 1 )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				open "leave_lobby_warning";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -1 -1 3 3 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2 2 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 2
+			textaligny 12
+			textscale 0.25
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp text ( "x=" + dvarint( "ui_gridx" ) )
+		}
+		itemDef
+		{
+			rect 0 0 2 2 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 2
+			textaligny 20
+			textscale 0.25
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp text ( "y=" + dvarint( "ui_gridy" ) )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 0 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 0 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 0 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 0 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 0 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 0 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 0 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 0 != 0 )
+			exp text ( 0 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 0 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 0 != 0 )
+			exp text ( 0 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 10 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 10 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 10 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 10 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 10 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 10 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 10 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 10 != 0 )
+			exp text ( 10 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 10 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 10 != 0 )
+			exp text ( 10 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 20 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 20 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 20 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 20 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 20 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 20 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 20 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 20 != 0 )
+			exp text ( 20 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 20 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 20 != 0 )
+			exp text ( 20 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 30 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 30 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 30 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 30 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 30 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 30 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 30 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 30 != 0 )
+			exp text ( 30 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 30 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 30 != 0 )
+			exp text ( 30 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 40 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 40 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 40 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 40 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 40 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 40 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 40 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 40 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 40 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 40 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 40 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 40 != 0 )
+			exp text ( 40 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 40 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 40 != 0 )
+			exp text ( 40 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 50 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 50 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 50 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 50 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 50 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 50 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 50 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 50 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 50 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 50 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 50 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 50 != 0 )
+			exp text ( 50 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 50 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 50 != 0 )
+			exp text ( 50 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 60 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 60 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 2 + 60 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 60 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 4 + 60 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 60 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 6 + 60 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 60 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( ( 8 + 60 ) * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 60 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 60 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 60 != 0 )
+			exp text ( 60 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 60 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 60 != 0 )
+			exp text ( 60 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 70 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 70 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 1 400 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect x ( ( 72 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			exp forecolor a ( 0.3 + ( 72 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 70 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) )
+			visible when ( dvarbool( "ui_grid" ) && 70 != 0 )
+			exp text ( 70 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -11
+			textscale 0.25
+			exp rect x ( ( 70 * 10 ) + dvarint( "ui_gridx" ) )
+			exp rect y ( dvarint( "ui_gridy" ) + 412 )
+			visible when ( dvarbool( "ui_grid" ) && 70 != 0 )
+			exp text ( 70 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( 0 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( 0 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 2 + 0 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 4 + 0 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 6 + 0 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 8 + 0 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 0 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -24
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 0 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) && 0 != 0 )
+			exp text ( 0 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 4
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 0 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) + 720 )
+			visible when ( dvarbool( "ui_grid" ) && 0 != 0 )
+			exp text ( 0 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( 10 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( 10 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 2 + 10 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 4 + 10 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 6 + 10 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 8 + 10 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 10 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -24
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 10 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) && 10 != 0 )
+			exp text ( 10 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 4
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 10 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) + 720 )
+			visible when ( dvarbool( "ui_grid" ) && 10 != 0 )
+			exp text ( 10 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( 20 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( 20 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 2 + 20 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 4 + 20 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 6 + 20 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 8 + 20 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 20 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -24
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 20 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) && 20 != 0 )
+			exp text ( 20 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 4
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 20 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) + 720 )
+			visible when ( dvarbool( "ui_grid" ) && 20 != 0 )
+			exp text ( 20 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( 30 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( 30 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 2 + 30 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 2 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 4 + 30 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 4 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 6 + 30 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 6 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( ( 8 + 30 ) * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( ( 8 + 30 ) % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -24
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 30 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) && 30 != 0 )
+			exp text ( 30 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 4
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 30 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) + 720 )
+			visible when ( dvarbool( "ui_grid" ) && 30 != 0 )
+			exp text ( 30 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 720 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0.5 0.6 0.8 0.5
+			textscale 0.55
+			exp rect y ( ( 40 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			exp forecolor a ( 0.3 + ( 40 % 10 == 0 ) * 0.45 )
+			visible when ( dvarbool( "ui_grid" ) )
+			exp material ( "white" )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx -24
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 40 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) )
+			visible when ( dvarbool( "ui_grid" ) && 40 != 0 )
+			exp text ( 40 * 10 )
+		}
+		itemDef
+		{
+			rect 0 0 2000 1 1 1
+			decoration
+			visible 1
+			forecolor 0.5 0.6 0.8 0.5
+			textfont 9
+			textalignx 4
+			textaligny 6
+			textscale 0.25
+			exp rect y ( ( 40 * 10 ) + dvarint( "ui_gridy" ) )
+			exp rect x ( dvarint( "ui_gridx" ) + 720 )
+			visible when ( dvarbool( "ui_grid" ) && 40 != 0 )
+			exp text ( 40 * 10 )
+		}
+	}
+}

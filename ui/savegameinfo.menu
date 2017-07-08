@@ -1,0 +1,49 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "savegameinfo"
+		rect 0 0 0 0 1 1
+		visible 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			"saveDelay";
+			"writeSave";
+		}
+		onClose
+		{
+			uiScript "saveComplete";
+		}
+		itemDef
+		{
+			name "backdrop"
+			rect -1 -1 1 1 1 1
+			decoration
+			visible 1
+			ownerdraw 101
+			forecolor 0 0 0 0.75
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "savingMsg"
+			rect 40 46 128 20 1 1
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 9
+			textscale 0.5833
+			text "@CGAME_NOW_SAVING"
+			visible when ( dvarbool( "sv_saveDeviceAvailable" ) )
+		}
+	}
+}

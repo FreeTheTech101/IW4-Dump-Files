@@ -1,0 +1,360 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "save_load_menu"
+		rect 0 0 640 480 0 0
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			uiScript "loadSavegames" setdvar "ui_savegameListAutosave" 1;
+			uiScript "update" "ui_savegameListAutosave" execOnDvarIntValue "cl_paused" 0 "set ui_hidesave 1";
+			execOnDvarIntValue "cl_paused" 1 "set ui_hidesave 0";
+			setdvar "ui_background" "background_american_w";
+			setdvar "ui_logo_show" 1;
+			setdvar "ui_version_show" 0;
+			setdvar "ui_separator_show" 1;
+			setdvar "ui_background_gradient_show" 0;
+		}
+		onEsc
+		{
+			close "save_load_menu";
+			open "main";
+		}
+		itemDef
+		{
+			name "window"
+			rect 378 130 240 300 0 0
+			decoration
+			visible 1
+			group "ingamebox4"
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.6
+			bordercolor 0.5 0.5 0.5 0.5
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "window"
+			rect 400 150 192 144 0 0
+			decoration
+			visible 1
+			group "ingamebox3"
+			border 1
+			ownerdraw 258
+			forecolor 1 1 1 1
+			backcolor 0.1 0.1 0.1 0.5
+			bordercolor 0.5 0.5 0.5 0.5
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "window"
+			rect 377 130 256 192 0 0
+			visible 1
+			group "ingamebox3"
+			forecolor 1 1 1 0
+			backcolor 0.1 0.1 0.1 0
+			textscale 0.55
+			action
+			{
+				uiScript "Loadgame";
+			}
+		}
+		itemDef
+		{
+			name "mapname"
+			rect 378 290 240 30 0 0
+			decoration
+			autowrapped
+			visible 1
+			ownerdraw 262
+			forecolor 1 1 1 1
+			backcolor 1 1 1 0.25
+			type 8
+			textfont 1
+			textalign 1
+			textalignx -5
+			textaligny 10
+			textscale 0.25
+		}
+		itemDef
+		{
+			name "mapinfo"
+			rect 378 320 230 70 0 0
+			decoration
+			autowrapped
+			visible 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 0.25
+			textfont 1
+			textalign 1
+			textaligny 10
+			textscale 0.25
+			text "savegameinfo"
+			textsavegame
+		}
+		itemDef
+		{
+			name "window"
+			rect 20 75 325 325 0 0
+			decoration
+			visible 1
+			group "grpControlbutton"
+			style 1
+			border 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.6
+			bordercolor 0.5 0.5 0.5 0.5
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "window2"
+			rect 24 130 317 20 0 0
+			decoration
+			visible 1
+			group "grpControlbutton"
+			style 1
+			border 1
+			forecolor 1 1 1 1
+			backcolor 1 1 0.3 0.3
+			bordercolor 0.1 0.1 0.1 0.2
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "savemain"
+			rect 125 90 40 14 0 0
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textalignx 6
+			textaligny 12
+			textscale 0.3
+			text "@MENU_SAVEGAMELIST"
+		}
+		itemDef
+		{
+			name "levelbar"
+			rect 90 134 100 20 0 0
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -25
+			textaligny 12
+			textscale 0.23
+			text "@MENU_NAME"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				uiScript "SavegameSort" 0;
+			}
+		}
+		itemDef
+		{
+			name "levelbar"
+			rect 230 134 100 20 0 0
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 12
+			textscale 0.23
+			text "@MENU_DATE"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				uiScript "SavegameSort" 1;
+			}
+		}
+		itemDef
+		{
+			name "savegamelist"
+			rect 24 150 319 200 0 0
+			visible 1
+			style 1
+			forecolor 1 1 1 0.9
+			backcolor 0 0 0.05 0.4
+			outlinecolor 0.9 0.9 0.9 0.2
+			type 6
+			textalign 1
+			textaligny 10
+			textscale 0.23
+			feeder 16
+			elementWidth 120
+			elementHeight 14
+//			numcol			xpos	xwidth	textlen	  alignment
+			columns 2		2		65		22		  0
+							162		40		21		  0
+			doubleClick
+			{
+				play "mouse_click";
+				open "load_sure_popmenu";
+			}
+			mouseEnter
+			{
+				setItemColor "savegamelist" bordercolor ".7" 0 0 1;
+			}
+			mouseExit
+			{
+				setItemColor "savegamelist" bordercolor ".5" ".5" ".5" ".5";
+			}
+		}
+		itemDef
+		{
+			name "savename"
+			rect 24 350 317 18 0 0
+			visible 1
+			group "loadsavegroup"
+			style 1
+			border 1
+			forecolor 0.9 0.9 0.9 1
+			bordercolor 0.5 0.5 0.5 0.5
+			outlinecolor 1 0.5 0.5 0.5
+			type 16
+			textalignx 10
+			textaligny 14
+			textscale 0.25
+			text "@MENU_SAVEAS"
+			dvar "ui_savegame"
+			maxChars 14
+			maxPaintChars 14
+			dvarTest "ui_hidesave"
+			hideDvar { 1 }
+			mouseEnter
+			{
+				setItemColor "loadname" backcolor ".3" ".5" ".2" ".25" play "mouse_over";
+			}
+			mouseExit
+			{
+				setItemColor "loadname" backcolor 0 0 0 ".25";
+			}
+			action
+			{
+				play "mouse_click";
+				uiScript "Savegame";
+			}
+		}
+		itemDef
+		{
+			name "back"
+			rect 30 375 60 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.3
+			text "@MENU_BACK"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				close "save_load_menu";
+				open "main";
+			}
+		}
+		itemDef
+		{
+			name "del"
+			rect 113 375 60 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.3
+			text "@MENU_DELETE"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				open "save_del_sure_popmenu";
+			}
+		}
+		itemDef
+		{
+			name "load"
+			rect 196 375 60 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.3
+			text "@MENU_LOAD"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				open "load_sure_popmenu";
+			}
+		}
+		itemDef
+		{
+			name "save"
+			rect 276 375 60 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.3
+			text "@MENU_SAVE"
+			dvarTest "ui_hidesave"
+			hideDvar { 1 }
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				close "save_load_menu";
+				close "main";
+				uiScript "Savegame";
+			}
+		}
+	}
+}

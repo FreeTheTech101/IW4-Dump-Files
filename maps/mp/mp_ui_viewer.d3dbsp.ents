@@ -1,0 +1,988 @@
+{
+"spawnflags" "512"
+"sunIsPrimaryLight" "1"
+"skycolor" "0.38 0.51 0.76"
+"skylight" "0.7"
+"_color" "0.38 0.51 0.76"
+"ambient" "0.1"
+"classname" "worldspawn"
+"sundirection" "-50 150 0"
+"suncolor" "1 0.945 0.823"
+"sunlight" "1"
+"sunradiosity" "1"
+}
+{
+"angles" "0 90 0"
+"origin" "-96 -129 12"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "-224 0 304"
+"angles" "0 0 0"
+"classname" "mp_global_intermission"
+}
+{
+"origin" "798 -5229 -2.5"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_woo"
+}
+{
+"angles" "0 90 0"
+"origin" "-31.9 -128.2 12"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "96 -128 12"
+"angles" "0 90 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "32 -128 12"
+"angles" "0 90 0"
+"classname" "mp_tdm_spawn"
+}
+{
+"origin" "704 384 12"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "576 384 12"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_axis"
+}
+{
+"origin" "384 360 16"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-352 512 12"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_allies"
+}
+{
+"origin" "-152 512 12"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis"
+}
+{
+"origin" "320 360 16"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn"
+}
+{
+"origin" "256 360 16"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "28 476 60"
+"angles" "0 270 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "30 478 62"
+"angles" "0 270 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "32 480 64"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "34 482 66"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "38 486 70"
+"angles" "0 270 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "286 -7309 -1"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_zm"
+}
+{
+"origin" "286 151 5"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "marketplace_player_pos"
+}
+{
+"origin" "286 143 5"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "lobby_player_pos"
+}
+{
+"origin" "286 -7314 31"
+"angles" "0 14.6 0"
+"classname" "script_origin"
+"targetname" "player_camera_zm"
+}
+{
+"origin" "798 -5234 29"
+"angles" "1.2 14.6 0"
+"classname" "script_origin"
+"targetname" "player_camera_woo"
+}
+{
+"origin" "5626 296 58.5"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "weapon_camera"
+}
+{
+"origin" "28 476 -4"
+"angles" "0 270 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "30 478 -2"
+"angles" "0 270 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "32 480 0"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "34 482 2"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "38 486 6"
+"angles" "0 270 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "5886 -3237 -3"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_center"
+}
+{
+"origin" "5891.7 -3235.9 33.9"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "player_camera_center"
+}
+{
+"origin" "5627 295.5 62"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos"
+}
+{
+"origin" "5622 297 60.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_coltanaconda_mp"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_crouch_01"
+"animation" "lobby_crouch_01_idle"
+"origin" "376.3 -7355.3 0"
+"angles" "352.178 186.541 0.813172"
+"classname" "script_origin"
+"targetname" "s5_place1"
+}
+{
+"origin" "798 -5280 47"
+"angles" "0.8 359.7 1.11754e-008"
+"classname" "script_origin"
+"targetname" "team_camera_woo"
+}
+{
+"origin" "286 -7362 48"
+"angles" "0 359.7 0"
+"classname" "script_origin"
+"targetname" "team_camera_zm"
+}
+{
+"origin" "30 -2721 53"
+"angles" "4 359.7 5.58332e-008"
+"classname" "script_origin"
+"targetname" "team_camera_des"
+}
+{
+"origin" "286 99 47"
+"angles" "4 359.7 5.58332e-008"
+"classname" "script_origin"
+"targetname" "team_camera_urb"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_01"
+"animation" "lobby_sit_high_01_idle"
+"origin" "408 162 34"
+"angles" "0 217 -2.7"
+"classname" "script_origin"
+"targetname" "s1_place7"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_01"
+"animation" "lobby_sit_low_01_idle"
+"origin" "374 172 40"
+"angles" "0 216 0"
+"classname" "script_origin"
+"targetname" "s1_place8"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_05_idle"
+"origin" "348 92 5.1"
+"angles" "0 169.2 0"
+"classname" "script_origin"
+"targetname" "s1_place2"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_02"
+"animation" "lobby_stand_02_idle"
+"origin" "338 54 5.1"
+"angles" "0 150.1 0"
+"classname" "script_origin"
+"targetname" "s1_place4"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_04_idle"
+"origin" "374 68 5.1"
+"angles" "0 160 0"
+"classname" "script_origin"
+"targetname" "s1_place1"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_02"
+"animation" "lobby_sit_high_02_idle"
+"origin" "365.5 145.5 4.6"
+"angles" "0 250 0"
+"classname" "script_origin"
+"targetname" "s1_place3"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_02"
+"animation" "lobby_sit_low_02_idle"
+"origin" "383 118.5 20.1"
+"angles" "0 202.6 0"
+"classname" "script_origin"
+"targetname" "s1_place5"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_footup_01"
+"animation" "lobby_stand_footup_01_idle"
+"origin" "312 160 5.1"
+"angles" "0 226 0"
+"classname" "script_origin"
+"targetname" "s1_place6"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_crouch_01"
+"animation" "lobby_crouch_01_idle"
+"origin" "326 123 5.1"
+"angles" "0 200.9 0"
+"classname" "script_origin"
+"targetname" "s1_place9"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_01"
+"animation" "lobby_sit_high_01_idle"
+"origin" "1020 -5318 38"
+"angles" "0 159 0"
+"classname" "script_origin"
+"targetname" "s2_place9"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_01"
+"animation" "lobby_sit_low_01_idle"
+"origin" "926.7 -5300.5 5"
+"angles" "0 159.8 0"
+"classname" "script_origin"
+"targetname" "s2_place5"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_05_idle"
+"origin" "931 -5272 -2.9"
+"angles" "0 167 0"
+"classname" "script_origin"
+"targetname" "s2_place3"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_02"
+"animation" "lobby_stand_02_idle"
+"origin" "906 -5321 -2.5"
+"angles" "0 132 0"
+"classname" "script_origin"
+"targetname" "s2_place7"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_04"
+"animation" "lobby_stand_04_idle"
+"origin" "946 -5214 -2.9"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s2_place4"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_02"
+"animation" "lobby_sit_high_02_idle"
+"origin" "924 -5188 -4.4"
+"angles" "0 226 0"
+"classname" "script_origin"
+"targetname" "s2_place6"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_03"
+"animation" "lobby_stand_03_idle"
+"origin" "1032 -5229 26.1"
+"angles" "0 164 0"
+"classname" "script_origin"
+"targetname" "s2_place8"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_06"
+"animation" "lobby_stand_06_idle"
+"origin" "947 -5246 -2.9"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s2_place1"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_crouch_01"
+"animation" "lobby_crouch_01_idle"
+"origin" "922 -5235 -0.4"
+"angles" "0 192 0"
+"classname" "script_origin"
+"targetname" "s2_place2"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_01"
+"animation" "lobby_sit_high_01_idle"
+"origin" "194 -2699 34"
+"angles" "0 219 0"
+"classname" "script_origin"
+"targetname" "s3_place7"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_01"
+"animation" "lobby_sit_low_01_idle"
+"origin" "111 -2743 0"
+"angles" "0 196 0"
+"classname" "script_origin"
+"targetname" "s3_place2"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_05_idle"
+"origin" "159 -2641 60.1"
+"angles" "0 229.5 0"
+"classname" "script_origin"
+"targetname" "s3_place9"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_02"
+"animation" "lobby_stand_02_idle"
+"origin" "122 -2656 -1.5"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s3_place4"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_02"
+"animation" "lobby_sit_high_02_idle"
+"origin" "179 -2670 32.1"
+"angles" "0 203.9 0"
+"classname" "script_origin"
+"targetname" "s3_place8"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_02"
+"animation" "lobby_sit_low_02_idle"
+"origin" "115 -2714 -0.9"
+"angles" "0 139.6 0"
+"classname" "script_origin"
+"targetname" "s3_place1"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_03"
+"animation" "lobby_stand_03_idle"
+"origin" "101 -2635 -1"
+"angles" "0 209 0"
+"classname" "script_origin"
+"targetname" "s3_place6"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_06"
+"animation" "lobby_stand_06_idle"
+"origin" "94 -2764 0.1"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s3_place5"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_crouch_01"
+"animation" "lobby_crouch_01_idle"
+"origin" "127 -2686 -1"
+"angles" "0 184.6 0"
+"classname" "script_origin"
+"targetname" "s3_place3"
+}
+{
+"origin" "6562 -3168 94"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "lobby_bg_pos_left_b"
+}
+{
+"origin" "1374 -10141 0"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_arc"
+}
+{
+"origin" "1374 -10146 32"
+"angles" "4 14.6 0"
+"classname" "script_origin"
+"targetname" "player_camera_arc"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_crouch_01"
+"animation" "lobby_crouch_01_idle"
+"origin" "1478.3 -10213.3 0"
+"angles" "352.138 192.5 -1.92539e-006"
+"classname" "script_origin"
+"targetname" "s4_place1"
+}
+{
+"spawnflags" "1024"
+"origin" "1374 -10215 49"
+"angles" "4 359.7 5.58332e-008"
+"classname" "script_origin"
+"targetname" "team_camera_arc"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_01"
+"animation" "lobby_sit_high_01_idle"
+"origin" "1540.1 -10279.4 36.3"
+"angles" "0 127 0"
+"classname" "script_origin"
+"targetname" "s4_place9"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_01"
+"animation" "lobby_sit_low_01_idle"
+"origin" "1549.1 -10183.3 25"
+"angles" "0 222 0"
+"classname" "script_origin"
+"targetname" "s4_place2"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_05_idle"
+"origin" "1461.5 -10151.7 0.1"
+"angles" "0 202.272 0"
+"classname" "script_origin"
+"targetname" "s4_place6"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_02"
+"animation" "lobby_stand_02_idle"
+"origin" "1470.5 -10268 0.2"
+"angles" "0 153.954 0"
+"classname" "script_origin"
+"targetname" "s4_place7"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_02"
+"animation" "lobby_sit_high_02_idle"
+"origin" "1557.5 -10224 6.7"
+"angles" "0 147.767 0"
+"classname" "script_origin"
+"targetname" "s4_place3"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_02"
+"animation" "lobby_sit_low_02_idle"
+"origin" "1530.8 -10162 18.1"
+"angles" "0 219.6 0"
+"classname" "script_origin"
+"targetname" "s4_place4"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_03"
+"animation" "lobby_stand_03_idle"
+"origin" "1438 -10135 0"
+"angles" "0 203.5 0"
+"classname" "script_origin"
+"targetname" "s4_place8"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_06"
+"animation" "lobby_stand_06_idle"
+"origin" "1495.8 -10242.1 0.1"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s4_place5"
+}
+{
+"origin" "5632 296.3 60.5"
+"angles" "0 86 -10"
+"classname" "script_origin"
+"targetname" "weapon_pos_m4a1tech_mp"
+}
+{
+"origin" "54 -2685 -1"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_des"
+}
+{
+"origin" "54 -2690 31"
+"angles" "4 14.6 0"
+"classname" "script_origin"
+"targetname" "player_camera_des"
+}
+{
+"origin" "6562 -3168 94"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "lobby_bg_pos_left"
+}
+{
+"gndLt" "8080780e01"
+"ltOrigin" "572.102 -7224.56 33.4184"
+"targetname" "destructible_toy"
+"sound_csv_include" "destruct_tv_exp"
+"destructible_type" "codo_toy_codo_static_peleliu_filecabinet_metal_destoryed01"
+"csv_include" "destructible_codo_static_peleliu_filecabinet_metal_destoryed01"
+"angles" "350 274.22 -0.0729978"
+"origin" "572.3 -7229.7 2"
+"model" "codo_static_peleliu_filecabinet_metal_destoryed01"
+"classname" "script_model"
+}
+{
+"origin" "5649.9 296.6 59.9"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_wa2000_mp"
+}
+{
+"gndLt" "2c2f3d1901"
+"ltOrigin" "1686.44 -2496.43 89.5658"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1687.2 -2496 68.7"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "359.623 122.078 -2.46315"
+}
+{
+"gndLt" "3f3b410801"
+"ltOrigin" "1827.56 -2502.57 123.256"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1824.4 -2504 103.5"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "348.829 208.825 -2.75435"
+}
+{
+"gndLt" "2c3144d801"
+"ltOrigin" "1722.46 -2824.13 19.0746"
+"csv_include" "animated_models_foliage_desertbrush_1"
+"precache_script" "maps animated_models foliage_desertbrush_1"
+"targetname" "animated_model"
+"origin" "1720.7 -2824.8 -2.1"
+"model" "foliage_desertbrush_1_animated"
+"classname" "script_model"
+"angles" "0 105.483 3.07717"
+}
+{
+"origin" "5615.6 297.1 60.3"
+"angles" "0 80 -10"
+"classname" "script_origin"
+"targetname" "weapon_pos_usp_mp"
+}
+{
+"origin" "5617.7 295.5 60.6"
+"angles" "0 85 -10"
+"classname" "script_origin"
+"targetname" "weapon_pos_deserteagle_mp"
+}
+{
+"origin" "5640.9 296.2 62.9"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_acr_mp"
+}
+{
+"origin" "6092.4 -5089.9 34.1"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "creation_camera_urb"
+}
+{
+"origin" "5652.5 298 60"
+"angles" "0 80 -5"
+"classname" "script_origin"
+"targetname" "weapon_pos_cheytac_mp"
+}
+{
+"origin" "5653 295.3 62.5"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m240_mp"
+}
+{
+"origin" "5645 296.2 59.9"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m21ebr_mp"
+}
+{
+"origin" "5634.2 294.7 61.3"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_ak104_mp"
+}
+{
+"origin" "5632 293.5 59.5"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_famas_mp"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_01"
+"animation" "lobby_sit_high_01_idle"
+"origin" "492.1 -7419.4 52.3"
+"angles" "0 147 0"
+"classname" "script_origin"
+"targetname" "s5_place8"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_01"
+"animation" "lobby_stand_01_idle"
+"origin" "343.1 -7399.3 -0.5"
+"angles" "0 136 0"
+"classname" "script_origin"
+"targetname" "s5_place6"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_05"
+"animation" "lobby_stand_05_idle"
+"origin" "363.5 -7376.7 0.1"
+"angles" "0 145.772 0"
+"classname" "script_origin"
+"targetname" "s5_place5"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_high_02"
+"animation" "lobby_sit_high_02_idle"
+"origin" "409.5 -7297 -8.3"
+"angles" "0 185.467 0"
+"classname" "script_origin"
+"targetname" "s5_place3"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_sit_low_02"
+"animation" "lobby_sit_low_02_idle"
+"origin" "379.8 -7271 6.1"
+"angles" "0 207.6 0"
+"classname" "script_origin"
+"targetname" "s5_place7"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_03"
+"animation" "lobby_stand_03_idle"
+"origin" "368 -7325 0"
+"angles" "0 165 0"
+"classname" "script_origin"
+"targetname" "s5_place2"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "lobby_stand_06"
+"animation" "lobby_stand_06_idle"
+"origin" "408.8 -7354.1 1.1"
+"angles" "0 172 0"
+"classname" "script_origin"
+"targetname" "s5_place4"
+}
+{
+"origin" "5636.4 294.6 62.5"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_l86_mp"
+}
+{
+"origin" "5658 300 59.1"
+"angles" "0 78 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_barrett_mp"
+}
+{
+"origin" "5641.1 293.1 63.3"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_rpd_mp"
+}
+{
+"origin" "5635 295.4 60.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_scar_mp"
+}
+{
+"origin" "5648 296.2 62.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_mg4_mp"
+}
+{
+"origin" "5633.3 294 60.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_fn2000_mp"
+}
+{
+"origin" "5645 294.6 61.7"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_aa12_mp"
+}
+{
+"origin" "5638 296.5 61.5"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_tar21_mp"
+}
+{
+"origin" "5625.4 295.2 60"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_p90_mp"
+}
+{
+"origin" "5638.2 296.1 61.6"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m1014_mp"
+}
+{
+"origin" "5644.7 294.6 63.6"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_aug_mp"
+}
+{
+"origin" "5627.3 297.8 60"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_striker_mp"
+}
+{
+"origin" "5634.3 293.4 62.5"
+"angles" "0 86 -10"
+"classname" "script_origin"
+"targetname" "weapon_pos_ak47_mp"
+}
+{
+"origin" "5635.2 289.9 61.1"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_mp5k_mp"
+}
+{
+"origin" "5628.7 296.2 61.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_miniuzi_mp"
+}
+{
+"origin" "5637 294.9 60.6"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m16_mp"
+}
+{
+"origin" "5643.8 296.2 60.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_fal_mp"
+}
+{
+"origin" "5640 296.2 61.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_model1887_mp"
+}
+{
+"origin" "5624 296.2 60.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_ranger_mp"
+}
+{
+"origin" "5618.9 296.2 61"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m9_mp"
+}
+{
+"origin" "5642.8 294.3 60.9"
+"angles" "0 85 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_spas12_mp"
+}
+{
+"origin" "5628 295.5 63.6"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_g18_mp"
+}
+{
+"origin" "5666 295.5 67.1"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_javelin_mp"
+}
+{
+"origin" "5666.3 297.1 62.1"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_at4_mp"
+}
+{
+"origin" "5632.3 295.5 60.1"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_m79_mp"
+}
+{
+"origin" "5653.4 295.5 59"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_rpg_mp"
+}
+{
+"origin" "5670 295.5 61.8"
+"angles" "0 90 0"
+"classname" "script_origin"
+"targetname" "weapon_pos_stinger_mp"
+}
+{
+"origin" "6566 -3223 94"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "lobby_bg_pos"
+}
+{
+"origin" "6562 -3159 94"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "lobby_bg_pos_left_c"
+}
+{
+"origin" "-5054 -9 -47"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "lobby_player_pos"
+}
+{
+"origin" "286 147 5"
+"angles" "0 180 0"
+"classname" "script_origin"
+"targetname" "player_pos_urb"
+}
+{
+"origin" "6562 -3175 94"
+"angles" "0 0 0"
+"classname" "script_origin"
+"targetname" "lobby_bg_pos_left_a"
+}
+{
+"origin" "286 142 37"
+"angles" "4 14.6 0"
+"classname" "script_origin"
+"targetname" "player_camera_urb"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "creation_stand_01"
+"animation" "lobby_stand_01_idle"
+"origin" "5886 -5057 -3"
+"angles" "4 180 9.529e-007"
+"classname" "script_origin"
+"targetname" "s1_place10"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "creation_stand_02"
+"animation" "lobby_stand_02_idle"
+"origin" "5886 -5093 -3"
+"angles" "4 180 9.529e-007"
+"classname" "script_origin"
+"targetname" "s1_place12"
+}
+{
+"model" "mp_body_us_army_lmg"
+"script_noteworthy" "creation_stand_03"
+"animation" "lobby_stand_03_idle"
+"origin" "5886 -5129 -3"
+"angles" "4 180 9.529e-007"
+"classname" "script_origin"
+"targetname" "s1_place11"
+}

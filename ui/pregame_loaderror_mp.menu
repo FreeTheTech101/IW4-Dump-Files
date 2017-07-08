@@ -1,0 +1,82 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "pregame_loaderror_mp"
+		rect 0 0 640 480 0 0
+		style 1
+		forecolor 1 1 1 1
+		backcolor 1 1 1 0
+		focuscolor 1 1 1 1
+		blurWorld 6
+		onOpen
+		{
+			setdvar "ui_SaveLoadVisible" 0;
+		}
+		onClose
+		{
+			uiScript "clearError";
+		}
+		itemDef
+		{
+			rect -107 0 854 480 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0.2 0.2 0.2 0.5
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "profile"
+			rect 40 40 560 400 0 0
+			decoration
+			visible 1
+			ownerdraw 264
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "errorinfo"
+			rect 120 142 400 255 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 0.2 0.2 1
+			textalign 5
+			textscale 0.8
+			dvar "com_errorMessage"
+		}
+		itemDef
+		{
+			rect 0 388 640 45 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			type 1
+			textalign 5
+			textaligny 4
+			textscale 0.5833
+			text "@MENU_PRESS_START"
+		}
+		itemDef
+		{
+			rect -128 0 896 480 0 0
+			visible 1
+			type 1
+			textscale 0.55
+			action
+			{
+				uiScript "clearLoadErrorsSummary";
+			}
+		}
+	}
+}

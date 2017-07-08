@@ -1,0 +1,620 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "pausedmenu"
+		rect 0 0 640 480 4 4
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		allowedBinding "pause"
+		onOpen
+		{
+			showMenu "pausedbkgnd" showMenu "objectiveinfo" showMenu "overheadmap";
+			setLocalVarInt "ui_ingame" ( 1 );
+			focusfirst;
+		}
+		onClose
+		{
+			hideMenu "pausedbkgnd" hideMenu "objectiveinfo" hideMenu "overheadmap";
+		}
+		onEsc
+		{
+			close "pausedmenu";
+		}
+		itemDef
+		{
+			name "pausedMsg"
+			rect -160 13 160 40 10 8
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 4
+			textscale 0.5
+			text "@MENU_PAUSED_CAP"
+			exp rect y ( 13 + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !dvarbool( "coop" ) )
+		}
+		itemDef
+		{
+			name "resumegame"
+			rect -200 48 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_RESUME_CREDITS"
+			exp rect y ( ( 28 + 1 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( ( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "resumegame"
+			rect -200 48 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_RESUMEGAME"
+			exp rect y ( ( 28 + 1 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "credits_quit"
+			rect -200 68 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@PLATFORM_QUIT"
+			exp rect y ( ( 28 + 2 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( ( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				setdvar "credits_active" 0;
+				close "pausedmenu";
+				exec "disconnect";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			rect -200 68 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_OPTIONS"
+			exp rect y ( ( 28 + 2 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				execnow "set ui_allow_graphic_change 1";
+				open "pc_options_video";
+				close "pausedmenu";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "difficulty_locked"
+			rect -200 88 336 20 10 8
+			decoration
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 0.5 0.5 0.5 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_LOWER_DIFFICULTY"
+			exp rect y ( ( 28 + 3 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && ( ( dvarint( "g_gameskill" ) == 0 ) || ( dvarstring( "mapname" ) == "trainer" ) ) && !( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) )
+			action
+			{
+				play "mouse_click";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "difficulty"
+			rect -200 88 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_LOWER_DIFFICULTY"
+			exp rect y ( ( 28 + 3 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && ( dvarint( "g_gameskill" ) > 0 ) && ( dvarstring( "mapname" ) != "trainer" ) && !( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				open "ingame_difficulty";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "last_checkpoint"
+			rect -200 108 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_LAST_CHECKPOINT"
+			exp rect y ( ( 28 + 4 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !( dvarbool( "specialops" ) ) ) && !( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) )
+			action
+			{
+				play "mouse_click";
+				open "last_checkpoint_warning";
+				close "pausedmenu";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "last_checkpoint_locked"
+			rect -200 108 336 20 10 8
+			decoration
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 0.5 0.5 0.5 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_LAST_CHECKPOINT"
+			exp rect y ( ( 28 + 4 * 20 ) + ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && !( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !( dvarbool( "specialops" ) ) ) && !( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) )
+			action
+			{
+				play "mouse_click";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "restartlevel"
+			rect -200 128 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_RESTART_MISSION"
+			exp rect y ( ( 28 + 5 * 20 ) - ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 16 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+				open "restart_warning";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "saveandquit"
+			rect -200 148 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@PLATFORM_SAVE_AND_QUIT"
+			exp rect y ( ( 28 + 6 * 20 ) - ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 16 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) && !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !( dvarbool( "specialops" ) ) ) && savegameavailable( ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+				open "savegame_warning";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "arcade_quit"
+			rect -200 148 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@PLATFORM_QUIT"
+			exp rect y ( ( 28 + 6 * 20 ) - ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 16 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) && !( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !( dvarbool( "specialops" ) ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+				open "savegame_warning_arcade";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "quit"
+			rect -200 148 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@PLATFORM_QUIT"
+			exp rect y ( ( 28 + 6 * 20 ) - ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 16 )
+			visible when ( ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) || ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !( dvarbool( "specialops" ) ) ) && !savegameavailable( ) ) )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+				open "savegame_warning_noprofile";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+		itemDef
+		{
+			name "skip_airport"
+			rect -200 168 336 20 10 8
+			visible 1
+			group "paused_buttons"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 4
+			textalignx 40
+			textscale 0.375
+			text "@MENU_SP_SKIP_MISSION"
+			exp rect y ( ( 28 + 7 * 20 ) - ( ( dvarbool( "specialops" ) ) || ( dvarstring( "mapname" ) == "ending" && dvarstring( "ui_char_museum_mode" ) == "free" ) ) * 16 )
+			visible when ( dvarstring( "mapname" ) == "airport" )
+			action
+			{
+				play "mouse_click";
+				play "mouse_click";
+				close "pausedmenu";
+				open "offensive_skip_popup_confirm";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+				play "mouse_over";
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+				setItemColor "paused_buttons" backcolor 0 0 0 "0.0";
+			}
+		}
+	}
+}

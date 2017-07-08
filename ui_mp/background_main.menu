@@ -1,0 +1,121 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "background_main"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			execnow "g_friendlyfiredist 0";
+			execnow "g_friendlynamedist 0";
+			execnow "loc_warnings 0";
+			execnow "loc_warningsaserrors 0";
+		}
+		onEsc
+		{
+		}
+		itemDef
+		{
+			rect 499 438 0 0 0 0
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textscale 0.4583
+			text "@PLATFORM_SELECT"
+		}
+		itemDef
+		{
+			name "signedinas"
+			rect 0 0 250 15 0 0
+			decoration
+			visible 1
+			ownerdraw 272
+			forecolor 0.4823 0.4823 0.4823 1
+			type 8
+			textfont 1
+			textscale 0.4583
+		}
+		itemDef
+		{
+			rect 80 170 250 15 0 0
+			visible 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textscale 0.4583
+			execKeyInt 157
+			{
+				scriptmenuresponse "BUTTON_RTRIG";
+			}
+			execKeyInt 156
+			{
+				scriptmenuresponse "BUTTON_LTRIG";
+			}
+			execKeyInt 17
+			{
+				scriptmenuresponse "BUTTON_RSTICK";
+			}
+			execKeyInt 16
+			{
+				scriptmenuresponse "BUTTON_LSTICK";
+			}
+			execKeyInt 15
+			{
+				scriptmenuresponse "BUTTON_BACK";
+			}
+			execKeyInt 14
+			{
+				scriptmenuresponse "BUTTON_START";
+			}
+			execKeyInt 186
+			{
+				scriptmenuresponse "BUTTON_RSHLDR";
+			}
+			execKeyInt 185
+			{
+				scriptmenuresponse "BUTTON_LSHLDR";
+			}
+			execKeyInt 167
+			{
+				scriptmenuresponse "BUTTON_Y";
+			}
+			execKeyInt 168
+			{
+				scriptmenuresponse "BUTTON_X";
+			}
+			execKeyInt 2
+			{
+				scriptmenuresponse "BUTTON_B";
+			}
+			execKeyInt 1
+			{
+				scriptmenuresponse "BUTTON_A";
+			}
+			execKeyInt 21
+			{
+				scriptmenuresponse "DPAD_DOWN";
+			}
+			execKeyInt 20
+			{
+				scriptmenuresponse "DPAD_UP";
+			}
+			execKeyInt 22
+			{
+				scriptmenuresponse "DPAD_LEFT";
+			}
+			execKeyInt 23
+			{
+				scriptmenuresponse "DPAD_RIGHT";
+			}
+		}
+	}
+}

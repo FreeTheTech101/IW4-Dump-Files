@@ -1,0 +1,29 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "boldgamemessages"
+		rect 0 180 0 0 9 8
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( 1 )
+		itemDef
+		{
+			rect 0 180 0 0 9 8
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textfont 4
+			textalign 5
+			textscale 0.417
+			gamemsgwindowindex 1
+			gamemsgwindowmode 1
+		}
+	}
+}

@@ -1,0 +1,34 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "savegameloading"
+		rect 0 0 640 480 0 0
+		popup
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			"saveDelay";
+		}
+		itemDef
+		{
+			name "savingMsg"
+			rect 0 64 640 120 0 0
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 9
+			textalign 1
+			textscale 0.5833
+			text "@CGAME_NOW_SAVING"
+			visible when ( dvarbool( "sv_saveDeviceAvailable" ) )
+		}
+	}
+}

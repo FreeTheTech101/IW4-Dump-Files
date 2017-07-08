@@ -1,0 +1,522 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "popmenu_specialops_online_difficulty"
+		rect -150 -82 300 164 2 2
+		popup
+		outOfBoundsClick
+		style 1
+		forecolor 1 1 1 1
+		backcolor 1 1 1 1
+		background "white"
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		allowedBinding "+talk"
+		exp rect y ( 0 - ( 24 + 7 * 20 ) / 2 )
+		onOpen
+		{
+			setfocusbydvar "g_gameskill_player_1";
+		}
+		onEsc
+		{
+			close self;
+		}
+		itemDef
+		{
+			rect -1004 -562 3416 1920 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.35
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -1004 -562 3416 1920 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 1
+			background "xpbar_stencilbase"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -427 -82 854 164 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 0.5 0.5 0.5 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -150 -82 1708 480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.75
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -150 -82 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -427 -82 854 0 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mockup_popup_bg_stencilfill"
+			textscale 0.55
+			exp rect h ( ( 24 + 7 * 20 ) )
+		}
+		itemDef
+		{
+			rect -150 -82 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.75
+			background "mw2_popup_bg_fogstencil"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) + ( 0 - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -150 -82 -1708 -480 2 9
+			decoration
+			visible 1
+			style 3
+			forecolor 0.85 0.85 0.85 1
+			background "mw2_popup_bg_fogscroll"
+			textscale 0.55
+			exp rect x ( ( 0 - ( 854 - 300 ) * 0.5 ) + ( 0 - 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -491 -146 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -427 -146 854 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 -146 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 -82 64 164 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 427 82 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -427 82 854 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -491 82 64 64 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -491 -82 64 164 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -150 -82 300 24 2 2
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			background "gradient_fadein"
+			textfont 9
+			textalign 4
+			textalignx 4
+			textscale 0.375
+			text "@MENU_SELECT_DIFFICULTY"
+		}
+		itemDef
+		{
+			rect -146 30 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_easy" )
+			exp text ( locstring( "@MENU_REGULAR_DESC_3" ) + "
+" + locstring( "@MENU_REGULAR_DESC_4" ) )
+		}
+		itemDef
+		{
+			rect -146 30 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_regular" )
+			exp text ( locstring( "@MENU_SKILLED_DESC" ) + "
+" + locstring( "@MENU_SKILLED_DESC_2" ) )
+		}
+		itemDef
+		{
+			rect -146 30 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_hardened" )
+			exp text ( "@MENU_HARDENED_DESC" )
+		}
+		itemDef
+		{
+			rect -146 30 292 42 2 2
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			textfont 3
+			textalign 6
+			textscale 0.375
+			visible when ( localvarstring( "ui_highlighted_diff" ) == "newgame_veteran" )
+			exp text ( "@MENU_VETERAN_DESC" )
+		}
+		itemDef
+		{
+			name "newgame_regular"
+			rect -146 -58 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_REGULAR_CAPS"
+			dvarTest "g_gameskill_player_1"
+			focusDvar { 1 }
+			action
+			{
+				play "mouse_click";
+				setdvar "g_gameskill" 1;
+				if ( 1 == 1 )
+				{
+					exec "setNetCoOpDifficulty 1";
+				}
+				if ( 1 == 2 )
+				{
+					exec "setNetCoOpDifficulty 2";
+				}
+				if ( 1 == 3 )
+				{
+					exec "setNetCoOpDifficulty 3";
+				}
+				close self;
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_regular" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "newgame_hardened"
+			rect -146 -38 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_HARDENED_CAPS"
+			dvarTest "g_gameskill_player_1"
+			focusDvar { 2 }
+			action
+			{
+				play "mouse_click";
+				setdvar "g_gameskill" 2;
+				if ( 2 == 1 )
+				{
+					exec "setNetCoOpDifficulty 1";
+				}
+				if ( 2 == 2 )
+				{
+					exec "setNetCoOpDifficulty 2";
+				}
+				if ( 2 == 3 )
+				{
+					exec "setNetCoOpDifficulty 3";
+				}
+				close self;
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_hardened" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "newgame_veteran"
+			rect -146 -18 292 20 2 2
+			visible 1
+			group "mw2_popup_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "popup_button_selection_bar_flipped"
+			type 1
+			textfont 3
+			textalign 4
+			textscale 0.375
+			text "@MENU_VETERAN_CAPS"
+			dvarTest "g_gameskill_player_1"
+			focusDvar { 3 }
+			action
+			{
+				play "mouse_click";
+				setdvar "g_gameskill" 3;
+				if ( 3 == 1 )
+				{
+					exec "setNetCoOpDifficulty 1";
+				}
+				if ( 3 == 2 )
+				{
+					exec "setNetCoOpDifficulty 2";
+				}
+				if ( 3 == 3 )
+				{
+					exec "setNetCoOpDifficulty 3";
+				}
+				close self;
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_popup_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				play "mouse_over";
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_popupAButton" ( 1 );
+				setLocalVarString "ui_highlighted_diff" ( "newgame_veteran" );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 1 1 1 0;
+				setLocalVarBool "ui_popupAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect 94 -55 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+		itemDef
+		{
+			rect 94 -35 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+		itemDef
+		{
+			rect 81 -35 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+		itemDef
+		{
+			rect 94 -15 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+		itemDef
+		{
+			rect 81 -15 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+		itemDef
+		{
+			rect 68 -15 292 20 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			textscale 0.55
+			exp rect w ( 14 )
+			exp rect h ( 14 )
+			visible when ( 1 )
+			exp material ( "difficulty_star" )
+		}
+	}
+}

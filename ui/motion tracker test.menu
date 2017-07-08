@@ -1,0 +1,28 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "motion tracker test"
+		rect 0 0 109 109 8 8
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( dvarbool( "motionTrackerTest" ) )
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 153
+			forecolor 1 1 1 1
+			background "compassping_friendly"
+			type 8
+			textscale 0.55
+		}
+	}
+}

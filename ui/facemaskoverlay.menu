@@ -1,0 +1,28 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "facemaskoverlay"
+		rect 0 0 960 480 2 2
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( dvarbool( "hud_gasMaskOverlay" ) == 1 )
+		itemDef
+		{
+			name "FacemaskOverlayBG"
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gasmask_overlay"
+			textscale 0.55
+		}
+	}
+}

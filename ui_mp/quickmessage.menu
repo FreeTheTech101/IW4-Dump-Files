@@ -1,0 +1,256 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "quickmessage"
+		rect 6 350 190 124 1 1
+		popup
+		visible 1
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		execKey 51
+		{
+			close "quickmessage";
+			open "quickresponses";
+		}
+		execKeyInt 50
+		{
+			close "quickmessage";
+			open "quickstatements";
+		}
+		execKeyInt 49
+		{
+			close "quickmessage";
+			open "quickcommands";
+		}
+		onOpen
+		{
+			setLocalVarInt "ui_centerPopup" ( 1 );
+			setdvar "cl_bypassMouseInput" 1 ;;
+		}
+		onRequestClose
+		{
+			play "mouse_click";
+			setLocalVarInt "ui_centerPopup" ( 0 );
+			;;
+			setdvar "cl_bypassMouseInput" 0;
+		}
+		onEsc
+		{
+			close self;
+		}
+		itemDef
+		{
+			rect -594 -450 2000 2000 1 1
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textscale 0.55
+			action
+			{
+				close self;
+			}
+			onFocus
+			{
+				setdvar "ui_popup_close_icon" 1;
+			}
+			leaveFocus
+			{
+				setdvar "ui_popup_close_icon" 0;
+			}
+		}
+		itemDef
+		{
+			rect 2 346 190 124 1 1
+			visible 1
+			forecolor 1 1 1 1
+			type 1
+			textfont 1
+			textscale 0.55
+			action
+			{
+			}
+		}
+		itemDef
+		{
+			rect 4 348 194 128 1 1
+			decoration
+			visible 1
+			style 3
+			border 1
+			bordersize 2
+			forecolor 0.2 0.2 0.22 0.65
+			bordercolor 0.4 0.405 0.42 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 6 350 190 124 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.7
+			background "gradient_bottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -28 316 32 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 4 316 194 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 198 316 32 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 198 348 32 0 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 6 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 198 350 32 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 6 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 4 350 194 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 6 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -28 350 32 32 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 6 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -28 348 32 0 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 6 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 103 352 0 0 1 1
+			decoration
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 5
+			textscale 0.4583
+			exp text ( "@QUICKMESSAGE_QUICK_MESSAGE" )
+		}
+		itemDef
+		{
+			name "window"
+			rect 22 386 0 0 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textscale 0.375
+			text "@QUICKMESSAGE_1_COMMANDS"
+		}
+		itemDef
+		{
+			name "window"
+			rect 22 402 0 0 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textscale 0.375
+			text "@QUICKMESSAGE_2_STATEMENTS"
+		}
+		itemDef
+		{
+			name "window"
+			rect 22 418 0 0 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textscale 0.375
+			text "@QUICKMESSAGE_3_RESPONSES"
+		}
+		itemDef
+		{
+			name "window"
+			rect 22 450 0 0 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textscale 0.375
+			text "@QUICKMESSAGE_ESC_EXIT"
+		}
+	}
+}

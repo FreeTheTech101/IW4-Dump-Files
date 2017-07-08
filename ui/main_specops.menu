@@ -1,0 +1,438 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "main_specops"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fullscreen 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		soundLoop "music_challenge_factory"
+		onOpen
+		{
+			exec "set ui_hint_text @NULL_EMPTY";
+			hide "desc_arrow" setdvar "arcademode" 0;
+			setdvar "arcademode_full" 0;
+			setdvar "start" 0;
+			setdvar "solo_play" 0;
+			setdvar "ui_last_opened_group" 0;
+			setGameMode "so";
+			setdvar "ui_version_show" 0;
+			execnow "Updatedvarsfromprofile";
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_background"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 1708 480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x 0 - 107 ) - ( ( float( milliseconds( ) % 60000 ) / 60000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect 0 0 -1708 -480 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.5
+			background "mw2_main_cloud_overlay"
+			textscale 0.55
+			exp rect x - 107 + 854 ) + ( ( float( milliseconds( ) % 50000 ) / 50000 ) * ( 854 ) ) )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_sp_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "sp" )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_co_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "so" )
+		}
+		itemDef
+		{
+			rect -427 -240 854 480 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "mw2_main_mp_image"
+			textscale 0.55
+			visible when ( dvarstring( "gameMode" ) == "mp" )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 1500 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect 0 0 640 480 4 4
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0
+			background "mockup_bg_glow"
+			textscale 0.55
+			exp forecolor a ( sin( milliseconds( ) / 480 ) + 1 ) * 0.25 ) + 0.25 )
+		}
+		itemDef
+		{
+			rect -64 0 280 480 1 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.1
+			background "gradient_fadein_fadebottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 0 0 272 28 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 9
+			textalign 6
+			textalignx -60
+			textaligny 24
+			textscale 0.5
+			text "@MENU_SP_SPECIAL_OPS_CAPS"
+		}
+		itemDef
+		{
+			rect 304 270 288 72 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "logo_cod2"
+			textscale 0.55
+			visible when ( !localvarbool( "ui_hideBack" ) )
+		}
+		itemDef
+		{
+			name "signedinas"
+			rect 0 0 250 15 0 0
+			decoration
+			visible 1
+			ownerdraw 272
+			forecolor 0.4823 0.4823 0.4823 1
+			type 8
+			textfont 1
+			textscale 0.4583
+		}
+		itemDef
+		{
+			name "so_singleplayer"
+			rect -64 48 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SP_SOLO_PLAY_CAPS"
+			action
+			{
+				play "mouse_click";
+				setdvar "arcademode" 0;
+				setdvar "arcademode_full" 0;
+				setdvar "start" 0;
+				setdvar "solo_play" 0;
+				setdvar "ui_last_opened_group" 0;
+				setdvar "solo_play" 1;
+				setdvar "so_ophud_player0" 0;
+				setdvar "so_ophud_player1" 0;
+				execOnDvarStringValue "developer" 0 "set developer_script 0";
+				exec "stopListening; set arcademode_lives 2; set arcademode_combined_score 0; set mblur_enable 0";
+				setdvar "specialops" 1;
+				open "levels_challenge" ;;
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "so_online"
+			rect -64 68 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_SP_TWO_PLAYER_ONLINE_CAPS"
+			action
+			{
+				play "mouse_click";
+				setdvar "arcademode" 0;
+				setdvar "arcademode_full" 0;
+				setdvar "start" 0;
+				setdvar "solo_play" 0;
+				setdvar "ui_last_opened_group" 0;
+				setdvar "ui_skip_level_select" 0;
+				setdvar "so_ophud_player0" 0;
+				setdvar "so_ophud_player1" 0;
+				execOnDvarStringValue "developer" 0 "set developer_script 0";
+				exec "xrequirelivesignin";
+				exec "stopListening; set arcademode_lives 2; set arcademode_combined_score 0; set mblur_enable 0";
+				exec "listen";
+				if ( dvarstring( "coop_mapName" ) == "" )
+				{
+					exec "set coop_mapName so_ac130_co_hunted";
+				}
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect 0 88 216 1 1 1
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.65
+			background "gradient_fadein"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "options"
+			rect -64 88 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_OPTIONS_CAPS"
+			action
+			{
+				play "mouse_click";
+				open "pc_options_video";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "stats"
+			rect -64 108 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_STATS_CAPS"
+			action
+			{
+				play "mouse_click";
+				open "stats";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "game_selection"
+			rect -64 128 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_MAIN_MENU_CAPS"
+			action
+			{
+				play "mouse_click";
+				close self;
+				setLocalVarBool "ui_skip_start" ( 1 );
+				setLocalVarString "ui_setfocus_to" ( "game_so" );
+				execnow "updategamerprofile";
+				setGameMode "none";
+				open "main_selection";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+		itemDef
+		{
+			name "button_quit"
+			rect -64 148 336 20 1 1
+			visible 1
+			group "mw2_button"
+			style 1
+			forecolor 1 1 1 1
+			disablecolor 0.6 0.55 0.55 1
+			background "menu_button_selection_bar"
+			type 1
+			textfont 3
+			textalign 6
+			textalignx -60
+			textscale 0.375
+			text "@MENU_QUIT_CAPS"
+			action
+			{
+				play "mouse_click";
+				open "quit_popmenu";
+			}
+			onFocus
+			{
+				play "mouse_over";
+				if ( dvarstring( "gameMode" ) != "mp" )
+				{
+					setItemColor "mw2_button" backcolor 0 0 0 0;
+				}
+				setItemColor self backcolor 0 0 0 1;
+				setLocalVarBool "ui_menuAButton" ( 1 );
+				setLocalVarFloat "ui_popupYPos" ( getfocuseditemy( ) );
+			}
+			leaveFocus
+			{
+				setItemColor self backcolor 0 0 0 "0.0";
+				setLocalVarString "ui_hint_text" ( "@NULL_EMPTY" );
+				setLocalVarBool "ui_menuAButton" ( 0 );
+			}
+		}
+	}
+}

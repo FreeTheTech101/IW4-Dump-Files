@@ -1,0 +1,28 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "savingicon"
+		rect -100 10 40 40 10 8
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		itemDef
+		{
+			name "chRect"
+			rect -100 10 40 40 10 8
+			decoration
+			visible 1
+			ownerdraw 111
+			forecolor 1 1 1 1
+			background "saving"
+			type 8
+			textscale 0.55
+		}
+	}
+}

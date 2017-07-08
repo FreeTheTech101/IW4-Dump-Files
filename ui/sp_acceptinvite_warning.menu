@@ -1,0 +1,240 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "sp_acceptinvite_warning"
+		rect 204 135 235 160 0 0
+		popup
+		style 1
+		border 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		blurWorld 4.8
+		onOpen
+		{
+			focusfirst;
+		}
+		onEsc
+		{
+			close "sp_acceptinvite_warning";
+			open "pausedmenu";
+		}
+		itemDef
+		{
+			name "backimage2fade"
+			rect 44 137 555 180 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "popmenu_bg"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "confirm"
+			rect 330 160 110 20 0 0
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textalign 1
+			textalignx -62
+			textaligny 5
+			textscale 0.5833
+			text "@MENU_CONTINUE_SAVING"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "txt"
+			rect 274 170 110 20 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -5
+			textaligny 19
+			textscale 0.35
+			text "@MENU_SAVEQUIT_TEXT_1"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "txt"
+			rect 274 185 110 20 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -5
+			textaligny 19
+			textscale 0.35
+			text "@MENU_SAVEQUIT_TEXT_2"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "txt"
+			rect 274 200 110 20 0 0
+			decoration
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -5
+			textaligny 19
+			textscale 0.35
+			text "@MENU_SAVEQUIT_TEXT_3"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "resumegame"
+			rect 274 235 220 15 0 0
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -60
+			textaligny 19
+			textscale 0.4583
+			text "@MENU_RESUMEGAME"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+			action
+			{
+				play "mouse_click";
+				close "sp_acceptinvite_warning";
+				close "pausedmenu";
+				uiScript "saveRevert";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef
+		{
+			name "saveandquit"
+			rect 274 260 220 15 0 0
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -60
+			textaligny 19
+			textscale 0.4583
+			text "@CGAME_CONTINUE_SAVING"
+			visible when ( ( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+			action
+			{
+				play "mouse_click";
+				close "sp_acceptinvite_warning";
+				"setSaveExecOnSuccess" "disconnect" open "savegameinfo";
+				setdvar "ui_skipMainLockout" 1;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef
+		{
+			name "confirm"
+			rect 330 160 110 20 0 0
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textalign 1
+			textalignx -62
+			textscale 0.4583
+			text "@MENU_QUIT_WARNING_ARCADE"
+			visible when ( !( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "confirm"
+			rect 330 160 110 20 0 0
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textalign 1
+			textalignx -62
+			textaligny 5
+			textscale 0.5833
+			text "@MENU_QUIT_WARNING"
+			visible when ( dvarstring( "credits_active" ) == "1" )
+		}
+		itemDef
+		{
+			name "resumegame2"
+			rect 274 200 220 15 0 0
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -60
+			textaligny 19
+			textscale 0.4583
+			text "@MENU_RESUMEGAME"
+			visible when ( !( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+			action
+			{
+				play "mouse_click";
+				close "sp_acceptinvite_warning";
+				close "pausedmenu";
+				uiScript "saveRevert";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef
+		{
+			name "quit"
+			rect 274 225 220 15 0 0
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -60
+			textaligny 19
+			textscale 0.4583
+			text "@PLATFORM_QUIT"
+			visible when ( !( !dvarbool( "arcademode" ) && !dvarbool( "coop" ) && !dvarbool( "specialops" ) ) )
+			action
+			{
+				play "mouse_click";
+				close "sp_acceptinvite_warning";
+				close "pausedmenu";
+				exec "confirmInvite";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+}

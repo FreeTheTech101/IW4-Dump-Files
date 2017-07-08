@@ -1,0 +1,83 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "minimap"
+		rect 0 0 109 109 8 8
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && !( player( "number" ) == dvarint( "ac130_player_num" ) ) && !dvarbool( "ui_hidemap" ) && dvarbool( "specialops" ) && dvarbool( "compass" ) && !( gamemsgwndactive( 0 ) ) && !ui_active( ) && !flashbanged( ) && !dvarbool( "motionTrackerTest" ) )
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 159
+			forecolor 1 1 1 1
+			background "compass_map_default"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 155
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 153
+			forecolor 1 1 1 1
+			background "compassping_friendly"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 150
+			forecolor 1 1 1 1
+			background "compassping_player"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect 5.5 5 89.5 89.5 8 8
+			decoration
+			visible 1
+			ownerdraw 152
+			forecolor 1 1 1 1
+			background "objective_line"
+			type 8
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "minimapBG"
+			rect -6.5 0 109 109 8 8
+			decoration
+			visible 1
+			ownerdraw 151
+			forecolor 1 1 1 1
+			background "minimap_background"
+			type 8
+			textscale 0.55
+		}
+	}
+}

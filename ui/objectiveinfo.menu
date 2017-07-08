@@ -1,0 +1,222 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "objectiveinfo"
+		rect 0 0 640 480 0 0
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		itemDef
+		{
+			rect 20 10 400 32 8 8
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 9
+			textalign 4
+			textscale 0.5833
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && 1 && ( dvarbool( "specialops" ) ) && !dvarbool( "coop" ) )
+			exp text ( "@" + tablelookup( "sp/specopstable.csv" , 1 , dvarstring( "ui_load_so_level" ) , 2 ) )
+		}
+		itemDef
+		{
+			rect 20 10 400 32 8 8
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 9
+			textalign 4
+			textscale 0.5833
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && 1 && ( dvarbool( "specialops" ) ) && dvarbool( "coop" ) )
+			exp text ( "@" + tablelookup( "sp/specopstable.csv" , 1 , dvarstring( "coop_mapname" ) , 2 ) )
+		}
+		itemDef
+		{
+			rect 20 38 -320 1 8 8
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && 1 && ( dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			rect 20 38 400 32 8 8
+			decoration
+			visible 1
+			ownerdraw 99
+			forecolor 1 1 1 1
+			type 8
+			textfont 9
+			textalign 4
+			textscale 0.5
+			exp rect y ( 38 + ( dvarbool( "specialops" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && 1 && ( dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			rect 20 38 400 32 8 8
+			decoration
+			visible 1
+			ownerdraw 99
+			forecolor 1 0.8 0.4 1
+			type 8
+			textfont 9
+			textalign 4
+			textscale 0.5
+			exp rect y ( 38 + ( dvarbool( "specialops" ) ) * 24 )
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && 1 && !( dvarbool( "specialops" ) ) )
+		}
+		itemDef
+		{
+			name "objectivecheckbox"
+			rect 20 64 16 16 8 8
+			decoration
+			visible 1
+			ownerdraw 100
+			forecolor 1 1 1 1
+			type 8
+			textfont 3
+			textscale 0.375
+			exp rect y ( 64 + ( dvarbool( "specialops" ) ) * 24 )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			name "minimapTickerBorder"
+			rect -159 -196 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 151
+			forecolor 1 1 1 1
+			background "minimap_tickertape_background"
+			type 8
+			textscale 0.55
+			exp rect w ( 120 + 2 )
+			exp rect h ( 16 )
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			name "minimapTicker"
+			rect -158 -192 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 146
+			forecolor 1 1 1 1
+			background "minimap_tickertape_mp"
+			type 8
+			textscale 0.55
+			exp rect h ( 10 )
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			rect -158 -180 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 159
+			forecolor 1 1 1 1
+			background "compass_map_default"
+			type 8
+			textscale 0.55
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			rect -158 -180 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 155
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.55
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			rect -158 -180 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 153
+			forecolor 1 1 1 1
+			background "compassping_friendly"
+			type 8
+			textscale 0.55
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			rect -158 -180 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 150
+			forecolor 1 1 1 1
+			background "compassping_player"
+			type 8
+			textscale 0.55
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			rect -158 -180 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 152
+			forecolor 1 1 1 1
+			background "objective_line"
+			type 8
+			textscale 0.55
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			name "minimapBG"
+			rect -174 -187 120 120 10 10
+			decoration
+			visible 1
+			ownerdraw 151
+			forecolor 1 1 1 1
+			background "minimap_background"
+			type 8
+			textscale 0.55
+			exp rect w ( 120 + 26 )
+			exp rect h ( 120 + 26 )
+			visible when ( !dvarbool( "ui_hidemap" ) )
+		}
+		itemDef
+		{
+			name "intel_items_title"
+			rect 20 -60 400 32 8 10
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textfont 9
+			textalign 4
+			textscale 0.375
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && !( dvarbool( "specialops" ) ) )
+			exp text ( "@MENU_SP_CURRENT_LEVEL_INTEL_TITLE" )
+		}
+		itemDef
+		{
+			name "intel_items"
+			rect 20 -60 400 32 8 10
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textalign 4
+			textaligny 16
+			textscale 0.375
+			visible when ( !( dvarstring( "mapname" ) == "ending" && ( ( dvarstring( "ui_char_museum_mode" ) == "credits_2" ) || ( dvarstring( "ui_char_museum_mode" ) == "credits_black" ) ) ) && !( dvarbool( "specialops" ) ) )
+			exp text ( locstring( "@MENU_SP_CURRENT_LEVEL_INTELS" , dvarint( "ui_level_player_cheatpoints" ) , dvarint( "ui_level_cheatpoints" ) ) )
+		}
+	}
+}

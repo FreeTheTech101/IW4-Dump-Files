@@ -1,0 +1,32 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "reload"
+		rect 0 -20 640 480 4 4
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( !( player( "number" ) + 1 == dvarint( "ui_remotemissile_playernum" ) ) && ( dvarbool( "hud_missionFailed" ) == 0 ) && ( dvarstring( "createfx" ) != "on" ) && !flashbanged( ) && !usingvehicle( ) && !ui_active( ) && ( dvarint( "ammoCounterHide" ) == 0 ) )
+		itemDef
+		{
+			name "lowammowarning"
+			rect -50 -20 100 100 2 2
+			decoration
+			visible 1
+			ownerdraw 120
+			forecolor 1 1 1 1
+			type 8
+			textfont 9
+			textalign 9
+			textscale 0.3333
+			exp forecolor a ( hudfade( "weapon" ) )
+			visible when ( ( dvarint( "g_gameskill" ) == 0 ) || ( dvarint( "g_gameskill" ) == 1 ) )
+		}
+	}
+}

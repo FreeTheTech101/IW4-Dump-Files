@@ -1,0 +1,376 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "account_settings_menu"
+		rect -162 -42 324 84 2 2
+		popup
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onOpen
+		{
+			setLocalVarInt "ui_centerPopup" ( 1 );
+			focusfirst;
+		}
+		onRequestClose
+		{
+			play "mouse_click";
+			setLocalVarInt "ui_centerPopup" ( 0 );
+			;;
+		}
+		onEsc
+		{
+			close self;
+		}
+		itemDef
+		{
+			rect -164 -44 328 88 2 2
+			decoration
+			visible 1
+			style 3
+			border 1
+			bordersize 2
+			forecolor 0.2 0.21 0.25 1
+			bordercolor 0.4 0.405 0.42 1
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -162 -42 324 84 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 0.7
+			background "gradient_bottom"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -196 -76 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tl"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -164 -76 328 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_t"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 164 -76 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_tr"
+			textscale 0.55
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 164 -44 32 0 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_r"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 4 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 164 -42 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_br"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 4 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -164 -42 328 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_b"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 4 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -196 -42 32 32 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_bl"
+			textscale 0.55
+			exp rect y ( ( 0 - 2 ) + ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 4 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect -196 -44 32 0 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 1
+			background "drop_shadow_l"
+			textscale 0.55
+			exp rect h ( ( ( ( 0 + 0 + ( ( 18 + 2 ) * ( 4 ) + 4 * 2 + 0 ) ) - 2 * 2 ) + 2 * 2 ) )
+			visible when ( 1 )
+		}
+		itemDef
+		{
+			rect 2 -40 0 0 2 2
+			decoration
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 5
+			textscale 0.4583
+			exp text ( "@MENU_IWNET_ACCOUNT_SETTINGS" )
+		}
+		itemDef
+		{
+			rect -160 -18 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			textscale 0.55
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect 155.5 -18 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			background "button_highlight_end"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -160 -18 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			bordersize 2
+			forecolor 0.9 0.95 1 0.25
+			bordercolor 0.8 0.95 1 0.4
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 2 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect 155.5 -18 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.95 1 0.25
+			background "button_highlight_end"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 2 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect -160 -18 320 18 2 2
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 10
+			textalignx -6
+			textscale 0.4
+			exp text ( "@MENU_IWNET_CHANGE_PASSWORD" )
+			action
+			{
+				play "mouse_click";
+				open "change_password_popup";
+				close self ;;
+			}
+			onFocus
+			{
+				play "mouse_submenu_over";
+				setLocalVarInt "ui_highlight" ( 2 );
+				setLocalVarString "ui_choicegroup" ( "popmenu" );
+			}
+			leaveFocus
+			{
+				setLocalVarInt "ui_highlight" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -160 2 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			textscale 0.55
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect 155.5 2 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			background "button_highlight_end"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -160 2 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			bordersize 2
+			forecolor 0.9 0.95 1 0.25
+			bordercolor 0.8 0.95 1 0.4
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 3 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect 155.5 2 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.95 1 0.25
+			background "button_highlight_end"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 3 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect -160 2 320 18 2 2
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 10
+			textalignx -6
+			textscale 0.4
+			exp text ( "@MENU_IWNET_CHANGE_EMAIL" )
+			action
+			{
+				play "mouse_click";
+				open "change_email_popup";
+				close self ;;
+			}
+			onFocus
+			{
+				play "mouse_submenu_over";
+				setLocalVarInt "ui_highlight" ( 3 );
+				setLocalVarString "ui_choicegroup" ( "popmenu" );
+			}
+			leaveFocus
+			{
+				setLocalVarInt "ui_highlight" ( 0 );
+			}
+		}
+		itemDef
+		{
+			rect -160 22 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			textscale 0.55
+			exp material ( "gradient_fadein" )
+		}
+		itemDef
+		{
+			rect 155.5 22 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.9 1 0.07
+			background "button_highlight_end"
+			textscale 0.55
+		}
+		itemDef
+		{
+			rect -160 22 315.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			bordersize 2
+			forecolor 0.9 0.95 1 0.25
+			bordercolor 0.8 0.95 1 0.4
+			background "gradient_fadein"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 4 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect 155.5 22 4.5 18 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.9 0.95 1 0.25
+			background "button_highlight_end"
+			textscale 0.55
+			visible when ( localvarint( "ui_highlight" ) == 4 && localvarstring( "ui_choicegroup" ) == "popmenu" )
+		}
+		itemDef
+		{
+			rect -160 22 320 18 2 2
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 10
+			textalignx -6
+			textscale 0.4
+			exp text ( "@MENU_DONE" )
+			action
+			{
+				play "mouse_click";
+				close self ;;
+			}
+			onFocus
+			{
+				play "mouse_submenu_over";
+				setLocalVarInt "ui_highlight" ( 4 );
+				setLocalVarString "ui_choicegroup" ( "popmenu" );
+			}
+			leaveFocus
+			{
+				setLocalVarInt "ui_highlight" ( 0 );
+			}
+		}
+	}
+}

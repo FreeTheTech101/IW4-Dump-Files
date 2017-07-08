@@ -1,0 +1,91 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "save_del_sure_popmenu"
+		rect 220 220 200 80 0 0
+		popup
+		style 1
+		border 1
+		forecolor 1 1 1 1
+		backcolor 0.1 0.15 0.1 1
+		bordercolor 0.5 0.5 0.5 0.5
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		onEsc
+		{
+			close "save_del_sure_popmenu";
+		}
+		itemDef
+		{
+			name "confirm"
+			rect 220 220 212 60 0 0
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textalign 1
+			textalignx 6
+			textaligny 20
+			textscale 0.25
+			text "@MENU_DEL_SEL_SAVEGAME"
+		}
+		itemDef
+		{
+			name "sdelsure_yes"
+			rect 238 255 50 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.25
+			text "@MENU_YES"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				uiScript "DelSavegame";
+				close "save_del_sure_popmenu";
+				close "save_load_menu";
+				open "save_load_menu";
+				uiScript "loadSavegames";
+				uiScript "update" "ui_savegameListAutosave";
+			}
+		}
+		itemDef
+		{
+			name "sdelsure_no"
+			rect 348 255 50 20 0 0
+			visible 1
+			style 1
+			forecolor 0.9 0.9 0.95 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 15
+			textscale 0.25
+			text "@MENU_NO"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				close "save_del_sure_popmenu";
+				open "save_load_menu" uiScript "loadSavegames";
+				uiScript "update" "ui_savegameListAutosave";
+			}
+		}
+	}
+}

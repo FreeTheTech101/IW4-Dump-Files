@@ -1,0 +1,28 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "cursorhints"
+		rect 0 70 40 40 2 2
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( 1 )
+		itemDef
+		{
+			name "chRect"
+			rect 0 70 40 40 2 2
+			decoration
+			visible 1
+			ownerdraw 72
+			forecolor 1 1 1 1
+			type 8
+			textscale 0.375
+		}
+	}
+}

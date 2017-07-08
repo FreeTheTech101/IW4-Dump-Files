@@ -1,0 +1,204 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "victory_notice_popmenu"
+		rect 204 140 235 135 0 0
+		popup
+		style 1
+		border 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		fadeInAmount 0.002
+		onOpen
+		{
+			setfocus "ok";
+		}
+		onEsc
+		{
+			close "victory_notice_popmenu";
+		}
+		itemDef
+		{
+			name "window"
+			rect 204 142 235 135 0 0
+			decoration
+			group "grpControlbutton"
+			style 1
+			border 1
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0.5
+			bordercolor 0.5 0.5 0.5 0.5
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "backimage2fade"
+			rect -128 -22 896 484 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 0 0 0 0.3
+			backcolor 0 0 0 0.3
+			background "white"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "window2"
+			rect 206 143 231 20 0 0
+			decoration
+			group "grpControlbutton"
+			style 1
+			border 1
+			forecolor 1 1 1 1
+			backcolor 1 1 0.3 0.3
+			bordercolor 0.1 0.1 0.1 0.2
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "backimage2fade"
+			rect 54 142 535 150 0 0
+			decoration
+			visible 1
+			style 3
+			forecolor 1 1 1 1
+			background "popmenu_bg"
+			textscale 0.55
+		}
+		itemDef
+		{
+			name "confirm"
+			rect 330 165 110 20 0 0
+			decoration
+			visible 1
+			forecolor 1 0.8 0.4 1
+			textalign 1
+			textalignx -62
+			textaligny 5
+			textscale 0.5
+			text "@MENU_CONGRATULATIONS"
+		}
+		itemDef
+		{
+			rect 271 175 200 100 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -50
+			textaligny 19
+			textscale 0.3
+			text "@MENU_VICTORY_BRITISH_UNLOCKED"
+			dvarTest "ui_popupstring"
+			showDvar { "british_unlocked" }
+		}
+		itemDef
+		{
+			rect 271 175 200 100 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -50
+			textaligny 19
+			textscale 0.3
+			text "@MENU_VICTORY_AMERICAN_UNLOCKED"
+			dvarTest "ui_popupstring"
+			showDvar { "american_unlocked" ; "american_unlockedbritish_completed" }
+		}
+		itemDef
+		{
+			rect 271 175 200 100 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -50
+			textaligny 19
+			textscale 0.3
+			text "@MENU_VICTORY_BRITISH_COMPLETED"
+			dvarTest "ui_popupstring"
+			showDvar { "british_completed" }
+		}
+		itemDef
+		{
+			rect 271 175 200 100 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -50
+			textaligny 19
+			textscale 0.3
+			text "@MENU_VICTORY_RUSSIAIN_COMPLETED"
+			dvarTest "ui_popupstring"
+			showDvar { "russian_completed" }
+		}
+		itemDef
+		{
+			rect 271 175 200 100 0 0
+			decoration
+			autowrapped
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textalignx -50
+			textaligny 19
+			textscale 0.3
+			text "@MENU_VICTORY_AMERICAN_RUSSIAN"
+			dvarTest "ui_popupstring"
+			showDvar { "american_unlocked_russian_completed" }
+		}
+		itemDef
+		{
+			name "ok"
+			rect 294 255 60 30 0 0
+			visible 1
+			style 1
+			forecolor 0.4823 0.4823 0.4823 1
+			type 1
+			textfont 1
+			textalign 1
+			textaligny 21
+			textscale 0.4583
+			text "@MENU_OK"
+			mouseEnter
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				setdvar "ui_showpopup" 0;
+				close "victory_notice_popmenu";
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/*********************************************************
+***************** Dumped by aerosoul94 *******************
+*********************************************************/
+
+{
+	menuDef
+	{
+		name "custom_level_info"
+		rect 0 0 640 480 0 0
+		visible 1
+		forecolor 1 1 1 1
+		fadeCycle 1
+		fadeClamp 1
+		fadeAmount 0.1
+		visible when ( dvarint( "guys_killed" ) || dvarint( "total_guys" ) )
+		itemDef
+		{
+			rect 0 0 0 0 3 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 6
+			textalign 6
+			textscale 0.375
+			glowColor 0.25 0.75 0.25 1
+			visible when ( dvarint( "guys_killed" ) || dvarint( "total_guys" ) )
+			exp text ( locstring( "@MYSTRING_X_SLASH_Y" , dvarint( "guys_killed" ) , dvarint( "total_guys" ) ) )
+		}
+	}
+}
